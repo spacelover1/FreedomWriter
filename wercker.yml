@@ -16,4 +16,4 @@ deploy:
     - lukevivier/gh-pages:
         token: $GITHUB_TOKEN
         basedir: _site
-        domain: mehranzr.ir
+        domain: spacelover.net
