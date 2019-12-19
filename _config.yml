@@ -3,7 +3,7 @@ motto:  وبلاگ من
 author: زینب سلیمی
 email: spacelover1@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://spacelover.net # the base hostname & protocol for your site
+url: http://spacelover.net # the base hostname & protocol for your site
 keywords: کامپیوتر برنامه‌نویسی پایتون تکنولوژی مهندسی ایران وب
 copyright: Commons Attribution 4.0 International
 description: >
