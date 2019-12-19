@@ -1,0 +1,54 @@
+﻿title: زینب سلیمی 
+motto:  وبلاگ من
+author: زینب سلیمی
+email: spacelover1@gmail.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: https://spacelover.net # the base hostname & protocol for your site
+keywords: کامپیوتر برنامه‌نویسی پایتون تکنولوژی مهندسی ایران وب
+copyright: Commons Attribution 4.0 International
+description: >
+    عاشق فضا
+
+long_description: > # this means to ignore newlines until "baseurl:"
+   ...........................................
+
+# twitter:
+#   username: 
+github:
+  username: spacelover
+  repository: personalBlog
+
+favicon: assets/img/favicon.ico
+logo: assets/img/favicon.ico
+
+# theme: jekyll-theme-mehdix-rtl
+
+permalink: :title.html
+timezone: Asia/Tehran
+paginate: 20
+paginate_path: /page:num/
+
+tag_page_layout: tag_page
+tag_page_dir: tag
+
+collections:
+  projects:
+    output: true
+
+comment_system: static
+# google_analytics_id: 
+# feedburner_id: 
+
+
+# Disqus Comments
+
+#disqus:
+#  shortname: mehranzr
+
+plugins:
+  - jekyll-jalali
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-hinduarabic
+  - jekyll-seo-tag
+  - jekyll-include-cache
