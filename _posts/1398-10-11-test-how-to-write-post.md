@@ -15,6 +15,6 @@ tags: وبلاگ جکیل هکر
 
 
 
-This is a test for writing post in farsi on github
+<dir= ltr>This is a test for writing post in farsi on github</ltr>
 
 let's see:)
