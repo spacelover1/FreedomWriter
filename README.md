@@ -1,15 +1,7 @@
-# peronalBlog
-My personal blog
-<h1 dir="rtl">
-صفحه‌ی گیت‌هاب وبلاگ شخصی من 
-</h1>
+# My Peronal Blog
 <p dir="rtl">
-توی این صفحه‌ی گیت‌هاب می‌تونین به کد منبع وبلاگ شخصی من که توی
+ 
 <a href="http://spacelover.net">
-این آدرس
+آدرس وبلاگ شخصی من
 </a>
- قرار داره دسترسی داشته باشین. 
-</p>
-
-<p dir="rtl">
 </p>
