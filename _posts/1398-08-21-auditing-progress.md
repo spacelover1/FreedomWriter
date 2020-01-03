@@ -1,6 +1,6 @@
 ---
 title:  معرفی کتاب- عادات اتمی (Atomic Habits) 
-category: general
+category: چالش
 tags: وبلاگ جکیل هکر
 ---
 
