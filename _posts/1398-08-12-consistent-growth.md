@@ -1,7 +1,7 @@
 ---
-title: روز دوم چالش: رشد پیوسته (Consistent Growth)
-category: general
-tags: وبلاگ جکیل چالش زندگی تعادل شادی رضایتمندی fulfillment
+title: روز دوم چالش- رشد پیوسته (Wheel of Life)
+category: چالش
+tags: وبلاگ جکیل چالش زندگی تعادل رشد توسعه رضایتمندی fulfillment
 ---
 
 
