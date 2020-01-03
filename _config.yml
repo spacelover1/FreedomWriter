@@ -4,13 +4,14 @@ author: زینب سلیمی
 email: spacelover1@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: http://spacelover.net # the base hostname & protocol for your site
-keywords: کامپیوتر برنامه‌نویسی پایتون تکنولوژی مهندسی ایران وب
+keywords:   هوش_مصنوعی علم_داده کامپیوتر برنامه‌نویسی پایتون تکنولوژی مهندسی ایران وب
 copyright: Commons Attribution 4.0 International
 description: >
     عاشق فضا
 
 long_description: > # this means to ignore newlines until "baseurl:"
-   ...........................................
+    عاشق فضا
+
 
 # twitter:
 #   username: 
@@ -21,7 +22,7 @@ github:
 favicon: assets/img/favicon.ico
 logo: assets/img/favicon.ico
 
-# theme: jekyll-theme-mehdix-rtl
+# theme: jekyll-theme-mehdix-rtl | https://github.com/mehdisadeghi/jekyll-theme-mehdix-rtl
 
 permalink: :title.html
 timezone: Asia/Tehran
