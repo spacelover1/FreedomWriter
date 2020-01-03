@@ -1,5 +1,5 @@
 ---
-title: روز اول چالش- چرخه حیات (Wheel of Life)
+title: روز دوم چالش: رشد پیوسته (Consistent Growth)
 category: general
 tags: وبلاگ جکیل چالش زندگی تعادل شادی رضایتمندی fulfillment
 ---
