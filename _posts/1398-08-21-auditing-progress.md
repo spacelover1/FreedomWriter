@@ -1,7 +1,7 @@
 ---
-title:  معرفی کتاب- عادات اتمی (Atomic Habits) 
+title: روز یازدهم چالش- بررسی پیشرفت (Auditing Progress)
 category: چالش
-tags: وبلاگ جکیل هکر
+tags:  چالش سلامت بررسی پیشرفت وبلاگ
 ---
 
 
