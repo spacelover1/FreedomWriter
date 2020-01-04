@@ -20,16 +20,16 @@ tags: وبلاگ جکیل هکر
 
 
 
-
+`
        Atomic habit: a regular practice or routine that is not only small and easy to do,
        but also the source of incredible power; 
        a component of the system of compound growth.
-
-
+`
+`
     Critical Lesson: Changes that seem small and unimportant at first 
     will compound into remarkable results if you're willing 
     to stick with them for years.
-
+`
     With the same habits, you'll end up with the same results. But with better habits, anything is POSSIBLE.
 
 
