@@ -11,27 +11,57 @@ tags: وبلاگ جکیل هکر
 
 
 
->      **Be the designer of your world and not merely the consumer of it.**
+>      Be the designer of your world and not merely the consumer of it.
 
 >      Atomic habit: a regular practice or routine that is not only small and easy to do,
 >      but also the source of incredible power;
 >      a component of the system of compound growth.
 
 >      Critical Lesson: Changes that seem small and unimportant at first
->      will compound into remarkable results 
+>      will compound into remarkable results
 >      if you're willing to stick with them for years.
 
->      With the same habits, you'll end up with the same results. 
+>      With the same habits, you'll end up with the same results.
 >      But with better habits, anything is POSSIBLE.
 
 >      The task of breaking a bad habit is like uprooting a powerful oak within us.
 >      And the task of building a good habit is like cultivating a delicate flower
 >      one day at a time.
+
+>      The more pride you have in a particular aspect of your identity,
+>      the more motivated you will be to maintain the habits associated with it.
+
+>      The more evidence you have for a belief, 
+>      the more strongly you will believe it.
+
+>      True behaviour change is identity change.
+
+>      Your bahaviours are usually a reflection of your identity.
+>      What you do is an indication of the type of person you believe that you are-
+>      either consciously or non consciously.
+
+>      The biggest barrier to positive change at any level - individual, team, society-
+>      is identity conflict. Good habits can make rational sense, but if they conflict
+>      with your identity, you will fail to put them into action.
+
+>      Becoming the best version of yourself requires you to continuously edit your
+>      beliefs, and to upgrade and expand your identity.
+
+>      Your identity is literally your "repeated beingness".
+
+>      Quite literally, you become your habits.
+
+>      Ask yourself "Who is the type of person that could get the outcome I want?"
+
+>      Building habits in the present allows you to do more of what you want
+>      in the future.
+
+>      The brain is continually scanning the environment,
+>      predicting what will happen next,
+>      trying out different responses,
+>      and learning from the results.
+
 >      
-
-
-
-
 
 
 
