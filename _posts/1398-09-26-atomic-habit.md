@@ -10,7 +10,15 @@ tags: وبلاگ جکیل هکر
 
 
 
-    Be the designer of your world and not merely the consumer of it.
+
+>      Be the designer of your world and not merely the consumer of it.
+
+>      Atomic habit: a regular practice or routine that is not only small and easy to do, but also the source of incredible power; a component of the system of compound growth.
+
+>      Critical Lesson: Changes that seem small and unimportant at first will compound into remarkable results if you're willing to stick with them for years.
+
+
+
 
     Atomic habit: a regular practice or routine that is not only small and easy to do, but also the source of incredible power; a component of the system of compound growth.
 
