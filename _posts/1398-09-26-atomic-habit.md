@@ -13,44 +13,13 @@ tags: وبلاگ جکیل هکر
 
 >      Be the designer of your world and not merely the consumer of it.
 
->      Atomic habit: a regular practice or routine that is not only small and easy to do,            >      but also the source of incredible power;
+>      Atomic habit: a regular practice or routine that is not only small and easy to do,
+>      but also the source of incredible power;
 >      a component of the system of compound growth.
 
->      Critical Lesson: Changes that seem small and unimportant at first will compound into remarkable results if you're willing to stick with them for years.
-
-
-
-`
-       Atomic habit: a regular practice or routine that is not only small and easy to do,
-       but also the source of incredible power; 
-       a component of the system of compound growth.
-`
-`
-    Critical Lesson: Changes that seem small and unimportant at first 
-    will compound into remarkable results if you're willing 
-    to stick with them for years.
-`
-    With the same habits, you'll end up with the same results. But with better habits, anything is POSSIBLE.
-
-
-    The task of breaking a bad habit is like uprooting a powerful oak within us. And the task of building a good habit is like cultivating a delicate flower one day at a time.
-
-    The more pride you have in a particular aspect of your identity, the more motivated you will be to maintain the habits associated with it.
-
-    The more evidence you have for a belief, the more strongly you will believe it.
-
-    test
-
-
-
-
-    > blockquote in code block
-
->      code block in bq
-
-
-
-
+>      Critical Lesson: Changes that seem small and unimportant at first
+>      will compound into remarkable results 
+>      if you're willing to stick with them for years.
 
 
 
