@@ -43,8 +43,8 @@ comment_system: static
 
 # Disqus Comments
 
-#disqus:
-#  shortname: mehranzr
+disqus:
+  shortname: zeinabsalimi 
 
 plugins:
   - jekyll-jalali
