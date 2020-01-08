@@ -3,7 +3,7 @@
  
 
 آدرس وبلاگ من  
-  <a href = "spacelover.net">
+  <a href = "http://spacelover.net/">
    spacelover.net
 </a>
 </p>
