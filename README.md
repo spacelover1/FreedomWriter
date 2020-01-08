@@ -2,11 +2,9 @@
 <p dir="rtl">
  
 
-آدرس وبلاگ شخصی من  
-
-</p>
-<p>
+آدرس وبلاگ من  
   <a href = "spacelover.net">
    spacelover.net
 </a>
 </p>
+
