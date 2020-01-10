@@ -1,7 +1,7 @@
 ---
 title: روز یازدهم چالش- بررسی پیشرفت (Auditing Progress)
 category: چالش
-tags:   سلامت وبلاگ چالش زندگی تعادل شادی رضایتمندی fulfillment 
+tags: وبلاگ چالش زندگی تعادل شادی رضایتمندی fulfillment 
 ---
 
 
