@@ -18,12 +18,14 @@ tags: وبلاگ جکیل زبان انگلیسی
 سعی کنید هر روز **<u>پادکست و کتاب صوتی گوش بدید</u>**. اپ که زیاد داره ولی خودم از npr one و podbean استفاده می کنم. می تونید پادکست های مورد علاقه تون رو در این اپ ها فالو کنید و هر وقت هر قسمتش منتشر بشه پیام میده و متوجه میشید. در ادامه یه سری پادکست هایی که گوش میدم رو معرفی می کنم.
 
 
-`The well woman show
-Self made CEO
-The well woman show
-The happiness lab with Dr. Laurie Santos
-Titanium Life with Arman Sadeghi
-Two guys on your head`
+
+    All Ears English
+    The well woman show
+    Self made CEO (Adriene Finch)
+    The well woman show
+    The happiness lab with Dr. Laurie Santos
+    Titanium Life with Arman Sadeghi
+    Two guys on your head  `
 
 
 موضوعات این پادکستا متفاوته، پادکست آموزش زبان زیاده ولی eslpodcast به نظرم خیلی خوبه و می تونید از طریق کانال تلگرام eslpodcast بهشون دسترسی داشته باشید.
