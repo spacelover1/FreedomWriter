@@ -1,7 +1,7 @@
 ---
 title: روز دوم چالش- رشد پیوسته (Consistent Growth)
 category: چالش
-tags: وبلاگ جکیل چالش زندگی تعادل رشد توسعه رضایتمندی fulfillment
+tags: وبلاگ چالش زندگی تعادل رشد توسعه رضایتمندی fulfillment
 ---
 
 
