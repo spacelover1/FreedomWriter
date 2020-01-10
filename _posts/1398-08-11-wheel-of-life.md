@@ -1,7 +1,7 @@
 ---
 title: روز اول چالش- چرخه حیات (Wheel of Life)
-category: general
-tags: وبلاگ جکیل چالش زندگی تعادل شادی رضایتمندی fulfillment
+category: چالش
+tags: وبلاگ چالش زندگی تعادل شادی رضایتمندی fulfillment
 ---
 
 
