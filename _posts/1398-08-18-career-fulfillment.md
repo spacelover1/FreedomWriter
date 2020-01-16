@@ -1,5 +1,5 @@
 ---
-title: روز هشتم چالش- رضایت شغلی (Wheel of Life)
+title: روز هشتم چالش- رضایت شغلی (Career Fulfillment)
 category: چالش
 tags:  شغل وبلاگ چالش زندگی تعادل شادی رضایتمندی fulfillment
 ---
