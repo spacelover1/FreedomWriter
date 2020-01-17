@@ -10,7 +10,7 @@ tags: وبلاگ چالش زندگی تعادل شادی رضایتمندی fulf
 ## تکنیک پاداش و جزا  (Carrot-and-Stick)
 
 {: .center}
-![Carrot-and-Stick](https://en.wikipedia.org/wiki/Carrot_and_stick#/media/File:Carrot_and_stick.svg)
+![Carrot-and-Stick](https://i.guim.co.uk/img/media/26c6e33db58023930682108bd38f7bd76090db9d/0_10_1023_614/master/1023.jpg?width=1920&quality=85&auto=format&fit=max&s=5ca24ce709a11ab6ae7fa55d0b194549)
 
 
 اصطلاح هویج و چوب از اینجا اومده که برای اینکه یه اسب کار کنه یه هویج جلوش می گذارید و اون باعث میشه که راه بره تا برسه به اون، یا میشه با چوب از پشت به اسبه ضربه بزنید تا مجبور شه به جلو حرکت کنه.<br>
