@@ -4,7 +4,8 @@ category: چالش
 tags: وبلاگ چالش زندگی تعادل شادی رضایتمندی fulfillment 
 ---
 
-    Fulfillment is the real score that matters in the game of life, but it is more elusive than other metrics of success.
+    Fulfillment is the real score that matters in the game of life, 
+    but it is more elusive than other metrics of success.
 
 رضایتمندی مهم ترین نقش را در بازی زندگی ایفا می کند.<br>
 موفقیت یک دانشه و رضایتمندی یک هنره. دانش موفق شدن رو میشه آموزش داد ولی هنر رضایتمندی (fulfillment) چیزیه که باید خودتون کشف کنید.<br>
