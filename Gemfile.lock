@@ -70,6 +70,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  gem "nokogiri", ">= 1.10.8"
   ffi (>= 1.9.24)
   jekyll (>= 3.8.4)
   jekyll-feed (~> 0.6)
