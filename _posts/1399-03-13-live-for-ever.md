@@ -33,3 +33,6 @@ tags: کامپیوتر زندگی_ابدی
 
     A: More than five years. I refuse to say anything beyond five years
     because I don’t think we can see much beyond five years.
+
+
+[منبع](https://www.macleans.ca/society/science/the-meaning-of-alphago-the-ai-program-that-beat-a-go-champ/)
