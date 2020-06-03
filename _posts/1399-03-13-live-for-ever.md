@@ -1,5 +1,5 @@
 ---
-title: جاویدان
+title: جاویدان با کامپیوتر
 category: general
 tags: کامپیوتر زندگی_ابدی
 ---
@@ -22,14 +22,14 @@ tags: کامپیوتر زندگی_ابدی
     in them as the brain. So in the brain, you have connections 
     between the neurons called synapses, and they can change. 
     All your knowledge is stored in those synapses. You have about
-     1,000-trillion synapses—10 to the 15, it’s a very big number. 
-     So that’s quite unlike the neural networks we have right now. 
-     They’re far, far smaller, the biggest ones we have right now 
-     have about a billion synapses. That’s about a million times 
-     smaller than the brain.” - Geoffrey Hinton Mar 18, 2016
+    1,000-trillion synapses—10 to the 15, it’s a very big number. 
+    So that’s quite unlike the neural networks we have right now. 
+    They’re far, far smaller, the biggest ones we have right now 
+    have about a billion synapses. That’s about a million times 
+    smaller than the brain.” - Geoffrey Hinton Mar 18, 2016
 
 
-    Do you dare predict a timeline for that?
+    Q: Do you dare predict a timeline for that?
 
     A: More than five years. I refuse to say anything beyond five years
     because I don’t think we can see much beyond five years.
