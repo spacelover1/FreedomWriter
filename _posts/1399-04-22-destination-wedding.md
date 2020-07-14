@@ -65,7 +65,12 @@ tags:  فیلم
     I consider it a triumph of the will, that there aren't 
     shallow graves dotting my backyard.
 
+-----------------------------------
 
+    "Do you want kids?"
+    "No, This is a horrible place to be. I'm already alive, I already know shit,
+    but unborn children and non the wiser deserved to be protected from certain things,
+    like being alive in the first place."
 
 
 
