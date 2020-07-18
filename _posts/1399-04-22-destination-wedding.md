@@ -22,7 +22,7 @@ tags:  فیلم
 
 -----------------------
 
-    "Some marriages workout."
+    "Some marriages work out."
     "Yes, and some people have six fingers"
 
 -----------------------------
@@ -61,7 +61,7 @@ tags:  فیلم
 --------------------------------------------
 
     If the parent-child bond is diseased, you have a better chance of 
-    a sociopath than of being well-adjusted. 
+    being a sociopath than of being well-adjusted. 
     I consider it a triumph of the will, that there aren't 
     shallow graves dotting my backyard.
 
