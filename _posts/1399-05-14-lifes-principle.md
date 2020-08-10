@@ -18,4 +18,3 @@ tags:   دلنوشته
 
 
     Smilers wear a crown, losers wear a frown.
-
