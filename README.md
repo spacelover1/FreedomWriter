@@ -1,4 +1,4 @@
-# My Peronal Blog
+# My Personal Blog
 <p dir="rtl">
  
 
