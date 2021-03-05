@@ -51,3 +51,13 @@ plugins:
   - jekyll-hinduarabic
   - jekyll-seo-tag
   - jekyll-include-cache
+  
+  
+  # Set default post layout
+defaults:
+-
+  scope:
+    path: ""
+    type: "posts"
+  values:
+    layout: "post"
