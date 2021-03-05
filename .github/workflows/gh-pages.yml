@@ -15,7 +15,7 @@ jobs:
       run: |
         echo "baseurl: /personalBlog" >> _config.yml
         echo "url: http://$GITHUB_ACTOR.github.io" >> _config.yml
-      with:
+      env:
          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
 
     - name: Remove Gemfile.lock
