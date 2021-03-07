@@ -6,19 +6,49 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: https://spacelover.ir  # the base hostname & protocol for your site
 keywords:    زندگی_در_ایران هوش_مصنوعی علم_داده کامپیوتر برنامه‌نویسی پایتون تکنولوژی مهندسی ایران وب
 copyright: Commons Attribution 4.0 International
+
 description: >
   
 long_description: > # this means to ignore newlines until "baseurl:"
                       هر چیزی به وقتش اتفاق میفته:)
+
+
+# The tiny icon of the website
+# favicon: assets/img/favicon.png
+
+
+paginate: 3
+paginate_path: /page:num/
+
+tag_page_layout: tag_page
+tag_page_dir: tag
+
+collections:
+  projects:
+    output: true
     
+    
+    
+# Set to `static` or `disqus`.
+comments:
+  enabled: true
+  type: static
+  recaptcha: false
+  static:
+    avatar:
+      visible: true
+  disqus:
+    # Used if the `comment_system` is set to `disqus`
+    shortname: ''
+    
+lang: fa_IR
+
 # twitter:
 #   username: 
 github:
   username: spacelover1
   repository: personalBlog
 
-favicon: assets/img/favicon.ico
-logo: assets/img/favicon.ico
 
 # theme: jekyll-theme-mehdix-rtl | https://github.com/mehdisadeghi/jekyll-theme-mehdix-rtl
 
