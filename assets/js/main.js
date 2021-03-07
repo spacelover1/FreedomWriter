@@ -1,4 +1,4 @@
-// This file contains JavaScript code required to display some bits on http://mehdix.ir
+// This file contains JavaScript code required to display some bits on https://spacelover.ir
 
 // main.js
 
