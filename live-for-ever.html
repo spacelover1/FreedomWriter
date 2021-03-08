@@ -50,39 +50,13 @@
     <h1 class="post-title">جاویدان با کامپیوتر</h1>
     <p>
       <i class="fas fa-calendar"></i>
-      سه‌شنبه ۱۳ خرداد ۱۳۹۹<br>
       
+      سه‌شنبه ۱۳ خرداد ۱۳۹۹<br>
+      <!--
+      ۲۰۲۰-۰۶-۰۲<br>
+      -->
       <i class="fas fa-stopwatch"></i>
-      <p>یکی از جملاتی که راس تو سریال Friends گفت:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>By the year ۲۰۳۰, there will be computers that can carry out 
-the same amount of functions as an actual human brain, 
-So, theoretically, you can download your thoughts and memories 
-into this computer and live forever as a machine." Nov - ۱۹۹۹
-</code></pre></div></div>
-
-<p>و این هم برگی از سخنان جفری هینتون:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"My belief is that we’re not going to get human-level abilities
-until we have systems that have the same number of parameters
-in them as the brain. So in the brain, you have connections 
-between the neurons called synapses, and they can change. 
-All your knowledge is stored in those synapses. You have about
-۱,۰۰۰-trillion synapses—۱۰ to the ۱۵, it’s a very big number. 
-So that’s quite unlike the neural networks we have right now. 
-They’re far, far smaller, the biggest ones we have right now 
-have about a billion synapses. That’s about a million times 
-smaller than the brain.” - Geoffrey Hinton Mar ۱۸, ۲۰۱۶
-
-
-Q: Do you dare predict a timeline for that?
-
-A: More than five years. I refuse to say anything beyond five years
-because I don’t think we can see much beyond five years.
-</code></pre></div></div>
-
-<p><a href="https://www.macleans.ca/society/science/the-meaning-of-alphago-the-ai-program-that-beat-a-go-champ/">منبع</a></p>
- دقیقه مطالعه
+       دقیقه مطالعه
     </p>
   </div>
 
@@ -145,28 +119,78 @@ because I don’t think we can see much beyond five years.
       <a rel="tag" href="زندگی_ابدی">زندگی_ابدی</a>
     
 
+    <br>
     <i class="fas fa-code"></i>
     
     
-    <a href="https://raw.githubusercontent.com/spacelover1/personalBlog/master/_posts/2020-06-02-live-for-ever.md">سورس</a>
+    <a href="https://raw.githubusercontent.com/spacelover1/personalBlog/master/_posts/2020-06-02-live-for-ever.md">سورس این پست رو می‌تونین از اینجا ببینین :)</a>
     
   </small>
 
   <nav class="pagination">
     
-      <a href="/radio-daal-podcast.html" class="pagination--pager" title="من و این چند روز و پادکست رادیو دال">قبلی</a>
+      <a href="https://spacelover.ir/anna.html" class="pagination--pager" title="فیلم Anna 2019">قبلی</a>
     
 
     
-      <a href="/anna.html" class="pagination--pager" title="فیلم Anna 2019">بعدی </a>
+      <a href="https://spacelover.ir/radio-daal-podcast.html" class="pagination--pager" title="من و این چند روز و پادکست رادیو دال">بعدی </a>
     
   </nav>
-
+<!--
   <section>
     
-  </section>
+      
+<section id="static-comments">
+  
+  
+  
 
+  <form id="comment-form" name="comment" netlify>
+    <input name="page_id" style="display:none" value="/live-for-ever">
+    <input id="reply-to" name="reply-to" style="display:none">
+    <label for="message">دیدگاه<sup class="required">*</sup> &nbsp;<small>می‌توانید با <a href="http://commonmark.org/help/" target="_">مارک‌داون</a> هم بنویسید.</small><br><small id="replyToVisualClue"></small>
+      <textarea id="message" name="message" required alt="no!!" onkeyup="preview()"></textarea>
+      <div id="preview"></div>
+    </label>
+    <label for="name">نام<sup class="required">*</sup>
+      <input id="name" type="text" name="name" required>
+    </label>
+    <label for="email">ایمیل<sup class="required">*</sup>
+      <input id="email" type="email" name="email" required>
+    </label>
+    <label for="website">وبسایت
+      <input id="website" type="url" name="website">
+    </label>
+    <div data-netlify-recaptcha></div>
+    <div style="text-align:left">
+      <button type="submit" class="button">ارسال</button>
+    </div>
+  </form>
+
+</section>
+<script src="https://spacelover.ir/assets/js/showdown.min.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+  function preview() {
+    var converter = new showdown.Converter();
+    var markdown = document.getElementById("message").value;
+    document.getElementById("preview").innerHTML = converter.makeHtml(markdown);
+  }
+
+  function replyTo(commentID) {
+    var comment = document.getElementById(commentID);
+    document.getElementById("reply-to").value = comment.querySelector("span[commentId]").innerText;
+    document.getElementById("replyToVisualClue").innerText = "[در جواب " + comment.querySelector("span[commenter]").innerText + "]";
+  }
+</script>
+    
+  </section>
+-->
 </article>
+
+
+
+
 </div>
     </main><footer>
 
@@ -209,7 +233,7 @@ because I don’t think we can see much beyond five years.
 
   </div>
 
-  <small id="build-time">Site generated on Mon, 08 Mar 2021 11:59:48 +0330</small>
+  <small id="build-time">Site generated on Mon, 08 Mar 2021 12:00:01 +0330</small>
 
 </footer>
 <script src="https://spacelover.ir/assets/js/main.js"></script>
