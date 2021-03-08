@@ -8,4 +8,5 @@ vendor
 __pycache__
 .jekyll-metadata
 env.sh
-gh.pages
+gh-pages
+gh-pages.pub
