@@ -1,6 +1,5 @@
 ---
 layout: default
-comments: true
 ---
 
 {% capture time %}{{ content | reading_time }}{% endcapture %}
@@ -11,10 +10,11 @@ comments: true
     <h1 class="post-title">{{ page.title }}</h1>
     <p>
       <i class="fas fa-calendar"></i>
-      {{ page.date | jdate: "%A %d %b %Y" | habify }}<br>      
+      {{ page.date | jdate: "%A %d %b %Y" | habify}}<br>
       
       <i class="fas fa-stopwatch"></i>
-      {{ page.timeToRead | habify }} دقیقه مطالعه    </p>
+      {{ time | habify }} دقیقه مطالعه
+    </p>
   </div>
 
   {{ content }}
@@ -36,64 +36,35 @@ comments: true
       <a rel="tag" href="{{ tag | tag_url  }}">{{tag}}</a>
     {% endfor %}
 
-    <br>
     <i class="fas fa-code"></i>
     {% assign slash = site.source | slice: 0 %}
     {% if slash == '/' %}
-    <a href="https://raw.githubusercontent.com/{{site.github.username}}/{{site.github.repository}}/master/{{ page.path }}">سورس این پست رو می‌تونین از اینجا ببینین :)</a>
+    <a href="https://raw.githubusercontent.com/{{site.github.username}}/{{site.github.repository}}/master/{{ page.path }}">سورس</a>
     {% else %}
-    <a href="https://raw.githubusercontent.com/{{site.github.username}}/{{site.github.repository}}/master/{{site.source}}/{{page.path}}">سورس این پست رو می‌تونین از اینجا ببینین :)</a>
+    <a href="https://raw.githubusercontent.com/{{site.github.username}}/{{site.github.repository}}/master/{{site.source}}/{{page.path}}">سورس</a>
     {% endif %}
   </small>
 
   <nav class="pagination">
     {% if page.next %}
-       <a href="{{ page.previous.url | absolute_url }}" class="pagination--pager" title="{{ page.previous.title }}">قبلی</a>
+      <a href="{{ page.next.url | relative_url }}" class="pagination--pager" title="{{ page.next.title }}">قبلی</a>
     {% else %}
       <a href="#" class="pagination--pager disabled">قبلی</a>
     {% endif %}
 
     {% if page.previous %}
-       <a href="{{ page.next.url | absolute_url }}" class="pagination--pager" title="{{ page.next.title }}">بعدی </a>
+      <a href="{{ page.previous.url | relative_url }}" class="pagination--pager" title="{{ page.previous.title }}">بعدی </a>
     {% else %}
       <a href="#" class="pagination--pager disabled">بعدی </a>
     {% endif %}
   </nav>
-<!--
+
   <section>
-     {% if site.comment_system == 'static' %}
-        {% include static_comments.html %}
-     {% elsif site.comment_system == 'disqus' %}
-        {% include disqus.html %}
+    {% if site.comments.type == 'static' %}
+      {% include static_comments.html %}
+    {% elsif site.comments.type == 'disqus' %}
+      {% include disqus.html %}
     {% endif %}
   </section>
--->
-</article>
 
-{% if site.disqus.shortname %}
-   <div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};*/
-
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://http-spacelover-net.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-  {% include disqus_comments.html %}
-
-{% endif %}
 </article>
