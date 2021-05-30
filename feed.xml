@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2021-04-25T13:36:31Z</updated>
+<updated>2021-05-30T14:24:43Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -11,6 +11,18 @@
   <email>spacelover1@gmail.com</email>
 </author>
 <rights>Commons Attribution 4.0 International</rights>
+
+  <entry>
+    <title>هر هفته، یک پست</title>
+    <link rel="alternate" type="text/html" href="https://spacelover.ir/write-every-week.html"/>
+    <id>urn:uuid:</id>
+    <updated>2021-05-30T00:00:00Z</updated>
+    <category term="نویسندگی"/><category term="هفته"/><category term="چالش"/>
+    <content type="html">
+      <![CDATA[<div dir="rtl"><p>تصمیم گرفتم که چهارشنبه هر هفته یک پست در این بلاگ یا <a href="https://spacelover1.github.io/">بلاگ انگلیسیم</a> بذارم. دیدم که بعضیا برای خودشون چالش روزانه نوشتن رو می ذارن ولی خب یا بعد یه مدت پشیمون شدن چون مطلب جدیدی برای نوشتن نداشتن یا اینکه وقتش رو نداشتن. یا یه مدت نوشتن و دیگه کلا یه مدت زیادی سراغی از بلاگ نگرفتن. برای اینکه مثل یک روهروی واقعی پیش برم فکر می کنم هفته ای یک پست خوب باشه.</p>
+</div>]]>
+    </content>
+  </entry>
 
   <entry>
     <title>با تمام قدرت ادامه بده!</title>
@@ -625,46 +637,6 @@ I had no intimacy that was the real reason i was able to speak so freely.
 
 <p>یه بحث دیگه هم اینکه خود سوئیسی ها خیلی بخونن همون کارشناسیه.</p>
 
-</div>]]>
-    </content>
-  </entry>
-
-  <entry>
-    <title>جاویدان با کامپیوتر</title>
-    <link rel="alternate" type="text/html" href="https://spacelover.ir/live-for-ever.html"/>
-    <id>urn:uuid:</id>
-    <updated>2020-06-02T00:00:00Z</updated>
-    <category term="کامپیوتر"/><category term="زندگی_ابدی"/>
-    <content type="html">
-      <![CDATA[<div dir="rtl"><p>یکی از جملاتی که راس تو سریال Friends گفت:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>By the year 2030, there will be computers that can carry out 
-the same amount of functions as an actual human brain, 
-So, theoretically, you can download your thoughts and memories 
-into this computer and live forever as a machine." Nov - 1999
-</code></pre></div></div>
-
-<p>و این هم برگی از سخنان جفری هینتون:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"My belief is that we’re not going to get human-level abilities
-until we have systems that have the same number of parameters
-in them as the brain. So in the brain, you have connections 
-between the neurons called synapses, and they can change. 
-All your knowledge is stored in those synapses. You have about
-1,000-trillion synapses—10 to the 15, it’s a very big number. 
-So that’s quite unlike the neural networks we have right now. 
-They’re far, far smaller, the biggest ones we have right now 
-have about a billion synapses. That’s about a million times 
-smaller than the brain.” - Geoffrey Hinton Mar 18, 2016
-
-
-Q: Do you dare predict a timeline for that?
-
-A: More than five years. I refuse to say anything beyond five years
-because I don’t think we can see much beyond five years.
-</code></pre></div></div>
-
-<p><a href="https://www.macleans.ca/society/science/the-meaning-of-alphago-the-ai-program-that-beat-a-go-champ/">منبع</a></p>
 </div>]]>
     </content>
   </entry>
