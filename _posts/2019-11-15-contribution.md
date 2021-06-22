@@ -1,5 +1,5 @@
 ---
-title: روز سیزدهم چالش- بخشش (Contribution)
+title: روز سیزدهم چالش- مشارکت (Contribution)
 category: چالش
 tags: وبلاگ چالش زندگی تعادل شادی رضایتمندی fulfillment 
 ---
