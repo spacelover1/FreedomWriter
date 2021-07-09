@@ -41,20 +41,14 @@ comments:
     # Used if the `comment_system` is set to `disqus`
     shortname: ''
     
-lang: fa_IR
 
-# twitter:
-#   username: 
-github:
-  username: spacelover1
-  repository: personalBlog
 
 
 # theme: jekyll-theme-mehdix-rtl | https://github.com/mehdisadeghi/jekyll-theme-mehdix-rtl
 
 permalink: :title.html
 timezone: Asia/Tehran
-paginate: 20
+paginate: 3
 paginate_path: /page:num/
 
 tag_page_layout: tag_page
@@ -82,7 +76,17 @@ plugins:
   - jekyll-seo-tag
   - jekyll-include-cache
   
+ # Footer stuff
+ lang: fa_IR
+
+# twitter:
+#   username: 
+github:
+  username: spacelover1
+  repository: personalBlog
   
+
+
   # Set default post layout
 defaults:
 -
