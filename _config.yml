@@ -85,24 +85,7 @@ github:
   username: spacelover1
   repository: personalBlog
   
- exclude:
-- scripts
-- cache
-- .bundle
-- reply-mail-hook
-- CONTRIBUTING.md
-- netlify.toml
-- LICENSE
-- env.sh
-- screenshot.png
-- jekyll-theme-mehdix-rtl.sublime-project
-- jekyll-theme-mehdix-rtl.sublime-workspace
-- travis.yml
-- jekyll-theme-mehdix-rtl.gemspec
-- rebuild_comments.py
-- README.md
-- renovate.json
-- '*.gem'
+
 
   # Set default post layout
 defaults:
