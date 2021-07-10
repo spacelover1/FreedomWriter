@@ -1,11 +1,11 @@
-﻿title: نویسنده آزاد  
+title: نویسنده آزاد  
 motto:  وبلاگ یک دختر ایرانی
 author: نویسنده 
 email: spacelover1@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://spacelover.ir  # the base hostname & protocol for your site
 keywords:    زندگی_در_ایران هوش_مصنوعی علم_داده کامپیوتر برنامه‌نویسی پایتون تکنولوژی مهندسی ایران وب
-copyright: Commons Attribution 4.0 International
+copyright: "Commons Attribution 4.0 International"
 
 description: >
   
@@ -16,8 +16,16 @@ long_description: > # this means to ignore newlines until "baseurl:"
 # The tiny icon of the website
 # favicon: assets/img/favicon.png
 
+github:
+  username: spacelover1
+  repository: personalBlog
+# favicon: assets/img/me.png
+# logo: assets/img/me.png
 
-paginate: 3
+permalink: :title:output_ext
+timezone: Asia/Tehran
+
+paginate: 20
 paginate_path: /page:num/
 
 tag_page_layout: tag_page
@@ -26,47 +34,33 @@ tag_page_dir: tag
 collections:
   projects:
     output: true
-    
-    
-    
-# Set to `static` or `disqus`.
+
 comments:
-  enabled: true
+  enabled: false
   type: static
-  recaptcha: false
   static:
     avatar:
       visible: true
-  disqus:
-    # Used if the `comment_system` is set to `disqus`
-    shortname: ''
-    
 
+defaults:
+- scope:
+    path: ""
+    type: "posts"
+  values:
+    layout: "post"
+- scope:
+    path: "projects"
+    type: "pages"
+  values:
+    layout: "project"
+- scope:
+    path: "tag"
+  values:
+    sitemap: false
 
-
-# theme: jekyll-theme-mehdix-rtl | https://github.com/mehdisadeghi/jekyll-theme-mehdix-rtl
-
-permalink: :title.html
-timezone: Asia/Tehran
-paginate: 3
-paginate_path: /page:num/
-
-tag_page_layout: tag_page
-tag_page_dir: tag
-
-collections:
-  projects:
-    output: true
-
-comment_system: static
-# google_analytics_id: 
-# feedburner_id: 
-
-
-# Disqus Comments
-
-#disqus:
-#  shortname:  
+navbar:
+  items:
+  - projects
 
 plugins:
   - jekyll-jalali
@@ -76,22 +70,3 @@ plugins:
   - jekyll-seo-tag
   - jekyll-include-cache
   
- # Footer stuff
- lang: fa_IR
-
-# twitter:
-#   username: 
-github:
-  username: spacelover1
-  repository: personalBlog
-  
-
-
-  # Set default post layout
-defaults:
--
-  scope:
-    path: ""
-    type: "posts"
-  values:
-    layout: "post"
