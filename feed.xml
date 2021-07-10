@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2021-07-10T16:04:48Z</updated>
+<updated>2021-07-10T21:26:40Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -11,6 +11,31 @@
   <email>spacelover1@gmail.com</email>
 </author>
 <rights>Commons Attribution 4.0 International</rights>
+
+  <entry>
+    <title>پردازش زبان طبیعی(NLP)- یک - خواندن فایل</title>
+    <link rel="alternate" type="text/html" href="https://spacelover.ir/nlp-one-read-file.html"/>
+    <id>urn:uuid:</id>
+    <updated>2021-07-10T00:00:00Z</updated>
+    <category term="nlp"/><category term="اموزش"/>
+    <content type="html">
+      <![CDATA[<div dir="rtl"><p>در چند سری پست آینده می خوام یک سری مبانی برنامه نویسی مربوط به پردازش زبان طبیعی رو توضیح بدم، کدها هم در <a href="https://github.com/spacelover1/NLP-with-Python"><u>این ریپو</u></a> قرار دارند. در این آموزش فرض شده که شما با مبانی پایتون یا حداقل برنامه نویسی آشنا هستید چون اینجا مبانی، مثل استفاده از لیست و دیگر نوع داده ها آموزش داده نمی شه.</p>
+
+<p>زبانی که در این سری استفاده می شه پایتونه، پس نیازه که پایتون رو نصب کنید. برای محیط برنامه نویسی هم می تونید از <a href="https://www.jetbrains.com/pycharm/download/#section=windows"><u>پایچارم</u></a> یا ژوپیتر استفاده کنید. برای استفاده از ژوپیتر باید <a href="https://docs.anaconda.com/anaconda/"><u>آناکوندا</u></a> رو نصب کنید. لینک سایت اصلی این برنامه ها رو هم قرار دادم که برای دانلود می تونید استفاده کنید. حتما دقت کنید که هر برنامه رو برای سیستم عامل خودتون دانلود کنید (خود این سایتت ها به صورت خودکار سیستم عامل رو شناسایی می کنند).</p>
+
+<p>خب شروع کنیم. تو این قسمت قراره یک فایل متنی رو بخونیم و یک سری مرتب سازی ها روش انجام بدیم. <br />
+فایلی که استفاده می شه در ریپویی که لینکش رو بالا گذاشتم موجوده. برای خوندن فایل باید اول با استفاده از تابع open() فایل رو باز کنیم.</p>
+
+<p><code class="language-plaintext highlighter-rouge">open()</code>
+    open()</p>
+
+<blockquote>
+  <p>open</p>
+</blockquote>
+
+</div>]]>
+    </content>
+  </entry>
 
   <entry>
     <title>چرا اینجا هستیم؟</title>
@@ -485,95 +510,6 @@ I feel like I exist for love
     <category term="دلنوشته"/>
     <content type="html">
       <![CDATA[<div dir="rtl">
-</div>]]>
-    </content>
-  </entry>
-
-  <entry>
-    <title>فیلم Destination Wedding</title>
-    <link rel="alternate" type="text/html" href="https://spacelover.ir/destination-wedding.html"/>
-    <id>urn:uuid:</id>
-    <updated>2020-07-12T00:00:00Z</updated>
-    <category term="فیلم"/>
-    <content type="html">
-      <![CDATA[<div dir="rtl"><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>How can we be allowed to feel so much for people 
-who don't feel anything for us?
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...,I got the gun out of his hand, hit him in the face with it, 
-broke his orbital bone.
-He begged me to kill him. 
-I wouldn't. Not because I didn't want to, 
-but because I didn't want to fuck up my life.
-I mean any more than it already was.
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I'm all fucked up, and I always will be.
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Some marriages work out."
-"Yes, and some people have six fingers"
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Don't you believe that there's someone for everyone?"
-"I believe that there's nobody for anyone."
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"I'd rather be strong and ruined than weak and ruined."
-"I'm not weak, I just have hope."
-"That's the same thing."
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"It's just very difficult for me to give myself over to any sort of 
-positive activity. It makes me think about how long I've gone without it. 
-Which makes me wanna kill myself."
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>People are ridiculous and pathetic, animals that's all. 
-We want to believe that there's some high-minded, 
-cosmic meaning behind love, but the truth is we drawn to, 
-and make most of our decisions based upon, shapes we find appealing, 
-and colors and textures, smell and taste and spatial relations.
-I mean there's nothing beautiful or transcendent about being human. 
-Ultimately, it's just a filthy business of a revolting species trying to survive.
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"I thought you hate life"
-"I do, but I'm gonna be dead for a long time, so there's no rush."
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>If the parent-child bond is diseased, you have a better chance of 
-being a sociopath than of being well-adjusted. 
-I consider it a triumph of the will, that there aren't 
-shallow graves dotting my backyard.
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Do you want kids?"
-"No, This is a horrible place to be. I'm already alive, I already know shit,
-but unborn children and non the wiser deserved to be protected from certain things,
-like being alive in the first place."
-</code></pre></div></div>
-
 </div>]]>
     </content>
   </entry>
