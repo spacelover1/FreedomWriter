@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2021-07-10T21:26:40Z</updated>
+<updated>2021-07-10T21:56:22Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -19,19 +19,40 @@
     <updated>2021-07-10T00:00:00Z</updated>
     <category term="nlp"/><category term="اموزش"/>
     <content type="html">
-      <![CDATA[<div dir="rtl"><p>در چند سری پست آینده می خوام یک سری مبانی برنامه نویسی مربوط به پردازش زبان طبیعی رو توضیح بدم، کدها هم در <a href="https://github.com/spacelover1/NLP-with-Python"><u>این ریپو</u></a> قرار دارند. در این آموزش فرض شده که شما با مبانی پایتون یا حداقل برنامه نویسی آشنا هستید چون اینجا مبانی، مثل استفاده از لیست و دیگر نوع داده ها آموزش داده نمی شه.</p>
+      <![CDATA[<div dir="rtl"><p>این پست رو با یک نقل قول شروع می کنم:
+    “Motivation often comes after starting, not before. Action produces momentum.”</p>
 
-<p>زبانی که در این سری استفاده می شه پایتونه، پس نیازه که پایتون رو نصب کنید. برای محیط برنامه نویسی هم می تونید از <a href="https://www.jetbrains.com/pycharm/download/#section=windows"><u>پایچارم</u></a> یا ژوپیتر استفاده کنید. برای استفاده از ژوپیتر باید <a href="https://docs.anaconda.com/anaconda/"><u>آناکوندا</u></a> رو نصب کنید. لینک سایت اصلی این برنامه ها رو هم قرار دادم که برای دانلود می تونید استفاده کنید. حتما دقت کنید که هر برنامه رو برای سیستم عامل خودتون دانلود کنید (خود این سایتت ها به صورت خودکار سیستم عامل رو شناسایی می کنند).</p>
+<p>در چند سری پست آینده می خوام یک سری مبانی برنامه نویسی مربوط به پردازش زبان طبیعی رو توضیح بدم، کدها هم در <a href="https://github.com/spacelover1/NLP-with-Python"><u>این ریپو</u></a> قرار دارند. در این آموزش فرض شده که شما با مبانی پایتون یا حداقل برنامه نویسی آشنا هستید چون اینجا مبانی، مثل استفاده از لیست و دیگر نوع داده ها آموزش داده نمی شه.</p>
+
+<p>زبانی که در این سری استفاده می شه پایتونه، پس نیازه که پایتون رو نصب کنید. برای محیط برنامه نویسی هم می تونید از <a href="https://www.jetbrains.com/pycharm/download/#section=windows"><u>پایچارم</u></a> یا ژوپیتر استفاده کنید. برای استفاده از ژوپیتر باید <a href="https://docs.anaconda.com/anaconda/"><u>آناکوندا</u></a> رو نصب کنید. لینک سایت اصلی این برنامه ها رو هم قرار دادم که برای دانلود می تونید استفاده کنید. حتما دقت کنید که هر برنامه رو برای سیستم عامل خودتون دانلود کنید (خود این سایت ها به صورت خودکار سیستم عامل رو شناسایی می کنند).</p>
 
 <p>خب شروع کنیم. تو این قسمت قراره یک فایل متنی رو بخونیم و یک سری مرتب سازی ها روش انجام بدیم. <br />
-فایلی که استفاده می شه در ریپویی که لینکش رو بالا گذاشتم موجوده. برای خوندن فایل باید اول با استفاده از تابع open() فایل رو باز کنیم.</p>
+فایلی که استفاده می شه در ریپویی که لینکش رو بالا گذاشتم موجوده. برای خوندن فایل باید اول با استفاده از تابع <code class="language-plaintext highlighter-rouge">open()</code> فایل رو باز کنیم و با تابع <code class="language-plaintext highlighter-rouge">read()</code> فایل باز شده رو می خونیم و محتواش رو در یک متغیر به اسم <code class="language-plaintext highlighter-rouge">raw_data</code> می نویسیم.</p>
 
-<p><code class="language-plaintext highlighter-rouge">open()</code>
-    open()</p>
+<p><code class="language-plaintext highlighter-rouge">raw_data = open('file_name').read()</code></p>
 
-<blockquote>
-  <p>open</p>
-</blockquote>
+<p>خب حالا باید ببینیم محتوای این <code class="language-plaintext highlighter-rouge">raw_data</code> به چه صورته تا ببینیم نیاز به مرتب سازی داره برای پردازش های بعدی یا نه. فایل رو اگر دیده باشید داده نه ساختاریافته نیست و خیلی هم بدون ساختار نیست، اول هر خط کلمه ham یا spam داره و بعد با یه تب فاصله یک متنی جلوش نوشته شده. بریم چند خط از فایل رو ببینیم:</p>
+
+<p><code class="language-plaintext highlighter-rouge">raw_data[0:500]</code></p>
+
+<p>بعد از اجرای این خط 500 کاراکتر اول فایل نمایش داده می شه. همون طور که می بینید محتوای فایل یک سری رشته است که کاراکترهایی مثل <code class="language-plaintext highlighter-rouge">\t</code> و <code class="language-plaintext highlighter-rouge">\n</code> داره. اولی فاصلی ای مه باتب ایجاد شده رو نشون می ده و دومی باعث می شه بره خط بعدی.
+خب ما الان می خوایم یکم داده رو مرتب کنیم، برای پردازش های بعدی. برای اینکار کاراکتر <code class="language-plaintext highlighter-rouge">\t</code> رو با <code class="language-plaintext highlighter-rouge">\n</code> جایگزین می کنیم و بعد با تابع <code class="language-plaintext highlighter-rouge">split</code> این رشته رو به لیست تبدیل می کنیم.</p>
+
+<p><code class="language-plaintext highlighter-rouge">parsed_data = raw_data.replace('\t','\n').split('\n')</code></p>
+
+<p>بریم ببینیم لیست مون چه شکلیه:</p>
+
+<p><code class="language-plaintext highlighter-rouge">parsed_data[:5]</code></p>
+
+<p>الان برچسب یا لیبل در خونه های با ایندکس زوج قرار داره و متن ایمیل در خونه های ایندکس فرد. حالا که یه نظمی تو ساختار ایجاد شده بریم هر کدوم رو تو لیست جدا بنویسیم:</p>
+
+<p><code class="language-plaintext highlighter-rouge">label_data = parsed_data[0::2]</code><br />
+<code class="language-plaintext highlighter-rouge">text_data = parsed_data[1::2]</code></p>
+
+<p>اولی لیست رو از خونه صفر می خونه و یکی درمیون مقادیر رو می ریزه تو لیست لیبلا، یعنی همون خونه های زوج. خط دوم از خونه یک میاد یکی در میون می خونه و باعث می شه خونه های فردو بخونه.<br />
+می تونیم این دو لیست رو ببینیم:</p>
+
+<p>``</p>
 
 </div>]]>
     </content>
