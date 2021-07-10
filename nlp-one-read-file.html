@@ -86,30 +86,32 @@
 
 <p>الان برچسب یا لیبل در خونه های با ایندکس زوج قرار داره و متن پیام در خونه های ایندکس فرد. حالا که یه نظمی تو ساختار ایجاد شده بریم هر کدوم رو تو لیست جدا بنویسیم:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>label_list  = parsed_data[۰::۲]&lt;br/&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>label_list  = parsed_data[۰::۲]
 text_list = parsed_data[۱::۲]
 </code></pre></div></div>
 
-<p>اولی لیست رو از خونه صفر می خونه و یکی درمیون مقادیر رو می ریزه تو لیست لیبلا، یعنی همون خونه های زوج. خط دوم از خونه یک میاد یکی در میون می خونه و باعث می شه خونه های فردو بخونه.<br />
+<p>اولی لیست رو از خونه صفر می خونه و یکی درمیون مقادیر رو می ریزه تو لیست لیبلا، یعنی همون خونه های زوج. خط دوم از خونه یک میاد یکی در میون می خونه و باعث می شه خونه های فرد رو بخونه.<br />
 می تونیم این دو لیست رو ببینیم و مطمئن شیم همونطور که می خواستیم شده. اینجا از تابع <code class="language-plaintext highlighter-rouge">print()</code> استفاده می کنیم چون در غیر اینصورت ژوپیتر فقط خروجی اخرین خط رو می ده.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(label_list[:۵])&lt;br/&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(label_list[:۵])
 print(text_list[:۵])
 </code></pre></div></div>
 
 <p>حالا باید این دو لیست رو یه جوری با هم ترکیب کنیم تا برای تحلیل های بعدی بتونیم ازشون استفاده کنیم. برای این کار از تابع <code class="language-plaintext highlighter-rouge">DataFrame()</code> پانداس استفاده می کنیم و در این دیتافریم یک دیکشنری می سازیم. بعد از ایمپورت کتابخونه می تونیم از توابعش استفاده کنیم:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import pandas as pd&lt;br/&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import pandas as pd
 full_corpus = DataFrame({'label': label_list, 'body': text_list})
 </code></pre></div></div>
 
 <p>احتمالا بعد از اجرای این خط کد اروری مشاهده می کنید که می گه ارایه ها باید طولشون یکسان باشه. بریم طول این دو لیست رو چک کنیم:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(len(label_list))&lt;br/&gt;
-print(len(text_list)) همون طور که می بینید طول لیست لیبل یه دونه بیشتر از متنه. بریم چند تا خونه اخر هر دو لیست رو ببینیم چه خبره: 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(len(label_list))
+print(len(text_list))
+</code></pre></div></div>
 
+<p>همون طور که می بینید طول لیست لیبل یه دونه بیشتر از متنه. بریم چند تا خونه اخر هر دو لیست رو ببینیم چه خبره:</p>
 
-label_list [-۵:]&lt;br/&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>label_list [-۵:]
 text_list[-۵:]
 </code></pre></div></div>
 
@@ -175,30 +177,32 @@ text_list[-۵:]
 
 <p>الان برچسب یا لیبل در خونه های با ایندکس زوج قرار داره و متن پیام در خونه های ایندکس فرد. حالا که یه نظمی تو ساختار ایجاد شده بریم هر کدوم رو تو لیست جدا بنویسیم:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>label_list  = parsed_data[0::2]&lt;br/&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>label_list  = parsed_data[0::2]
 text_list = parsed_data[1::2]
 </code></pre></div></div>
 
-<p>اولی لیست رو از خونه صفر می خونه و یکی درمیون مقادیر رو می ریزه تو لیست لیبلا، یعنی همون خونه های زوج. خط دوم از خونه یک میاد یکی در میون می خونه و باعث می شه خونه های فردو بخونه.<br />
+<p>اولی لیست رو از خونه صفر می خونه و یکی درمیون مقادیر رو می ریزه تو لیست لیبلا، یعنی همون خونه های زوج. خط دوم از خونه یک میاد یکی در میون می خونه و باعث می شه خونه های فرد رو بخونه.<br />
 می تونیم این دو لیست رو ببینیم و مطمئن شیم همونطور که می خواستیم شده. اینجا از تابع <code class="language-plaintext highlighter-rouge">print()</code> استفاده می کنیم چون در غیر اینصورت ژوپیتر فقط خروجی اخرین خط رو می ده.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(label_list[:5])&lt;br/&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(label_list[:5])
 print(text_list[:5])
 </code></pre></div></div>
 
 <p>حالا باید این دو لیست رو یه جوری با هم ترکیب کنیم تا برای تحلیل های بعدی بتونیم ازشون استفاده کنیم. برای این کار از تابع <code class="language-plaintext highlighter-rouge">DataFrame()</code> پانداس استفاده می کنیم و در این دیتافریم یک دیکشنری می سازیم. بعد از ایمپورت کتابخونه می تونیم از توابعش استفاده کنیم:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import pandas as pd&lt;br/&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import pandas as pd
 full_corpus = DataFrame({'label': label_list, 'body': text_list})
 </code></pre></div></div>
 
 <p>احتمالا بعد از اجرای این خط کد اروری مشاهده می کنید که می گه ارایه ها باید طولشون یکسان باشه. بریم طول این دو لیست رو چک کنیم:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(len(label_list))&lt;br/&gt;
-print(len(text_list)) همون طور که می بینید طول لیست لیبل یه دونه بیشتر از متنه. بریم چند تا خونه اخر هر دو لیست رو ببینیم چه خبره: 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(len(label_list))
+print(len(text_list))
+</code></pre></div></div>
 
+<p>همون طور که می بینید طول لیست لیبل یه دونه بیشتر از متنه. بریم چند تا خونه اخر هر دو لیست رو ببینیم چه خبره:</p>
 
-label_list [-5:]&lt;br/&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>label_list [-5:]
 text_list[-5:]
 </code></pre></div></div>
 
@@ -366,7 +370,7 @@ text_list[-5:]
 
   </div>
 
-  <small id="build-time">Site generated on Sat, 10 Jul 2021 23:21:49 +0430</small>
+  <small id="build-time">Site generated on Sat, 10 Jul 2021 23:26:35 +0430</small>
 
 </footer>
 <script src="https://spacelover.ir/assets/js/main.js"></script>
