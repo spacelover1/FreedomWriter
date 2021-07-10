@@ -19,8 +19,8 @@
 <meta property="og:title" content="پردازش زبان طبیعی(NLP)- یک - خواندن فایل" />
 <meta name="author" content="نویسنده" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="این پست رو با یک نقل قول شروع می کنم: “Motivation often comes after starting, not before. Action produces momentum.”" />
-<meta property="og:description" content="این پست رو با یک نقل قول شروع می کنم: “Motivation often comes after starting, not before. Action produces momentum.”" />
+<meta name="description" content="این پست رو با یک نقل قول شروع می کنم: &quot;Motivation often comes after starting, not before. Action produces momentum.&quot;" />
+<meta property="og:description" content="این پست رو با یک نقل قول شروع می کنم: &quot;Motivation often comes after starting, not before. Action produces momentum.&quot;" />
 <link rel="canonical" href="https://spacelover.ir/nlp-one-read-file.html" />
 <meta property="og:url" content="https://spacelover.ir/nlp-one-read-file.html" />
 <meta property="og:site_name" content="نویسنده آزاد" />
@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="پردازش زبان طبیعی(NLP)- یک - خواندن فایل" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"نویسنده"},"url":"https://spacelover.ir/nlp-one-read-file.html","@type":"BlogPosting","description":"این پست رو با یک نقل قول شروع می کنم: “Motivation often comes after starting, not before. Action produces momentum.”","headline":"پردازش زبان طبیعی(NLP)- یک - خواندن فایل","dateModified":"2021-07-10T00:00:00+04:30","datePublished":"2021-07-10T00:00:00+04:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://spacelover.ir/nlp-one-read-file.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"نویسنده"},"url":"https://spacelover.ir/nlp-one-read-file.html","@type":"BlogPosting","description":"این پست رو با یک نقل قول شروع می کنم: &quot;Motivation often comes after starting, not before. Action produces momentum.&quot;","headline":"پردازش زبان طبیعی(NLP)- یک - خواندن فایل","dateModified":"2021-07-10T00:00:00+04:30","datePublished":"2021-07-10T00:00:00+04:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://spacelover.ir/nlp-one-read-file.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -53,8 +53,10 @@
       شنبه ۱۹ تیر ۱۴۰۰<br>
       
 <!--       <i class="fas fa-stopwatch"></i>
-      <p>این پست رو با یک نقل قول شروع می کنم:
-    “Motivation often comes after starting, not before. Action produces momentum.”</p>
+      <p>این پست رو با یک نقل قول شروع می کنم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Motivation often comes after starting, not before. Action produces momentum."
+</code></pre></div></div>
 
 <p>در چند سری پست آینده می خوام یک سری مبانی برنامه نویسی مربوط به پردازش زبان طبیعی رو توضیح بدم، کدها هم در <a href="https://github.com/spacelover۱/NLP-with-Python"><u>این ریپو</u></a> قرار دارند. در این آموزش فرض شده که شما با مبانی پایتون یا حداقل برنامه نویسی آشنا هستید چون اینجا مبانی، مثل استفاده از لیست و دیگر نوع داده ها آموزش داده نمی شه.</p>
 
@@ -63,37 +65,119 @@
 <p>خب شروع کنیم. تو این قسمت قراره یک فایل متنی رو بخونیم و یک سری مرتب سازی ها روش انجام بدیم. <br />
 فایلی که استفاده می شه در ریپویی که لینکش رو بالا گذاشتم موجوده. برای خوندن فایل باید اول با استفاده از تابع <code class="language-plaintext highlighter-rouge">open()</code> فایل رو باز کنیم و با تابع <code class="language-plaintext highlighter-rouge">read()</code> فایل باز شده رو می خونیم و محتواش رو در یک متغیر به اسم <code class="language-plaintext highlighter-rouge">raw_data</code> می نویسیم.</p>
 
-<p><code class="language-plaintext highlighter-rouge">raw_data = open('file_name').read()</code></p>
+<div dir="rtl">
 
+`raw_data = open('file_name').read()`
+</div>
 <p>خب حالا باید ببینیم محتوای این <code class="language-plaintext highlighter-rouge">raw_data</code> به چه صورته تا ببینیم نیاز به مرتب سازی داره برای پردازش های بعدی یا نه. فایل رو اگر دیده باشید داده نه ساختاریافته نیست و خیلی هم بدون ساختار نیست، اول هر خط کلمه ham یا spam داره و بعد با یه تب فاصله یک متنی جلوش نوشته شده. بریم چند خط از فایل رو ببینیم:</p>
 
-<p><code class="language-plaintext highlighter-rouge">raw_data[۰:۵۰۰]</code></p>
+<div dir="rtl">
 
-<p>بعد از اجرای این خط ۵۰۰ کاراکتر اول فایل نمایش داده می شه. همون طور که می بینید محتوای فایل یک سری رشته است که کاراکترهایی مثل <code class="language-plaintext highlighter-rouge">\t</code> و <code class="language-plaintext highlighter-rouge">\n</code> داره. اولی فاصلی ای مه باتب ایجاد شده رو نشون می ده و دومی باعث می شه بره خط بعدی.
-خب ما الان می خوایم یکم داده رو مرتب کنیم، برای پردازش های بعدی. برای اینکار کاراکتر <code class="language-plaintext highlighter-rouge">\t</code> رو با <code class="language-plaintext highlighter-rouge">\n</code> جایگزین می کنیم و بعد با تابع <code class="language-plaintext highlighter-rouge">split</code> این رشته رو به لیست تبدیل می کنیم.</p>
+`raw_data[۰:۵۰۰]`
 
-<p><code class="language-plaintext highlighter-rouge">parsed_data = raw_data.replace('\t','\n').split('\n')</code></p>
+بعد از اجرای این خط ۵۰۰ کاراکتر اول فایل نمایش داده می شه. همون طور که می بینید محتوای فایل یک سری رشته است که کاراکترهایی مثل `\t` و `\n` داره. اولی فاصلی ای مه باتب ایجاد شده رو نشون می ده و دومی باعث می شه بره خط بعدی.
+خب ما الان می خوایم یکم داده رو مرتب کنیم، برای پردازش های بعدی. برای اینکار کاراکتر `\t` رو با `\n` جایگزین می کنیم و بعد با تابع `split` این رشته رو به لیست تبدیل می کنیم.
 
-<p>بریم ببینیم لیست مون چه شکلیه:</p>
+<div dir="rtl">
 
-<p><code class="language-plaintext highlighter-rouge">parsed_data[:۵]</code></p>
+`parsed_data = raw_data.replace('\t','\n').split('\n')`
 
-<p>الان برچسب یا لیبل در خونه های با ایندکس زوج قرار داره و متن ایمیل در خونه های ایندکس فرد. حالا که یه نظمی تو ساختار ایجاد شده بریم هر کدوم رو تو لیست جدا بنویسیم:</p>
+بریم ببینیم لیست مون چه شکلیه:
 
-<p><code class="language-plaintext highlighter-rouge">label_data = parsed_data[۰::۲]</code><br />
-<code class="language-plaintext highlighter-rouge">text_data = parsed_data[۱::۲]</code></p>
+<div dir="rtl">
 
-<p>اولی لیست رو از خونه صفر می خونه و یکی درمیون مقادیر رو می ریزه تو لیست لیبلا، یعنی همون خونه های زوج. خط دوم از خونه یک میاد یکی در میون می خونه و باعث می شه خونه های فردو بخونه.<br />
-می تونیم این دو لیست رو ببینیم:</p>
+`parsed_data[:۵]`
 
-<p>``</p>
+الان برچسب یا لیبل در خونه های با ایندکس زوج قرار داره و متن پیام در خونه های ایندکس فرد. حالا که یه نظمی تو ساختار ایجاد شده بریم هر کدوم رو تو لیست جدا بنویسیم:
 
+<div dir="rtl">
+
+`label_list  = parsed_data[۰::۲]`<br />
+`text_list = parsed_data[۱::۲]`
+
+اولی لیست رو از خونه صفر می خونه و یکی درمیون مقادیر رو می ریزه تو لیست لیبلا، یعنی همون خونه های زوج. خط دوم از خونه یک میاد یکی در میون می خونه و باعث می شه خونه های فردو بخونه.<br />
+می تونیم این دو لیست رو ببینیم و مطمئن شیم همونطور که می خواستیم شده. اینجا از تابع `print()` استفاده می کنیم چون در غیر اینصورت ژوپیتر فقط خروجی اخرین خط رو می ده.
+<div dir="rtl">
+
+`print(label_list[:۵])`<br />
+`print(text_list[:۵])`
+
+حالا باید این دو لیست رو یه جوری با هم ترکیب کنیم تا برای تحلیل های بعدی بتونیم ازشون استفاده کنیم. برای این کار از تابع `DataFrame()` پانداس استفاده می کنیم و در این دیتافریم یک دیکشنری می سازیم. بعد از ایمپورت کتابخونه می تونیم از توابعش استفاده کنیم:
+
+<div dir="rtl">
+
+`import pandas as pd`<br />
+`full_corpus = DataFrame({'label': label_list, 'body': text_list})`
+
+احتمالا بعد از اجرای این خط کد اروری مشاهده می کنید که می گه ارایه ها باید طولشون یکسان باشه. بریم طول این دو لیست رو چک کنیم:
+
+<div dir="rtl">
+
+`print(len(label_list))`<br />
+`print(len(text_list))`
+همون طور که می بینید طول لیست لیبل یه دونه بیشتر از متنه. بریم چند تا خونه اخر هر دو لیست رو ببینیم چه خبره: 
+
+<div dir="rtl">
+
+`label_list [-۵:]`<br />
+`text_list[-۵:]`
+
+خونه اخر لیست لیبلا یه خونه خالیه. پس وقتی این لیست رو می خونیم، خونه اخر رو باید نادیده بگیریم:
+
+<div dir="rtl">
+
+`full_corpus = DataFrame({'label': label_list[:-۱], 'body': text_list})`
+
+ببینیم دیتافریم مون چه شکلیه:
+
+<div dir="rtl">
+
+`full_corpus.head()`
+
+خب الان دیتامون یکم ساختار پیدا کرده و نسبت به اول خوانایی بهتری داره. <br />
+همون اول که نگاهی به داده انداختیم و `\t` رو دیدیم باید متوجه شیم که این یک فایلیه که عناصرش با تب از هم جدا شدن. برای خوندن این فایل ها می تونیم از تابع `read_csv` استفاده کنیم، مقدار هدر رو هم در اینجا `None` قرار می دیم چون در فایل اصلی ردیفی برای عنوان ستون وجود نداره.
+
+<div dir="rtl">
+
+`dataset = read_csv('file_name', sep="\t", header=None)`
+
+برای مشاهده هم می تونیم از تابع `head()` استفاده کنیم:
+
+<div dir="rtl">
+
+`dataset.head()`
+
+همونطور که می بینید دیگه ردیف اولی برای عنوان ستون ها وجود نداره.
+
+در این قسمت یاد گرفتیم که یک دیتاست متنی رو چطوری بخونیم و برای تحلیل های بعدی مرتبش کنیم.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div>
  دقیقه مطالعه -->
     </p>
   </div>
 
-  <p>این پست رو با یک نقل قول شروع می کنم:
-    “Motivation often comes after starting, not before. Action produces momentum.”</p>
+  <p>این پست رو با یک نقل قول شروع می کنم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Motivation often comes after starting, not before. Action produces momentum."
+</code></pre></div></div>
 
 <p>در چند سری پست آینده می خوام یک سری مبانی برنامه نویسی مربوط به پردازش زبان طبیعی رو توضیح بدم، کدها هم در <a href="https://github.com/spacelover1/NLP-with-Python"><u>این ریپو</u></a> قرار دارند. در این آموزش فرض شده که شما با مبانی پایتون یا حداقل برنامه نویسی آشنا هستید چون اینجا مبانی، مثل استفاده از لیست و دیگر نوع داده ها آموزش داده نمی شه.</p>
 
@@ -102,31 +186,111 @@
 <p>خب شروع کنیم. تو این قسمت قراره یک فایل متنی رو بخونیم و یک سری مرتب سازی ها روش انجام بدیم. <br />
 فایلی که استفاده می شه در ریپویی که لینکش رو بالا گذاشتم موجوده. برای خوندن فایل باید اول با استفاده از تابع <code class="language-plaintext highlighter-rouge">open()</code> فایل رو باز کنیم و با تابع <code class="language-plaintext highlighter-rouge">read()</code> فایل باز شده رو می خونیم و محتواش رو در یک متغیر به اسم <code class="language-plaintext highlighter-rouge">raw_data</code> می نویسیم.</p>
 
-<p><code class="language-plaintext highlighter-rouge">raw_data = open('file_name').read()</code></p>
+<div dir="rtl">
 
+`raw_data = open('file_name').read()`
+</div>
 <p>خب حالا باید ببینیم محتوای این <code class="language-plaintext highlighter-rouge">raw_data</code> به چه صورته تا ببینیم نیاز به مرتب سازی داره برای پردازش های بعدی یا نه. فایل رو اگر دیده باشید داده نه ساختاریافته نیست و خیلی هم بدون ساختار نیست، اول هر خط کلمه ham یا spam داره و بعد با یه تب فاصله یک متنی جلوش نوشته شده. بریم چند خط از فایل رو ببینیم:</p>
 
-<p><code class="language-plaintext highlighter-rouge">raw_data[0:500]</code></p>
+<div dir="rtl">
 
-<p>بعد از اجرای این خط 500 کاراکتر اول فایل نمایش داده می شه. همون طور که می بینید محتوای فایل یک سری رشته است که کاراکترهایی مثل <code class="language-plaintext highlighter-rouge">\t</code> و <code class="language-plaintext highlighter-rouge">\n</code> داره. اولی فاصلی ای مه باتب ایجاد شده رو نشون می ده و دومی باعث می شه بره خط بعدی.
-خب ما الان می خوایم یکم داده رو مرتب کنیم، برای پردازش های بعدی. برای اینکار کاراکتر <code class="language-plaintext highlighter-rouge">\t</code> رو با <code class="language-plaintext highlighter-rouge">\n</code> جایگزین می کنیم و بعد با تابع <code class="language-plaintext highlighter-rouge">split</code> این رشته رو به لیست تبدیل می کنیم.</p>
+`raw_data[0:500]`
 
-<p><code class="language-plaintext highlighter-rouge">parsed_data = raw_data.replace('\t','\n').split('\n')</code></p>
+بعد از اجرای این خط 500 کاراکتر اول فایل نمایش داده می شه. همون طور که می بینید محتوای فایل یک سری رشته است که کاراکترهایی مثل `\t` و `\n` داره. اولی فاصلی ای مه باتب ایجاد شده رو نشون می ده و دومی باعث می شه بره خط بعدی.
+خب ما الان می خوایم یکم داده رو مرتب کنیم، برای پردازش های بعدی. برای اینکار کاراکتر `\t` رو با `\n` جایگزین می کنیم و بعد با تابع `split` این رشته رو به لیست تبدیل می کنیم.
 
-<p>بریم ببینیم لیست مون چه شکلیه:</p>
+<div dir="rtl">
 
-<p><code class="language-plaintext highlighter-rouge">parsed_data[:5]</code></p>
+`parsed_data = raw_data.replace('\t','\n').split('\n')`
 
-<p>الان برچسب یا لیبل در خونه های با ایندکس زوج قرار داره و متن ایمیل در خونه های ایندکس فرد. حالا که یه نظمی تو ساختار ایجاد شده بریم هر کدوم رو تو لیست جدا بنویسیم:</p>
+بریم ببینیم لیست مون چه شکلیه:
 
-<p><code class="language-plaintext highlighter-rouge">label_data = parsed_data[0::2]</code><br />
-<code class="language-plaintext highlighter-rouge">text_data = parsed_data[1::2]</code></p>
+<div dir="rtl">
 
-<p>اولی لیست رو از خونه صفر می خونه و یکی درمیون مقادیر رو می ریزه تو لیست لیبلا، یعنی همون خونه های زوج. خط دوم از خونه یک میاد یکی در میون می خونه و باعث می شه خونه های فردو بخونه.<br />
-می تونیم این دو لیست رو ببینیم:</p>
+`parsed_data[:5]`
 
-<p>``</p>
+الان برچسب یا لیبل در خونه های با ایندکس زوج قرار داره و متن پیام در خونه های ایندکس فرد. حالا که یه نظمی تو ساختار ایجاد شده بریم هر کدوم رو تو لیست جدا بنویسیم:
 
+<div dir="rtl">
+
+`label_list  = parsed_data[0::2]`<br />
+`text_list = parsed_data[1::2]`
+
+اولی لیست رو از خونه صفر می خونه و یکی درمیون مقادیر رو می ریزه تو لیست لیبلا، یعنی همون خونه های زوج. خط دوم از خونه یک میاد یکی در میون می خونه و باعث می شه خونه های فردو بخونه.<br />
+می تونیم این دو لیست رو ببینیم و مطمئن شیم همونطور که می خواستیم شده. اینجا از تابع `print()` استفاده می کنیم چون در غیر اینصورت ژوپیتر فقط خروجی اخرین خط رو می ده.
+<div dir="rtl">
+
+`print(label_list[:5])`<br />
+`print(text_list[:5])`
+
+حالا باید این دو لیست رو یه جوری با هم ترکیب کنیم تا برای تحلیل های بعدی بتونیم ازشون استفاده کنیم. برای این کار از تابع `DataFrame()` پانداس استفاده می کنیم و در این دیتافریم یک دیکشنری می سازیم. بعد از ایمپورت کتابخونه می تونیم از توابعش استفاده کنیم:
+
+<div dir="rtl">
+
+`import pandas as pd`<br />
+`full_corpus = DataFrame({'label': label_list, 'body': text_list})`
+
+احتمالا بعد از اجرای این خط کد اروری مشاهده می کنید که می گه ارایه ها باید طولشون یکسان باشه. بریم طول این دو لیست رو چک کنیم:
+
+<div dir="rtl">
+
+`print(len(label_list))`<br />
+`print(len(text_list))`
+همون طور که می بینید طول لیست لیبل یه دونه بیشتر از متنه. بریم چند تا خونه اخر هر دو لیست رو ببینیم چه خبره: 
+
+<div dir="rtl">
+
+`label_list [-5:]`<br />
+`text_list[-5:]`
+
+خونه اخر لیست لیبلا یه خونه خالیه. پس وقتی این لیست رو می خونیم، خونه اخر رو باید نادیده بگیریم:
+
+<div dir="rtl">
+
+`full_corpus = DataFrame({'label': label_list[:-1], 'body': text_list})`
+
+ببینیم دیتافریم مون چه شکلیه:
+
+<div dir="rtl">
+
+`full_corpus.head()`
+
+خب الان دیتامون یکم ساختار پیدا کرده و نسبت به اول خوانایی بهتری داره. <br />
+همون اول که نگاهی به داده انداختیم و `\t` رو دیدیم باید متوجه شیم که این یک فایلیه که عناصرش با تب از هم جدا شدن. برای خوندن این فایل ها می تونیم از تابع `read_csv` استفاده کنیم، مقدار هدر رو هم در اینجا `None` قرار می دیم چون در فایل اصلی ردیفی برای عنوان ستون وجود نداره.
+
+<div dir="rtl">
+
+`dataset = read_csv('file_name', sep="\t", header=None)`
+
+برای مشاهده هم می تونیم از تابع `head()` استفاده کنیم:
+
+<div dir="rtl">
+
+`dataset.head()`
+
+همونطور که می بینید دیگه ردیف اولی برای عنوان ستون ها وجود نداره.
+
+در این قسمت یاد گرفتیم که یک دیتاست متنی رو چطوری بخونیم و برای تحلیل های بعدی مرتبش کنیم.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div></div></div></div></div></div>
 
 
   
@@ -266,7 +430,7 @@
 
   </div>
 
-  <small id="build-time">Site generated on Sat, 10 Jul 2021 21:56:22 +0430</small>
+  <small id="build-time">Site generated on Sat, 10 Jul 2021 23:12:51 +0430</small>
 
 </footer>
 <script src="https://spacelover.ir/assets/js/main.js"></script>
