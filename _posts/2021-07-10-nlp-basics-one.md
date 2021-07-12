@@ -161,9 +161,16 @@ tags:    nlp اموزش
 حرف کوچک w رو اینجا استفاده کردیم. یعنی کاراکترهای کلمه رو جدا کن.
 
 
-کدهای بخش سوم [<u>اینجا</u>](https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/03-RegEx.ipynb) قرار دارند.
+کدهای بخش سوم [<u>اینجا</u>](https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/03-RegEx.ipynb) قرار دارند.<br/>
+یک کار دیگه ای که می شه با این عبارات با قاعده انجام داد اینه که کلماتی که املاشون اشتباه نوشته شده در یک متن رو پیدا کرد و با مقدار درستش جایگزین کرد. مثال این مورد رو می تونید در [اینجا](https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/04-RegEx1.ipynb) مشاهده کنید.
 
 
+### بخش چهارم: 
+
+
+
+
+کدهای بخش چهارم [<u>اینجا</u>]() قرار دارند.
 
 
 
