@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2021-07-12T19:10:15Z</updated>
+<updated>2021-07-12T21:40:30Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -187,7 +187,12 @@ messy_text1 = "This-is-a''''made-up/string-+to*****test-2 &gt;&gt;&gt;&gt;&gt;&g
 
 <p>حرف کوچک w رو اینجا استفاده کردیم. یعنی کاراکترهای کلمه رو جدا کن.</p>
 
-<p>کدهای بخش سوم <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/03-RegEx.ipynb"><u>اینجا</u></a> قرار دارند.</p>
+<p>کدهای بخش سوم <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/03-RegEx.ipynb"><u>اینجا</u></a> قرار دارند.<br />
+یک کار دیگه ای که می شه با این عبارات با قاعده انجام داد اینه که کلماتی که املاشون اشتباه نوشته شده در یک متن رو پیدا کرد و با مقدار درستش جایگزین کرد. مثال این مورد رو می تونید در <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/04-RegEx1.ipynb">اینجا</a> مشاهده کنید.</p>
+
+<h3 id="بخش-چهارم">بخش چهارم:</h3>
+
+<p>کدهای بخش چهارم <a href=""><u>اینجا</u></a> قرار دارند.</p>
 
 </div>]]>
     </content>
