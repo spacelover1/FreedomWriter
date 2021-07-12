@@ -68,7 +68,7 @@
 
 <p>زبانی که در این سری استفاده می شه پایتونه، پس نیازه که پایتون رو نصب کنید. برای محیط برنامه نویسی هم می تونید از <a href="https://www.jetbrains.com/pycharm/download/#section=windows"><u>پایچارم</u></a> یا ژوپیتر استفاده کنید. برای استفاده از ژوپیتر باید <a href="https://docs.anaconda.com/anaconda/"><u>آناکوندا</u></a> رو نصب کنید. لینک سایت اصلی این برنامه ها رو هم قرار دادم که برای دانلود می تونید استفاده کنید. حتما دقت کنید که هر برنامه رو برای سیستم عامل خودتون دانلود کنید (خود این سایت ها به صورت خودکار سیستم عامل رو شناسایی می کنند).</p>
 
-<h۳ id="بخش-اول">بخش اول</h۳>
+<h۳ id="بخش-اول-خواندن-فایل">بخش اول: خواندن فایل</h۳>
 
 <p>خب شروع کنیم. تو این قسمت قراره یک فایل متنی رو بخونیم و یک سری مرتب سازی ها روش انجام بدیم. اول یک با دیتاست بازی می کنیم تا  یکسری اطلاعات از دیتاست دستمون بیاد و بعد یک روش ساده برای خوندن این دیتاست معرفی می کنیم. <br /> 
 فایلی که استفاده می شه در ریپویی که لینکش رو بالا گذاشتم موجوده. برای خوندن فایل باید اول با استفاده از تابع <code class="language-plaintext highlighter-rouge">open()</code> فایل رو باز کنیم و با تابع <code class="language-plaintext highlighter-rouge">read()</code> فایل باز شده رو می خونیم و محتواش رو در یک متغیر به اسم <code class="language-plaintext highlighter-rouge">raw_data</code> می نویسیم.</p>
@@ -150,7 +150,7 @@ text_list[-۵:]
 <p>در این بخش یاد گرفتیم که یک دیتاست متنی رو چطوری بخونیم و برای تحلیل های بعدی مرتبش کنیم.
 کدهای بخش اول رو از <a href="https://github.com/spacelover۱/NLP-with-Python/blob/main/۱-Basics/۰۱-read_file.ipynb"><u>اینجا</u></a> می تونید ببینید.</p>
 
-<h۳ id="بخش-دوم">بخش دوم</h۳>
+<h۳ id="بخش-دوم-بررسی-دیتاست">بخش دوم: بررسی دیتاست</h۳>
 
 <p>بخش قبل یاد گرفتیم که چطور دیتا رو به روش پیچیده بخونیم تا با یک سری از ابزارهای تغییر در متن آشنا شیم و در آخر روش ساده رو یاد گرفتیم:</p>
 
@@ -185,6 +185,44 @@ print("Number of null in body: {}".format(dataset['body'].isnull().sum()))
 
 <p>کدهای بخش دوم رو از <a href="https://github.com/spacelover۱/NLP-with-Python/blob/main/۱-Basics/۰۲-Exploring%۲۰Dataset.ipynb"><u>اینجا</u></a> می تونید ببینید.</p>
 
+<h۳ id="بخش-سوم-عبارات-منظم">بخش سوم: عبارات منظم</h۳>
+
+<p>دلیل اصلی یاد گرفتن عبارات با قاعده اینه که بتونیم جمله رو tokenize کنیم یا به عبارتی کلمه های جمله رو از هم جدا کنیم که پایتون بدونه که دنبال چی بگرده. گاهی اوقات لازمه که یک الگوی خاصی از کاراکترها رو در یک رشته متن پیدا کنیم، این کار به راحتی با عبارات با قاعده قابل انجامه. البته خیلی راحتم نه :) چون روش هایی که برای تشخیص این الگوها وجود داره خیلی گسترده است ولی یک سری موارد کلی رو اگر یاد بگیرید و تمرین کنید براتون راحت می شه. از <a href="https://docs.python.org/۳/library/re.html">داکیومنت عبارات با قاعده در پایتون</a> هم می تونید استفاده کنید.</p>
+
+<p>در اینجا دو روش رو یاد می گیریم. برای تست این دو روش یک متن رو به سه حالت نوشتم و قراره که کلمه ها رو از هم جدا کنیم.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import re
+text = "This is a made up string to test ۲ different regex methods"
+messy_text = "This            is a made up string to              test ۲   different regex methods"
+messy_text۱ = "This-is-a''''made-up/string-+to*****test-۲ &gt;&gt;&gt;&gt;&gt;&gt;-different.regex-methods"
+</code></pre></div></div>
+
+<p>برای اینکه بتونیم از این عبارات با قاعده در پایتون استفاده کنیم باید کتابخونه ش رو ایمپورت کنیم. <br />
+کلمات جمله اول با فاصله از هم جدا شدند پس یه الگو به دست اومد، می تونیم هر جا کاراکتر فاصله بود تشخیص بدیم و کلمات رو از هم جدا کنیم. با استفاده از تابع <code class="language-plaintext highlighter-rouge">split()</code> و ‘\s’ به کوچک و بزرگ بودن حروف دقت کنید، چون هر کدوم معنی خاصی دارند. در اینجا حرف کوچک s یعنی از نقاطی که کاراکتر فاصله وجود داره کلمات رو جدا کن.
+    re.split(‘\s’, ‘text’)</p>
+
+<p>اگر همین کد رو روی متن دوم اجرا کنیم جوابی که می خوایم رو نمی گیریم، چون بیشتر از یک کاراکتر فاصله بین بعضی کلمات وجود داره. پس از ‘\s+’ استفاده می کنیم. این یعنی یک فاصله یا بیشتر اگر بین کلمات بود حذف کن.
+    re.split(‘\s+’, ‘messy_text’)</p>
+
+<p>برای متن سوم هیچ کدوم از راه حلای بالا جواب نمی ده. و باید از راه دیگه ای بریم. اینجا به غیر از کاراکتر فاصله، کاراکترهای دیگه ای هم وجود داره. پس می تونیم بیاییم بگیم هر کاراکتر غیر کلمه ای رو حذف کن. و علامت + رو هم می ذاریم چون کاراکترهای غیرکلمه بیشتر از یکبار تکرار شدن بین هر کلمه.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>re.split('\W+', 'messy_text۱')
+</code></pre></div></div>
+
+<p>کاری که تا الان انجام می دادیم این بود که بیاییم هر چی غیر از کلمه است رو جدا می کردیم تا کلمه ها جدا شن. یه راه دیگه برای جداسازی کلمات اینه که بیاییم مستقیم کلمه ها رو پیدا کنیم. برای این کار از تابع <code class="language-plaintext highlighter-rouge">findall()</code> استفاده می کنیم.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>re.findall('\S+', text)
+</code></pre></div></div>
+
+<p>در کد بالا از حرف بزرگ S استفاده کردیم. گفتیم هر چی غیر کاراکتر فاصله. که این روش دوباره روی متن سوم جواب نمیده. که می تونیم از روش زیر به جای این استفاده کنیم.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>re.findall('\w+', 'messy_text۱')
+</code></pre></div></div>
+
+<p>حرف کوچک w رو اینجا استفاده کردیم. یعنی کاراکترهای کلمه رو جدا کن.</p>
+
+<p>کدهای بخش سوم <a href="https://github.com/spacelover۱/NLP-with-Python/blob/main/۱-Basics/۰۳-RegEx.ipynb"><u>اینجا</u></a> قرار دارند.</p>
+
  دقیقه مطالعه -->
     </p>
   </div>
@@ -204,7 +242,7 @@ print("Number of null in body: {}".format(dataset['body'].isnull().sum()))
 
 <p>زبانی که در این سری استفاده می شه پایتونه، پس نیازه که پایتون رو نصب کنید. برای محیط برنامه نویسی هم می تونید از <a href="https://www.jetbrains.com/pycharm/download/#section=windows"><u>پایچارم</u></a> یا ژوپیتر استفاده کنید. برای استفاده از ژوپیتر باید <a href="https://docs.anaconda.com/anaconda/"><u>آناکوندا</u></a> رو نصب کنید. لینک سایت اصلی این برنامه ها رو هم قرار دادم که برای دانلود می تونید استفاده کنید. حتما دقت کنید که هر برنامه رو برای سیستم عامل خودتون دانلود کنید (خود این سایت ها به صورت خودکار سیستم عامل رو شناسایی می کنند).</p>
 
-<h3 id="بخش-اول">بخش اول</h3>
+<h3 id="بخش-اول-خواندن-فایل">بخش اول: خواندن فایل</h3>
 
 <p>خب شروع کنیم. تو این قسمت قراره یک فایل متنی رو بخونیم و یک سری مرتب سازی ها روش انجام بدیم. اول یک با دیتاست بازی می کنیم تا  یکسری اطلاعات از دیتاست دستمون بیاد و بعد یک روش ساده برای خوندن این دیتاست معرفی می کنیم. <br /> 
 فایلی که استفاده می شه در ریپویی که لینکش رو بالا گذاشتم موجوده. برای خوندن فایل باید اول با استفاده از تابع <code class="language-plaintext highlighter-rouge">open()</code> فایل رو باز کنیم و با تابع <code class="language-plaintext highlighter-rouge">read()</code> فایل باز شده رو می خونیم و محتواش رو در یک متغیر به اسم <code class="language-plaintext highlighter-rouge">raw_data</code> می نویسیم.</p>
@@ -286,7 +324,7 @@ text_list[-5:]
 <p>در این بخش یاد گرفتیم که یک دیتاست متنی رو چطوری بخونیم و برای تحلیل های بعدی مرتبش کنیم.
 کدهای بخش اول رو از <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/01-read_file.ipynb"><u>اینجا</u></a> می تونید ببینید.</p>
 
-<h3 id="بخش-دوم">بخش دوم</h3>
+<h3 id="بخش-دوم-بررسی-دیتاست">بخش دوم: بررسی دیتاست</h3>
 
 <p>بخش قبل یاد گرفتیم که چطور دیتا رو به روش پیچیده بخونیم تا با یک سری از ابزارهای تغییر در متن آشنا شیم و در آخر روش ساده رو یاد گرفتیم:</p>
 
@@ -320,6 +358,44 @@ print("Number of null in body: {}".format(dataset['body'].isnull().sum()))
 وقتی بعد از <code class="language-plaintext highlighter-rouge">isnull()</code> تابع <code class="language-plaintext highlighter-rouge">sum()</code> رو میاریم یعنی تعداد کل ریف هایی که لیبل ندارن رو بده.</p>
 
 <p>کدهای بخش دوم رو از <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/02-Exploring%20Dataset.ipynb"><u>اینجا</u></a> می تونید ببینید.</p>
+
+<h3 id="بخش-سوم-عبارات-منظم">بخش سوم: عبارات منظم</h3>
+
+<p>دلیل اصلی یاد گرفتن عبارات با قاعده اینه که بتونیم جمله رو tokenize کنیم یا به عبارتی کلمه های جمله رو از هم جدا کنیم که پایتون بدونه که دنبال چی بگرده. گاهی اوقات لازمه که یک الگوی خاصی از کاراکترها رو در یک رشته متن پیدا کنیم، این کار به راحتی با عبارات با قاعده قابل انجامه. البته خیلی راحتم نه :) چون روش هایی که برای تشخیص این الگوها وجود داره خیلی گسترده است ولی یک سری موارد کلی رو اگر یاد بگیرید و تمرین کنید براتون راحت می شه. از <a href="https://docs.python.org/3/library/re.html">داکیومنت عبارات با قاعده در پایتون</a> هم می تونید استفاده کنید.</p>
+
+<p>در اینجا دو روش رو یاد می گیریم. برای تست این دو روش یک متن رو به سه حالت نوشتم و قراره که کلمه ها رو از هم جدا کنیم.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import re
+text = "This is a made up string to test 2 different regex methods"
+messy_text = "This            is a made up string to              test 2   different regex methods"
+messy_text1 = "This-is-a''''made-up/string-+to*****test-2 &gt;&gt;&gt;&gt;&gt;&gt;-different.regex-methods"
+</code></pre></div></div>
+
+<p>برای اینکه بتونیم از این عبارات با قاعده در پایتون استفاده کنیم باید کتابخونه ش رو ایمپورت کنیم. <br />
+کلمات جمله اول با فاصله از هم جدا شدند پس یه الگو به دست اومد، می تونیم هر جا کاراکتر فاصله بود تشخیص بدیم و کلمات رو از هم جدا کنیم. با استفاده از تابع <code class="language-plaintext highlighter-rouge">split()</code> و ‘\s’ به کوچک و بزرگ بودن حروف دقت کنید، چون هر کدوم معنی خاصی دارند. در اینجا حرف کوچک s یعنی از نقاطی که کاراکتر فاصله وجود داره کلمات رو جدا کن.
+    re.split(‘\s’, ‘text’)</p>
+
+<p>اگر همین کد رو روی متن دوم اجرا کنیم جوابی که می خوایم رو نمی گیریم، چون بیشتر از یک کاراکتر فاصله بین بعضی کلمات وجود داره. پس از ‘\s+’ استفاده می کنیم. این یعنی یک فاصله یا بیشتر اگر بین کلمات بود حذف کن.
+    re.split(‘\s+’, ‘messy_text’)</p>
+
+<p>برای متن سوم هیچ کدوم از راه حلای بالا جواب نمی ده. و باید از راه دیگه ای بریم. اینجا به غیر از کاراکتر فاصله، کاراکترهای دیگه ای هم وجود داره. پس می تونیم بیاییم بگیم هر کاراکتر غیر کلمه ای رو حذف کن. و علامت + رو هم می ذاریم چون کاراکترهای غیرکلمه بیشتر از یکبار تکرار شدن بین هر کلمه.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>re.split('\W+', 'messy_text1')
+</code></pre></div></div>
+
+<p>کاری که تا الان انجام می دادیم این بود که بیاییم هر چی غیر از کلمه است رو جدا می کردیم تا کلمه ها جدا شن. یه راه دیگه برای جداسازی کلمات اینه که بیاییم مستقیم کلمه ها رو پیدا کنیم. برای این کار از تابع <code class="language-plaintext highlighter-rouge">findall()</code> استفاده می کنیم.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>re.findall('\S+', text)
+</code></pre></div></div>
+
+<p>در کد بالا از حرف بزرگ S استفاده کردیم. گفتیم هر چی غیر کاراکتر فاصله. که این روش دوباره روی متن سوم جواب نمیده. که می تونیم از روش زیر به جای این استفاده کنیم.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>re.findall('\w+', 'messy_text1')
+</code></pre></div></div>
+
+<p>حرف کوچک w رو اینجا استفاده کردیم. یعنی کاراکترهای کلمه رو جدا کن.</p>
+
+<p>کدهای بخش سوم <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/03-RegEx.ipynb"><u>اینجا</u></a> قرار دارند.</p>
 
 
 
@@ -460,7 +536,7 @@ print("Number of null in body: {}".format(dataset['body'].isnull().sum()))
 
   </div>
 
-  <small id="build-time">Site generated on Mon, 12 Jul 2021 12:48:53 +0430</small>
+  <small id="build-time">Site generated on Mon, 12 Jul 2021 19:10:15 +0430</small>
 
 </footer>
 <script src="https://spacelover.ir/assets/js/main.js"></script>
