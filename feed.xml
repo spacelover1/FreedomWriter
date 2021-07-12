@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2021-07-12T12:25:07Z</updated>
+<updated>2021-07-12T12:48:53Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -113,7 +113,8 @@ text_list[-5:]
 
 <p>همونطور که می بینید دیگه ردیف اولی برای عنوان ستون ها وجود نداره.</p>
 
-<p>در این بخش یاد گرفتیم که یک دیتاست متنی رو چطوری بخونیم و برای تحلیل های بعدی مرتبش کنیم.</p>
+<p>در این بخش یاد گرفتیم که یک دیتاست متنی رو چطوری بخونیم و برای تحلیل های بعدی مرتبش کنیم.
+کدهای بخش اول رو از <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/01-read_file.ipynb"><u>اینجا</u></a> می تونید ببینید.</p>
 
 <h3 id="بخش-دوم">بخش دوم</h3>
 
@@ -147,6 +148,8 @@ print("Number of null in body: {}".format(dataset['body'].isnull().sum()))
 
 <p>خروجی تابع <code class="language-plaintext highlighter-rouge">isnull()</code> بولینه یعنی True یا False برمی گردونه. هر سطر رو بررسی می کنه اگر اون ستونی که داریم بررسی می کنیم تو اون سطر دیتا نداشته باشه True میشه و در غیراینصورت False. 
 وقتی بعد از <code class="language-plaintext highlighter-rouge">isnull()</code> تابع <code class="language-plaintext highlighter-rouge">sum()</code> رو میاریم یعنی تعداد کل ریف هایی که لیبل ندارن رو بده.</p>
+
+<p>کدهای بخش دوم رو از <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/02-Exploring%20Dataset.ipynb"><u>اینجا</u></a> می تونید ببینید.</p>
 
 </div>]]>
     </content>
