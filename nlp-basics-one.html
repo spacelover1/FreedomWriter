@@ -13,23 +13,23 @@
 <link rel="icon" href="" />
 <link rel="stylesheet" href="https://spacelover.ir/assets/css/main.css" />
 <link rel="stylesheet" href="https://spacelover.ir/assets/fonts/fontawesomev5.0.2.css" />
-<meta name="keywords" content='nlp,اموزش' /><title>پردازش زبان طبیعی(NLP)- یک - خواندن فایل - نویسنده آزاد</title><!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>پردازش زبان طبیعی(NLP)- یک - خواندن فایل | نویسنده آزاد</title>
+<meta name="keywords" content='nlp,اموزش' /><title>پردازش زبان طبیعی(NLP)- مبانی - یک - نویسنده آزاد</title><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>پردازش زبان طبیعی(NLP)- مبانی - یک | نویسنده آزاد</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="پردازش زبان طبیعی(NLP)- یک - خواندن فایل" />
+<meta property="og:title" content="پردازش زبان طبیعی(NLP)- مبانی - یک" />
 <meta name="author" content="نویسنده" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="این پست رو با یک نقل قول شروع می کنم: &quot;Motivation often comes after starting, not before. Action produces momentum.&quot;" />
 <meta property="og:description" content="این پست رو با یک نقل قول شروع می کنم: &quot;Motivation often comes after starting, not before. Action produces momentum.&quot;" />
-<link rel="canonical" href="https://spacelover.ir/nlp-one-read-file.html" />
-<meta property="og:url" content="https://spacelover.ir/nlp-one-read-file.html" />
+<link rel="canonical" href="https://spacelover.ir/nlp-basics-one.html" />
+<meta property="og:url" content="https://spacelover.ir/nlp-basics-one.html" />
 <meta property="og:site_name" content="نویسنده آزاد" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-07-10T00:00:00+04:30" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="پردازش زبان طبیعی(NLP)- یک - خواندن فایل" />
+<meta property="twitter:title" content="پردازش زبان طبیعی(NLP)- مبانی - یک" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"نویسنده"},"url":"https://spacelover.ir/nlp-one-read-file.html","@type":"BlogPosting","description":"این پست رو با یک نقل قول شروع می کنم: &quot;Motivation often comes after starting, not before. Action produces momentum.&quot;","headline":"پردازش زبان طبیعی(NLP)- یک - خواندن فایل","dateModified":"2021-07-10T00:00:00+04:30","datePublished":"2021-07-10T00:00:00+04:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://spacelover.ir/nlp-one-read-file.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"نویسنده"},"url":"https://spacelover.ir/nlp-basics-one.html","@type":"BlogPosting","description":"این پست رو با یک نقل قول شروع می کنم: &quot;Motivation often comes after starting, not before. Action produces momentum.&quot;","headline":"پردازش زبان طبیعی(NLP)- مبانی - یک","dateModified":"2021-07-10T00:00:00+04:30","datePublished":"2021-07-10T00:00:00+04:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://spacelover.ir/nlp-basics-one.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -47,7 +47,7 @@
 <article class="post-content">
 
   <div class="post-header">
-    <h1 class="post-title">پردازش زبان طبیعی(NLP)- یک - خواندن فایل</h1>
+    <h1 class="post-title">پردازش زبان طبیعی(NLP)- مبانی - یک</h1>
     <p>
       <i class="fas fa-calendar"></i>
       شنبه ۱۹ تیر ۱۴۰۰<br>
@@ -58,11 +58,19 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Motivation often comes after starting, not before. Action produces momentum."
 </code></pre></div></div>
 
+<p>تعاریف متفاوتی برای پردازش زبان طبیعی وجود داره ولی شاید کامل ترینش این باشه:</p>
+
+<blockquote>
+  <p>پردازش زبان طبیعی شاخه ای از دانشه که بر روی توانایی کامپیوتر برای درک، تحلیل، تغییر و احتمالا تولید زبان انسان متمرکز است.</p>
+</blockquote>
+
 <p>در چند سری پست آینده می خوام یک سری مبانی برنامه نویسی مربوط به پردازش زبان طبیعی رو توضیح بدم، کدها هم در <a href="https://github.com/spacelover۱/NLP-with-Python"><u>این ریپو</u></a> قرار دارند. در این آموزش فرض شده که شما با مبانی پایتون یا حداقل برنامه نویسی آشنا هستید چون اینجا مبانی، مثل استفاده از لیست و دیگر نوع داده ها آموزش داده نمی شه.</p>
 
 <p>زبانی که در این سری استفاده می شه پایتونه، پس نیازه که پایتون رو نصب کنید. برای محیط برنامه نویسی هم می تونید از <a href="https://www.jetbrains.com/pycharm/download/#section=windows"><u>پایچارم</u></a> یا ژوپیتر استفاده کنید. برای استفاده از ژوپیتر باید <a href="https://docs.anaconda.com/anaconda/"><u>آناکوندا</u></a> رو نصب کنید. لینک سایت اصلی این برنامه ها رو هم قرار دادم که برای دانلود می تونید استفاده کنید. حتما دقت کنید که هر برنامه رو برای سیستم عامل خودتون دانلود کنید (خود این سایت ها به صورت خودکار سیستم عامل رو شناسایی می کنند).</p>
 
-<p>خب شروع کنیم. تو این قسمت قراره یک فایل متنی رو بخونیم و یک سری مرتب سازی ها روش انجام بدیم. <br />
+<h۳ id="بخش-اول">بخش اول</h۳>
+
+<p>خب شروع کنیم. تو این قسمت قراره یک فایل متنی رو بخونیم و یک سری مرتب سازی ها روش انجام بدیم. اول یک با دیتاست بازی می کنیم تا  یکسری اطلاعات از دیتاست دستمون بیاد و بعد یک روش ساده برای خوندن این دیتاست معرفی می کنیم. <br /> 
 فایلی که استفاده می شه در ریپویی که لینکش رو بالا گذاشتم موجوده. برای خوندن فایل باید اول با استفاده از تابع <code class="language-plaintext highlighter-rouge">open()</code> فایل رو باز کنیم و با تابع <code class="language-plaintext highlighter-rouge">read()</code> فایل باز شده رو می خونیم و محتواش رو در یک متغیر به اسم <code class="language-plaintext highlighter-rouge">raw_data</code> می نویسیم.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>raw_data = open('file_name').read()
@@ -125,8 +133,9 @@ text_list[-۵:]
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>full_corpus.head()
 </code></pre></div></div>
 
-<p>خب الان دیتامون یکم ساختار پیدا کرده و نسبت به اول خوانایی بهتری داره. <br />
-همون اول که نگاهی به داده انداختیم و <code class="language-plaintext highlighter-rouge">\t</code> رو دیدیم باید متوجه شیم که این یک فایلیه که عناصرش با تب از هم جدا شدن. برای خوندن این فایل ها می تونیم از تابع <code class="language-plaintext highlighter-rouge">read_csv</code> استفاده کنیم، مقدار هدر رو هم در اینجا <code class="language-plaintext highlighter-rouge">None</code> قرار می دیم چون در فایل اصلی ردیفی برای عنوان ستون وجود نداره.</p>
+<p>خب الان دیتامون یکم ساختار پیدا کرده و نسبت به اول خوانایی بهتری داره. <br /></p>
+
+<p>و اما روش ساده خوندن این دیتاست. همون اول که نگاهی به داده انداختیم و <code class="language-plaintext highlighter-rouge">\t</code> رو دیدیم باید متوجه شیم که این یک فایلیه که عناصرش با تب از هم جدا شدن. برای خوندن این فایل ها می تونیم از تابع <code class="language-plaintext highlighter-rouge">read_csv</code> استفاده کنیم، مقدار هدر رو هم در اینجا <code class="language-plaintext highlighter-rouge">None</code> قرار می دیم چون در فایل اصلی ردیفی برای عنوان ستون وجود نداره.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dataset = read_csv('file_name', sep="\t", header=None)
 </code></pre></div></div>
@@ -138,7 +147,40 @@ text_list[-۵:]
 
 <p>همونطور که می بینید دیگه ردیف اولی برای عنوان ستون ها وجود نداره.</p>
 
-<p>در این قسمت یاد گرفتیم که یک دیتاست متنی رو چطوری بخونیم و برای تحلیل های بعدی مرتبش کنیم.</p>
+<p>در این بخش یاد گرفتیم که یک دیتاست متنی رو چطوری بخونیم و برای تحلیل های بعدی مرتبش کنیم.</p>
+
+<h۳ id="بخش-دوم">بخش دوم</h۳>
+
+<p>بخش قبل یاد گرفتیم که چطور دیتا رو به روش پیچیده بخونیم تا با یک سری از ابزارهای تغییر در متن آشنا شیم و در آخر روش ساده رو یاد گرفتیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dataset = read_csv('file_name', sep="\t", header=None)
+</code></pre></div></div>
+
+<p>حالا برای ستون ها اسم برچسب می ذاریم تا راحت بتونیم دیتا رو بررسی کنیم:
+    dataset.columns[‘label’, ‘body’]</p>
+
+<p>اول از همه بریم سایز دیتاست رو دربیاریم، ببینیم چند تا سطر و ستون داره:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("There are {} rows and {} columns.".format(len(dataset), len(dataset.columns)))
+</code></pre></div></div>
+
+<p>حالا باید تعداد سطرهای اسپم و غیر اسپم رو دربیاریم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("Out of {} rows, {} rows are spam and {} rows are ham.".format(
+                                                                    len(dataset),
+                                                                    len(dataset[dataset['label'] == 'spam']),
+                                                                    len(dataset[dataset['label'] == 'hame'])
+                                                                    ))
+</code></pre></div></div>
+
+<p>ممکنه بعضی ردیفا هیچ لیبلی نداشته باشه، باید تعداد اون ها رو هم پیدا کنیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("Number of null in label: {}".format(dataset['label'].isnull().sum()))
+print("Number of null in body: {}".format(dataset['body'].isnull().sum()))
+</code></pre></div></div>
+
+<p>خروجی تابع <code class="language-plaintext highlighter-rouge">isnull()</code> بولینه یعنی True یا False برمی گردونه. هر سطر رو بررسی می کنه اگر اون ستونی که داریم بررسی می کنیم تو اون سطر دیتا نداشته باشه True میشه و در غیراینصورت False. 
+وقتی بعد از <code class="language-plaintext highlighter-rouge">isnull()</code> تابع <code class="language-plaintext highlighter-rouge">sum()</code> رو میاریم یعنی تعداد کل ریف هایی که لیبل ندارن رو بده.</p>
 
  دقیقه مطالعه -->
     </p>
@@ -149,11 +191,19 @@ text_list[-۵:]
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Motivation often comes after starting, not before. Action produces momentum."
 </code></pre></div></div>
 
+<p>تعاریف متفاوتی برای پردازش زبان طبیعی وجود داره ولی شاید کامل ترینش این باشه:</p>
+
+<blockquote>
+  <p>پردازش زبان طبیعی شاخه ای از دانشه که بر روی توانایی کامپیوتر برای درک، تحلیل، تغییر و احتمالا تولید زبان انسان متمرکز است.</p>
+</blockquote>
+
 <p>در چند سری پست آینده می خوام یک سری مبانی برنامه نویسی مربوط به پردازش زبان طبیعی رو توضیح بدم، کدها هم در <a href="https://github.com/spacelover1/NLP-with-Python"><u>این ریپو</u></a> قرار دارند. در این آموزش فرض شده که شما با مبانی پایتون یا حداقل برنامه نویسی آشنا هستید چون اینجا مبانی، مثل استفاده از لیست و دیگر نوع داده ها آموزش داده نمی شه.</p>
 
 <p>زبانی که در این سری استفاده می شه پایتونه، پس نیازه که پایتون رو نصب کنید. برای محیط برنامه نویسی هم می تونید از <a href="https://www.jetbrains.com/pycharm/download/#section=windows"><u>پایچارم</u></a> یا ژوپیتر استفاده کنید. برای استفاده از ژوپیتر باید <a href="https://docs.anaconda.com/anaconda/"><u>آناکوندا</u></a> رو نصب کنید. لینک سایت اصلی این برنامه ها رو هم قرار دادم که برای دانلود می تونید استفاده کنید. حتما دقت کنید که هر برنامه رو برای سیستم عامل خودتون دانلود کنید (خود این سایت ها به صورت خودکار سیستم عامل رو شناسایی می کنند).</p>
 
-<p>خب شروع کنیم. تو این قسمت قراره یک فایل متنی رو بخونیم و یک سری مرتب سازی ها روش انجام بدیم. <br />
+<h3 id="بخش-اول">بخش اول</h3>
+
+<p>خب شروع کنیم. تو این قسمت قراره یک فایل متنی رو بخونیم و یک سری مرتب سازی ها روش انجام بدیم. اول یک با دیتاست بازی می کنیم تا  یکسری اطلاعات از دیتاست دستمون بیاد و بعد یک روش ساده برای خوندن این دیتاست معرفی می کنیم. <br /> 
 فایلی که استفاده می شه در ریپویی که لینکش رو بالا گذاشتم موجوده. برای خوندن فایل باید اول با استفاده از تابع <code class="language-plaintext highlighter-rouge">open()</code> فایل رو باز کنیم و با تابع <code class="language-plaintext highlighter-rouge">read()</code> فایل باز شده رو می خونیم و محتواش رو در یک متغیر به اسم <code class="language-plaintext highlighter-rouge">raw_data</code> می نویسیم.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>raw_data = open('file_name').read()
@@ -216,8 +266,9 @@ text_list[-5:]
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>full_corpus.head()
 </code></pre></div></div>
 
-<p>خب الان دیتامون یکم ساختار پیدا کرده و نسبت به اول خوانایی بهتری داره. <br />
-همون اول که نگاهی به داده انداختیم و <code class="language-plaintext highlighter-rouge">\t</code> رو دیدیم باید متوجه شیم که این یک فایلیه که عناصرش با تب از هم جدا شدن. برای خوندن این فایل ها می تونیم از تابع <code class="language-plaintext highlighter-rouge">read_csv</code> استفاده کنیم، مقدار هدر رو هم در اینجا <code class="language-plaintext highlighter-rouge">None</code> قرار می دیم چون در فایل اصلی ردیفی برای عنوان ستون وجود نداره.</p>
+<p>خب الان دیتامون یکم ساختار پیدا کرده و نسبت به اول خوانایی بهتری داره. <br /></p>
+
+<p>و اما روش ساده خوندن این دیتاست. همون اول که نگاهی به داده انداختیم و <code class="language-plaintext highlighter-rouge">\t</code> رو دیدیم باید متوجه شیم که این یک فایلیه که عناصرش با تب از هم جدا شدن. برای خوندن این فایل ها می تونیم از تابع <code class="language-plaintext highlighter-rouge">read_csv</code> استفاده کنیم، مقدار هدر رو هم در اینجا <code class="language-plaintext highlighter-rouge">None</code> قرار می دیم چون در فایل اصلی ردیفی برای عنوان ستون وجود نداره.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dataset = read_csv('file_name', sep="\t", header=None)
 </code></pre></div></div>
@@ -229,7 +280,40 @@ text_list[-5:]
 
 <p>همونطور که می بینید دیگه ردیف اولی برای عنوان ستون ها وجود نداره.</p>
 
-<p>در این قسمت یاد گرفتیم که یک دیتاست متنی رو چطوری بخونیم و برای تحلیل های بعدی مرتبش کنیم.</p>
+<p>در این بخش یاد گرفتیم که یک دیتاست متنی رو چطوری بخونیم و برای تحلیل های بعدی مرتبش کنیم.</p>
+
+<h3 id="بخش-دوم">بخش دوم</h3>
+
+<p>بخش قبل یاد گرفتیم که چطور دیتا رو به روش پیچیده بخونیم تا با یک سری از ابزارهای تغییر در متن آشنا شیم و در آخر روش ساده رو یاد گرفتیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dataset = read_csv('file_name', sep="\t", header=None)
+</code></pre></div></div>
+
+<p>حالا برای ستون ها اسم برچسب می ذاریم تا راحت بتونیم دیتا رو بررسی کنیم:
+    dataset.columns[‘label’, ‘body’]</p>
+
+<p>اول از همه بریم سایز دیتاست رو دربیاریم، ببینیم چند تا سطر و ستون داره:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("There are {} rows and {} columns.".format(len(dataset), len(dataset.columns)))
+</code></pre></div></div>
+
+<p>حالا باید تعداد سطرهای اسپم و غیر اسپم رو دربیاریم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("Out of {} rows, {} rows are spam and {} rows are ham.".format(
+                                                                    len(dataset),
+                                                                    len(dataset[dataset['label'] == 'spam']),
+                                                                    len(dataset[dataset['label'] == 'hame'])
+                                                                    ))
+</code></pre></div></div>
+
+<p>ممکنه بعضی ردیفا هیچ لیبلی نداشته باشه، باید تعداد اون ها رو هم پیدا کنیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("Number of null in label: {}".format(dataset['label'].isnull().sum()))
+print("Number of null in body: {}".format(dataset['body'].isnull().sum()))
+</code></pre></div></div>
+
+<p>خروجی تابع <code class="language-plaintext highlighter-rouge">isnull()</code> بولینه یعنی True یا False برمی گردونه. هر سطر رو بررسی می کنه اگر اون ستونی که داریم بررسی می کنیم تو اون سطر دیتا نداشته باشه True میشه و در غیراینصورت False. 
+وقتی بعد از <code class="language-plaintext highlighter-rouge">isnull()</code> تابع <code class="language-plaintext highlighter-rouge">sum()</code> رو میاریم یعنی تعداد کل ریف هایی که لیبل ندارن رو بده.</p>
 
 
 
@@ -264,7 +348,7 @@ text_list[-5:]
     <i class="fas fa-code"></i>
     
     
-    <a href="https://raw.githubusercontent.com/spacelover1/personalBlog/master/_posts/2021-07-10-nlp-one-read-file.md">سورس</a>
+    <a href="https://raw.githubusercontent.com/spacelover1/personalBlog/master/_posts/2021-07-10-nlp-basics-one.md">سورس</a>
     
   </small>
 
@@ -287,7 +371,7 @@ text_list[-5:]
   
 
   <form id="comment-form" name="comment" netlify>
-    <input name="page_id" style="display:none" value="/nlp-one-read-file">
+    <input name="page_id" style="display:none" value="/nlp-basics-one">
     <input id="reply-to" name="reply-to" style="display:none">
     <label for="message">دیدگاه<sup class="required">*</sup> &nbsp;<small>می‌توانید با <a href="http://commonmark.org/help/" target="_">مارک‌داون</a> هم بنویسید.</small><br><small id="replyToVisualClue"></small>
       <textarea id="message" name="message" required alt="no!!" onkeyup="preview()"></textarea>
@@ -370,7 +454,7 @@ text_list[-5:]
 
   </div>
 
-  <small id="build-time">Site generated on Mon, 12 Jul 2021 11:22:00 +0430</small>
+  <small id="build-time">Site generated on Mon, 12 Jul 2021 12:25:07 +0430</small>
 
 </footer>
 <script src="https://spacelover.ir/assets/js/main.js"></script>

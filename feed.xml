@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2021-07-12T11:22:00Z</updated>
+<updated>2021-07-12T12:25:07Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -13,8 +13,8 @@
 <rights>Commons Attribution 4.0 International</rights>
 
   <entry>
-    <title>پردازش زبان طبیعی(NLP)- یک - خواندن فایل</title>
-    <link rel="alternate" type="text/html" href="https://spacelover.ir/nlp-one-read-file.html"/>
+    <title>پردازش زبان طبیعی(NLP)- مبانی - یک</title>
+    <link rel="alternate" type="text/html" href="https://spacelover.ir/nlp-basics-one.html"/>
     <id>urn:uuid:</id>
     <updated>2021-07-10T00:00:00Z</updated>
     <category term="nlp"/><category term="اموزش"/>
@@ -24,11 +24,19 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Motivation often comes after starting, not before. Action produces momentum."
 </code></pre></div></div>
 
+<p>تعاریف متفاوتی برای پردازش زبان طبیعی وجود داره ولی شاید کامل ترینش این باشه:</p>
+
+<blockquote>
+  <p>پردازش زبان طبیعی شاخه ای از دانشه که بر روی توانایی کامپیوتر برای درک، تحلیل، تغییر و احتمالا تولید زبان انسان متمرکز است.</p>
+</blockquote>
+
 <p>در چند سری پست آینده می خوام یک سری مبانی برنامه نویسی مربوط به پردازش زبان طبیعی رو توضیح بدم، کدها هم در <a href="https://github.com/spacelover1/NLP-with-Python"><u>این ریپو</u></a> قرار دارند. در این آموزش فرض شده که شما با مبانی پایتون یا حداقل برنامه نویسی آشنا هستید چون اینجا مبانی، مثل استفاده از لیست و دیگر نوع داده ها آموزش داده نمی شه.</p>
 
 <p>زبانی که در این سری استفاده می شه پایتونه، پس نیازه که پایتون رو نصب کنید. برای محیط برنامه نویسی هم می تونید از <a href="https://www.jetbrains.com/pycharm/download/#section=windows"><u>پایچارم</u></a> یا ژوپیتر استفاده کنید. برای استفاده از ژوپیتر باید <a href="https://docs.anaconda.com/anaconda/"><u>آناکوندا</u></a> رو نصب کنید. لینک سایت اصلی این برنامه ها رو هم قرار دادم که برای دانلود می تونید استفاده کنید. حتما دقت کنید که هر برنامه رو برای سیستم عامل خودتون دانلود کنید (خود این سایت ها به صورت خودکار سیستم عامل رو شناسایی می کنند).</p>
 
-<p>خب شروع کنیم. تو این قسمت قراره یک فایل متنی رو بخونیم و یک سری مرتب سازی ها روش انجام بدیم. <br />
+<h3 id="بخش-اول">بخش اول</h3>
+
+<p>خب شروع کنیم. تو این قسمت قراره یک فایل متنی رو بخونیم و یک سری مرتب سازی ها روش انجام بدیم. اول یک با دیتاست بازی می کنیم تا  یکسری اطلاعات از دیتاست دستمون بیاد و بعد یک روش ساده برای خوندن این دیتاست معرفی می کنیم. <br /> 
 فایلی که استفاده می شه در ریپویی که لینکش رو بالا گذاشتم موجوده. برای خوندن فایل باید اول با استفاده از تابع <code class="language-plaintext highlighter-rouge">open()</code> فایل رو باز کنیم و با تابع <code class="language-plaintext highlighter-rouge">read()</code> فایل باز شده رو می خونیم و محتواش رو در یک متغیر به اسم <code class="language-plaintext highlighter-rouge">raw_data</code> می نویسیم.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>raw_data = open('file_name').read()
@@ -91,8 +99,9 @@ text_list[-5:]
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>full_corpus.head()
 </code></pre></div></div>
 
-<p>خب الان دیتامون یکم ساختار پیدا کرده و نسبت به اول خوانایی بهتری داره. <br />
-همون اول که نگاهی به داده انداختیم و <code class="language-plaintext highlighter-rouge">\t</code> رو دیدیم باید متوجه شیم که این یک فایلیه که عناصرش با تب از هم جدا شدن. برای خوندن این فایل ها می تونیم از تابع <code class="language-plaintext highlighter-rouge">read_csv</code> استفاده کنیم، مقدار هدر رو هم در اینجا <code class="language-plaintext highlighter-rouge">None</code> قرار می دیم چون در فایل اصلی ردیفی برای عنوان ستون وجود نداره.</p>
+<p>خب الان دیتامون یکم ساختار پیدا کرده و نسبت به اول خوانایی بهتری داره. <br /></p>
+
+<p>و اما روش ساده خوندن این دیتاست. همون اول که نگاهی به داده انداختیم و <code class="language-plaintext highlighter-rouge">\t</code> رو دیدیم باید متوجه شیم که این یک فایلیه که عناصرش با تب از هم جدا شدن. برای خوندن این فایل ها می تونیم از تابع <code class="language-plaintext highlighter-rouge">read_csv</code> استفاده کنیم، مقدار هدر رو هم در اینجا <code class="language-plaintext highlighter-rouge">None</code> قرار می دیم چون در فایل اصلی ردیفی برای عنوان ستون وجود نداره.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dataset = read_csv('file_name', sep="\t", header=None)
 </code></pre></div></div>
@@ -104,7 +113,40 @@ text_list[-5:]
 
 <p>همونطور که می بینید دیگه ردیف اولی برای عنوان ستون ها وجود نداره.</p>
 
-<p>در این قسمت یاد گرفتیم که یک دیتاست متنی رو چطوری بخونیم و برای تحلیل های بعدی مرتبش کنیم.</p>
+<p>در این بخش یاد گرفتیم که یک دیتاست متنی رو چطوری بخونیم و برای تحلیل های بعدی مرتبش کنیم.</p>
+
+<h3 id="بخش-دوم">بخش دوم</h3>
+
+<p>بخش قبل یاد گرفتیم که چطور دیتا رو به روش پیچیده بخونیم تا با یک سری از ابزارهای تغییر در متن آشنا شیم و در آخر روش ساده رو یاد گرفتیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dataset = read_csv('file_name', sep="\t", header=None)
+</code></pre></div></div>
+
+<p>حالا برای ستون ها اسم برچسب می ذاریم تا راحت بتونیم دیتا رو بررسی کنیم:
+    dataset.columns[‘label’, ‘body’]</p>
+
+<p>اول از همه بریم سایز دیتاست رو دربیاریم، ببینیم چند تا سطر و ستون داره:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("There are {} rows and {} columns.".format(len(dataset), len(dataset.columns)))
+</code></pre></div></div>
+
+<p>حالا باید تعداد سطرهای اسپم و غیر اسپم رو دربیاریم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("Out of {} rows, {} rows are spam and {} rows are ham.".format(
+                                                                    len(dataset),
+                                                                    len(dataset[dataset['label'] == 'spam']),
+                                                                    len(dataset[dataset['label'] == 'hame'])
+                                                                    ))
+</code></pre></div></div>
+
+<p>ممکنه بعضی ردیفا هیچ لیبلی نداشته باشه، باید تعداد اون ها رو هم پیدا کنیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("Number of null in label: {}".format(dataset['label'].isnull().sum()))
+print("Number of null in body: {}".format(dataset['body'].isnull().sum()))
+</code></pre></div></div>
+
+<p>خروجی تابع <code class="language-plaintext highlighter-rouge">isnull()</code> بولینه یعنی True یا False برمی گردونه. هر سطر رو بررسی می کنه اگر اون ستونی که داریم بررسی می کنیم تو اون سطر دیتا نداشته باشه True میشه و در غیراینصورت False. 
+وقتی بعد از <code class="language-plaintext highlighter-rouge">isnull()</code> تابع <code class="language-plaintext highlighter-rouge">sum()</code> رو میاریم یعنی تعداد کل ریف هایی که لیبل ندارن رو بده.</p>
 
 </div>]]>
     </content>
