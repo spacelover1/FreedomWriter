@@ -270,12 +270,15 @@ def tokenize(text):
 dataset['body_tokenized'] = dataset['body_nopunct'].apply(lambda x: tokenize(x.lower()))
 </code></pre></div></div>
 
-<p>تابع ‘lower()’ شاید اینجا زیاد استفاده نشه و اهمیتش مشخص نباشه ولی چون در پایتون حروف کوچک و بزرگ یکسان نیستند باید همه حروف در کلمات یک جور باشند.</p>
+<p>تابع <code class="language-plaintext highlighter-rouge">lower()</code> شاید اینجا زیاد استفاده نشه و اهمیتش مشخص نباشه ولی چون در پایتون حروف کوچک و بزرگ یکسان نیستند باید همه حروف در کلمات یک جور باشند.</p>
 
-<p>###حذف کلمات بدون معنی 
-هر زبانی یک سری کلمات داره که معنی خاصی در جمله ندارند و اگر حذف شوند جمله معنی خودش رو حفظ می کنه. مثل حروف ربط. با استفاده از کتابخانه <code class="language-plaintext highlighter-rouge">nltk</code> این کلمات رو از جمله حذف می کنیم:
-    import nltk
-    stopwords = nltk.corpus.stopwords.words(‘english’)</p>
+<p>###حذف کلمات بدون معنی</p>
+
+<p>هر زبانی یک سری کلمات داره که معنی خاصی در جمله ندارند و اگر حذف شوند جمله معنی خودش رو حفظ می کنه. مثل حروف ربط. با استفاده از کتابخانه <code class="language-plaintext highlighter-rouge">nltk</code> این کلمات رو از جمله حذف می کنیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import nltk
+stopwords = nltk.corpus.stopwords.words('english')
+</code></pre></div></div>
 
 <p>حالا یک تابع می نویسیم که این کلمات رو حذف کنه از جملات:</p>
 
@@ -509,12 +512,15 @@ def tokenize(text):
 dataset['body_tokenized'] = dataset['body_nopunct'].apply(lambda x: tokenize(x.lower()))
 </code></pre></div></div>
 
-<p>تابع ‘lower()’ شاید اینجا زیاد استفاده نشه و اهمیتش مشخص نباشه ولی چون در پایتون حروف کوچک و بزرگ یکسان نیستند باید همه حروف در کلمات یک جور باشند.</p>
+<p>تابع <code class="language-plaintext highlighter-rouge">lower()</code> شاید اینجا زیاد استفاده نشه و اهمیتش مشخص نباشه ولی چون در پایتون حروف کوچک و بزرگ یکسان نیستند باید همه حروف در کلمات یک جور باشند.</p>
 
-<p>###حذف کلمات بدون معنی 
-هر زبانی یک سری کلمات داره که معنی خاصی در جمله ندارند و اگر حذف شوند جمله معنی خودش رو حفظ می کنه. مثل حروف ربط. با استفاده از کتابخانه <code class="language-plaintext highlighter-rouge">nltk</code> این کلمات رو از جمله حذف می کنیم:
-    import nltk
-    stopwords = nltk.corpus.stopwords.words(‘english’)</p>
+<p>###حذف کلمات بدون معنی</p>
+
+<p>هر زبانی یک سری کلمات داره که معنی خاصی در جمله ندارند و اگر حذف شوند جمله معنی خودش رو حفظ می کنه. مثل حروف ربط. با استفاده از کتابخانه <code class="language-plaintext highlighter-rouge">nltk</code> این کلمات رو از جمله حذف می کنیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import nltk
+stopwords = nltk.corpus.stopwords.words('english')
+</code></pre></div></div>
 
 <p>حالا یک تابع می نویسیم که این کلمات رو حذف کنه از جملات:</p>
 
@@ -666,7 +672,7 @@ dataset['body_nostop'] = dataset['body_tokenized'].apply(lambda x: remove_stopwo
 
   </div>
 
-  <small id="build-time">Site generated on Tue, 13 Jul 2021 23:31:48 +0430</small>
+  <small id="build-time">Site generated on Tue, 13 Jul 2021 23:33:44 +0430</small>
 
 </footer>
 <script src="https://spacelover.ir/assets/js/main.js"></script>

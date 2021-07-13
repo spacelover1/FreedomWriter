@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2021-07-13T23:31:48Z</updated>
+<updated>2021-07-13T23:33:44Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -236,12 +236,15 @@ def tokenize(text):
 dataset['body_tokenized'] = dataset['body_nopunct'].apply(lambda x: tokenize(x.lower()))
 </code></pre></div></div>
 
-<p>تابع ‘lower()’ شاید اینجا زیاد استفاده نشه و اهمیتش مشخص نباشه ولی چون در پایتون حروف کوچک و بزرگ یکسان نیستند باید همه حروف در کلمات یک جور باشند.</p>
+<p>تابع <code class="language-plaintext highlighter-rouge">lower()</code> شاید اینجا زیاد استفاده نشه و اهمیتش مشخص نباشه ولی چون در پایتون حروف کوچک و بزرگ یکسان نیستند باید همه حروف در کلمات یک جور باشند.</p>
 
-<p>###حذف کلمات بدون معنی 
-هر زبانی یک سری کلمات داره که معنی خاصی در جمله ندارند و اگر حذف شوند جمله معنی خودش رو حفظ می کنه. مثل حروف ربط. با استفاده از کتابخانه <code class="language-plaintext highlighter-rouge">nltk</code> این کلمات رو از جمله حذف می کنیم:
-    import nltk
-    stopwords = nltk.corpus.stopwords.words(‘english’)</p>
+<p>###حذف کلمات بدون معنی</p>
+
+<p>هر زبانی یک سری کلمات داره که معنی خاصی در جمله ندارند و اگر حذف شوند جمله معنی خودش رو حفظ می کنه. مثل حروف ربط. با استفاده از کتابخانه <code class="language-plaintext highlighter-rouge">nltk</code> این کلمات رو از جمله حذف می کنیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import nltk
+stopwords = nltk.corpus.stopwords.words('english')
+</code></pre></div></div>
 
 <p>حالا یک تابع می نویسیم که این کلمات رو حذف کنه از جملات:</p>
 
