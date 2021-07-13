@@ -16,7 +16,7 @@ tags:    nlp اموزش
 
 زبانی که در این سری استفاده می شه پایتونه، پس نیازه که پایتون رو نصب کنید. برای محیط برنامه نویسی هم می تونید از [<u>پایچارم</u>](https://www.jetbrains.com/pycharm/download/#section=windows) یا ژوپیتر استفاده کنید. برای استفاده از ژوپیتر باید [<u>آناکوندا</u>](https://docs.anaconda.com/anaconda/) رو نصب کنید. لینک سایت اصلی این برنامه ها رو هم قرار دادم که برای دانلود می تونید استفاده کنید. حتما دقت کنید که هر برنامه رو برای سیستم عامل خودتون دانلود کنید (خود این سایت ها به صورت خودکار سیستم عامل رو شناسایی می کنند).
 
-### بخش اول: خواندن فایل
+## بخش اول: خواندن فایل
 
 
 خب شروع کنیم. تو این قسمت قراره یک فایل متنی رو بخونیم و یک سری مرتب سازی ها روش انجام بدیم. اول یک با دیتاست بازی می کنیم تا  یکسری اطلاعات از دیتاست دستمون بیاد و بعد یک روش ساده برای خوندن این دیتاست معرفی می کنیم. <br/> 
@@ -96,7 +96,7 @@ tags:    nlp اموزش
 کدهای بخش اول رو از [<u>اینجا</u>](https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/01-read_file.ipynb) می تونید ببینید.
 
 
-### بخش دوم: بررسی دیتاست
+## بخش دوم: بررسی دیتاست
 
 
 بخش قبل یاد گرفتیم که چطور دیتا رو به روش پیچیده بخونیم تا با یک سری از ابزارهای تغییر در متن آشنا شیم و در آخر روش ساده رو یاد گرفتیم:
@@ -128,7 +128,7 @@ tags:    nlp اموزش
 
 کدهای بخش دوم رو از [<u>اینجا</u>](https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/02-Exploring%20Dataset.ipynb) می تونید ببینید.
 
-### بخش سوم: عبارات منظم 
+## بخش سوم: عبارات منظم 
 
 دلیل اصلی یاد گرفتن عبارات با قاعده اینه که بتونیم جمله رو tokenize کنیم یا به عبارتی کلمه های جمله رو از هم جدا کنیم که پایتون بدونه که دنبال چی بگرده. گاهی اوقات لازمه که یک الگوی خاصی از کاراکترها رو در یک رشته متن پیدا کنیم، این کار به راحتی با عبارات با قاعده قابل انجامه. البته خیلی راحتم نه :) چون روش هایی که برای تشخیص این الگوها وجود داره خیلی گسترده است ولی یک سری موارد کلی رو اگر یاد بگیرید و تمرین کنید براتون راحت می شه. از [داکیومنت عبارات با قاعده در پایتون](https://docs.python.org/3/library/re.html) هم می تونید استفاده کنید.
 
@@ -165,12 +165,66 @@ tags:    nlp اموزش
 یک کار دیگه ای که می شه با این عبارات با قاعده انجام داد اینه که کلماتی که املاشون اشتباه نوشته شده در یک متن رو پیدا کرد و با مقدار درستش جایگزین کرد. مثال این مورد رو می تونید در [اینجا](https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/04-RegEx1.ipynb) مشاهده کنید.
 
 
-### بخش چهارم: 
+## بخش چهارم: پیش پردازش (پاکسازی) داده
+
+برای اینکه داده آماده بررسی و تحلیل بشه باید یکسری مراحل به عنوان پیش پردازش روش انجام بشه تا مواردی که اضافه است حذف بشه. این مراحل شامل حذف علائم نگارشی، تقسیم جمله به کلمه ها متشکل، حذف کلماتی که معنی خاصی ندارندو حذف مشتقات کلمات می شود.
+
+بریم پنج سطر اول دیتا رو دوباره ببینیم:
+    import pandas as pd
+    pd.set_option('display.max_colwidth', 100)
+    dataset = pd.read_csv('file_name', sep='\t', header=None)
+    dataset.columns = ['label', 'body']
+    dataset.head()
+
+خط دوم `set_option('display.max_colwidth', 100)` تعداد کاراکترهایی که نمایش داده می شه رو مشخص می کنه. <br/>
+الان دیتا به این صورته:
+
+![dataset_before_cleaning](https://raw.githubusercontent.com/spacelover1/personalBlog/master/image/dataset.PNG)
+
+فایل دیتاست بعد از پاکسازی هم در این فولدر وجود داره و قراره دیتا به این صورت دربیاد:
+
+![cleaned_dataset](https://raw.githubusercontent.com/spacelover1/personalBlog/master/image/cleaned_dataset.PNG)
+
+### حذف علائم نگارشی
+
+علائم نگارشی در کتابخونه `string` قرار دارند. باید یک تابع بنویسیم که این علائم نگارشی رو از متن پیام در دیتا حذف کنه. و متن بدون علائم نگارشی بده.
+
+    def remove_punct(text):
+        text_nopunct = [char for char in text if char not in string.punctuation]
+        return text_nopunct
+
+    dataset['body_nopunct'] = dataset['body'].apply(lambda x: remove_punct(x))
+
+در اینجا چون متن پیام رو داره کاراکتر  به کاراکتر بررسی می کنه در نهایت هم کاراکتر ها رو از هم جدا می کنه و به عنوان خروجی می ده، برای اینکه به صورت کلمه خروجی بگیریم از تابع `join()` استفاده می کنیم.
+
+    text_nopunct = "".join([char for char in text if char not in string.punctuation])
+
+### جداسازی کلمات
+
+    import re
+    def tokenize(text):
+        tokens = re.split('\W+', text)
+        return tokens
+        
+    dataset['body_tokenized'] = dataset['body_nopunct'].apply(lambda x: tokenize(x.lower()))
+
+تابع 'lower()' شاید اینجا زیاد استفاده نشه و اهمیتش مشخص نباشه ولی چون در پایتون حروف کوچک و بزرگ یکسان نیستند باید همه حروف در کلمات یک جور باشند.
+
+###حذف کلمات بدون معنی 
+هر زبانی یک سری کلمات داره که معنی خاصی در جمله ندارند و اگر حذف شوند جمله معنی خودش رو حفظ می کنه. مثل حروف ربط. با استفاده از کتابخانه `nltk` این کلمات رو از جمله حذف می کنیم:
+    import nltk
+    stopwords = nltk.corpus.stopwords.words('english')
+
+حالا یک تابع می نویسیم که این کلمات رو حذف کنه از جملات:
+
+    def remove_stopwords(tokenized_list):
+        text_nostop = [word for word in tokenized_list if word not in stopwords]
+        return text_nostop
+
+    dataset['body_nostop'] = dataset['body_tokenized'].apply(lambda x: remove_stopwords(x))
 
 
-
-
-کدهای بخش چهارم [<u>اینجا</u>]() قرار دارند.
+کدهای بخش چهارم [<u>اینجا</u>](https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/05-cleaning%20text_1.ipynb) قرار دارند.
 
 
 
