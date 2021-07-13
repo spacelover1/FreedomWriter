@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2021-07-13T23:33:44Z</updated>
+<updated>2021-07-13T23:36:42Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -34,7 +34,7 @@
 
 <p>زبانی که در این سری استفاده می شه پایتونه، پس نیازه که پایتون رو نصب کنید. برای محیط برنامه نویسی هم می تونید از <a href="https://www.jetbrains.com/pycharm/download/#section=windows"><u>پایچارم</u></a> یا ژوپیتر استفاده کنید. برای استفاده از ژوپیتر باید <a href="https://docs.anaconda.com/anaconda/"><u>آناکوندا</u></a> رو نصب کنید. لینک سایت اصلی این برنامه ها رو هم قرار دادم که برای دانلود می تونید استفاده کنید. حتما دقت کنید که هر برنامه رو برای سیستم عامل خودتون دانلود کنید (خود این سایت ها به صورت خودکار سیستم عامل رو شناسایی می کنند).</p>
 
-<h2 id="بخش-اول-خواندن-فایل">بخش اول: خواندن فایل</h2>
+<h2 id="بخش-اول-خواندن-فایل"><strong>بخش اول: خواندن فایل</strong></h2>
 
 <p>خب شروع کنیم. تو این قسمت قراره یک فایل متنی رو بخونیم و یک سری مرتب سازی ها روش انجام بدیم. اول یک با دیتاست بازی می کنیم تا  یکسری اطلاعات از دیتاست دستمون بیاد و بعد یک روش ساده برای خوندن این دیتاست معرفی می کنیم. <br /> 
 فایلی که استفاده می شه در ریپویی که لینکش رو بالا گذاشتم موجوده. برای خوندن فایل باید اول با استفاده از تابع <code class="language-plaintext highlighter-rouge">open()</code> فایل رو باز کنیم و با تابع <code class="language-plaintext highlighter-rouge">read()</code> فایل باز شده رو می خونیم و محتواش رو در یک متغیر به اسم <code class="language-plaintext highlighter-rouge">raw_data</code> می نویسیم.</p>
@@ -116,7 +116,7 @@ text_list[-5:]
 <p>در این بخش یاد گرفتیم که یک دیتاست متنی رو چطوری بخونیم و برای تحلیل های بعدی مرتبش کنیم.
 کدهای بخش اول رو از <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/01-read_file.ipynb"><u>اینجا</u></a> می تونید ببینید.</p>
 
-<h2 id="بخش-دوم-بررسی-دیتاست">بخش دوم: بررسی دیتاست</h2>
+<h2 id="بخش-دوم-بررسی-دیتاست"><strong>بخش دوم: بررسی دیتاست</strong></h2>
 
 <p>بخش قبل یاد گرفتیم که چطور دیتا رو به روش پیچیده بخونیم تا با یک سری از ابزارهای تغییر در متن آشنا شیم و در آخر روش ساده رو یاد گرفتیم:</p>
 
@@ -151,7 +151,7 @@ print("Number of null in body: {}".format(dataset['body'].isnull().sum()))
 
 <p>کدهای بخش دوم رو از <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/02-Exploring%20Dataset.ipynb"><u>اینجا</u></a> می تونید ببینید.</p>
 
-<h2 id="بخش-سوم-عبارات-منظم">بخش سوم: عبارات منظم</h2>
+<h2 id="بخش-سوم-عبارات-منظم"><strong>بخش سوم: عبارات منظم</strong></h2>
 
 <p>دلیل اصلی یاد گرفتن عبارات با قاعده اینه که بتونیم جمله رو tokenize کنیم یا به عبارتی کلمه های جمله رو از هم جدا کنیم که پایتون بدونه که دنبال چی بگرده. گاهی اوقات لازمه که یک الگوی خاصی از کاراکترها رو در یک رشته متن پیدا کنیم، این کار به راحتی با عبارات با قاعده قابل انجامه. البته خیلی راحتم نه :) چون روش هایی که برای تشخیص این الگوها وجود داره خیلی گسترده است ولی یک سری موارد کلی رو اگر یاد بگیرید و تمرین کنید براتون راحت می شه. از <a href="https://docs.python.org/3/library/re.html">داکیومنت عبارات با قاعده در پایتون</a> هم می تونید استفاده کنید.</p>
 
@@ -194,12 +194,14 @@ messy_text1 = "This-is-a''''made-up/string-+to*****test-2 &gt;&gt;&gt;&gt;&gt;&g
 
 <p>برای اینکه داده آماده بررسی و تحلیل بشه باید یکسری مراحل به عنوان پیش پردازش روش انجام بشه تا مواردی که اضافه است حذف بشه. این مراحل شامل حذف علائم نگارشی، تقسیم جمله به کلمه ها متشکل، حذف کلماتی که معنی خاصی ندارندو حذف مشتقات کلمات می شود.</p>
 
-<p>بریم پنج سطر اول دیتا رو دوباره ببینیم:
-    import pandas as pd
-    pd.set_option(‘display.max_colwidth’, 100)
-    dataset = pd.read_csv(‘file_name’, sep=’\t’, header=None)
-    dataset.columns = [‘label’, ‘body’]
-    dataset.head()</p>
+<p>بریم پنج سطر اول دیتا رو دوباره ببینیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import pandas as pd
+pd.set_option('display.max_colwidth', 100)
+dataset = pd.read_csv('file_name', sep='\t', header=None)
+dataset.columns = ['label', 'body']
+dataset.head()
+</code></pre></div></div>
 
 <p>خط دوم <code class="language-plaintext highlighter-rouge">set_option('display.max_colwidth', 100)</code> تعداد کاراکترهایی که نمایش داده می شه رو مشخص می کنه. <br />
 الان دیتا به این صورته:</p>
@@ -210,7 +212,7 @@ messy_text1 = "This-is-a''''made-up/string-+to*****test-2 &gt;&gt;&gt;&gt;&gt;&g
 
 <p><img src="https://raw.githubusercontent.com/spacelover1/personalBlog/master/image/cleaned_dataset.PNG" alt="cleaned_dataset" /></p>
 
-<h3 id="حذف-علائم-نگارشی">حذف علائم نگارشی</h3>
+<h3 id="حذف-علائم-نگارشی"><strong>حذف علائم نگارشی</strong></h3>
 
 <p>علائم نگارشی در کتابخونه <code class="language-plaintext highlighter-rouge">string</code> قرار دارند. باید یک تابع بنویسیم که این علائم نگارشی رو از متن پیام در دیتا حذف کنه. و متن بدون علائم نگارشی بده.</p>
 
@@ -226,7 +228,7 @@ dataset['body_nopunct'] = dataset['body'].apply(lambda x: remove_punct(x))
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>text_nopunct = "".join([char for char in text if char not in string.punctuation])
 </code></pre></div></div>
 
-<h3 id="جداسازی-کلمات">جداسازی کلمات</h3>
+<h3 id="جداسازی-کلمات"><strong>جداسازی کلمات</strong></h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import re
 def tokenize(text):
@@ -238,7 +240,7 @@ dataset['body_tokenized'] = dataset['body_nopunct'].apply(lambda x: tokenize(x.l
 
 <p>تابع <code class="language-plaintext highlighter-rouge">lower()</code> شاید اینجا زیاد استفاده نشه و اهمیتش مشخص نباشه ولی چون در پایتون حروف کوچک و بزرگ یکسان نیستند باید همه حروف در کلمات یک جور باشند.</p>
 
-<p>###حذف کلمات بدون معنی</p>
+<h3 id="حذف-کلمات-بدون-معنی"><strong>حذف کلمات بدون معنی</strong></h3>
 
 <p>هر زبانی یک سری کلمات داره که معنی خاصی در جمله ندارند و اگر حذف شوند جمله معنی خودش رو حفظ می کنه. مثل حروف ربط. با استفاده از کتابخانه <code class="language-plaintext highlighter-rouge">nltk</code> این کلمات رو از جمله حذف می کنیم:</p>
 
