@@ -1,5 +1,5 @@
 ---
-title: پردازش زبان طبیعی(NLP)- مبانی - یک
+title: مبانی پردازش زبان طبیعی(NLP)- یک
 category: general
 tags:    nlp اموزش  
 ---
