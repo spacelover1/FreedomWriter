@@ -9,3 +9,4 @@ Theme repo: https://github.com/mehdisadeghi/jekyll-theme-mehdix-rtl
 - Photo Gallery link on the header
 - Link to the original template in the footer
 - Solve problem with the comment section
+- Related posts not shown correctly
