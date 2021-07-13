@@ -201,6 +201,7 @@ tags:    nlp اموزش
 
 ### جداسازی کلمات
 
+
     import re
     def tokenize(text):
         tokens = re.split('\W+', text)
@@ -208,14 +209,18 @@ tags:    nlp اموزش
         
     dataset['body_tokenized'] = dataset['body_nopunct'].apply(lambda x: tokenize(x.lower()))
 
-تابع 'lower()' شاید اینجا زیاد استفاده نشه و اهمیتش مشخص نباشه ولی چون در پایتون حروف کوچک و بزرگ یکسان نیستند باید همه حروف در کلمات یک جور باشند.
+تابع `lower()` شاید اینجا زیاد استفاده نشه و اهمیتش مشخص نباشه ولی چون در پایتون حروف کوچک و بزرگ یکسان نیستند باید همه حروف در کلمات یک جور باشند.
 
-###حذف کلمات بدون معنی 
+
+###حذف کلمات بدون معنی
+ 
 هر زبانی یک سری کلمات داره که معنی خاصی در جمله ندارند و اگر حذف شوند جمله معنی خودش رو حفظ می کنه. مثل حروف ربط. با استفاده از کتابخانه `nltk` این کلمات رو از جمله حذف می کنیم:
+
     import nltk
     stopwords = nltk.corpus.stopwords.words('english')
 
 حالا یک تابع می نویسیم که این کلمات رو حذف کنه از جملات:
+
 
     def remove_stopwords(tokenized_list):
         text_nostop = [word for word in tokenized_list if word not in stopwords]
