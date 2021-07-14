@@ -55,7 +55,7 @@
 <!--       <i class="fas fa-stopwatch"></i>
       <p>در قسمت قبل فایل متنی رو به دو روش آسان و دشوار خوندیم. و پاکسازی دیتا رو توسط سه متد پیش پردازش یاد گرفتیم: حذف علائم نگارشی، توکنایز کردن (جداسازی کلمات)، حذف کلمات بدون معنی. و گفتیم که یک مرحله چهارمی هم برای پاکسازی یا نرمالسازی داده متنی می شه استفاده کرد که شاید همیشه به اندازه مراحل قبل اهمیت نداشته باشه. در این قسمت درباره این مرحله چهارم صحبت می کنیم.</p>
 
-<h۲ id="بخش-پنجم-stemming">بخش پنجم: stemming</h۲>
+<h۲ id="بخش-پنجم-stemming"><strong>بخش پنجم: Stemming</strong></h۲>
 
 <p>کاری که stemming انجام می ده اینه که میاد پسوند و پیشوند رو از کلمه حذف می کنه و هر چی باقی موند رو به عنوان خروجی میده، پس ممکنه خروجی حتی کلمه نباشه. خب پس چرا ازش استفاده می کنیم؟ بخاطر سادگی و سرعتی که داره.</p>
 
@@ -114,13 +114,15 @@ def stemming(tokenized_text):
 dataset['stemmed_text'] = dataset['tokenized_text'].apply(lambda x: stemming(x))
 </code></pre></div></div>
 
+<h۲ id="بخش-ششم-lemmatization"><strong>بخش ششم: Lemmatization</strong></h۲>
+
  دقیقه مطالعه -->
     </p>
   </div>
 
   <p>در قسمت قبل فایل متنی رو به دو روش آسان و دشوار خوندیم. و پاکسازی دیتا رو توسط سه متد پیش پردازش یاد گرفتیم: حذف علائم نگارشی، توکنایز کردن (جداسازی کلمات)، حذف کلمات بدون معنی. و گفتیم که یک مرحله چهارمی هم برای پاکسازی یا نرمالسازی داده متنی می شه استفاده کرد که شاید همیشه به اندازه مراحل قبل اهمیت نداشته باشه. در این قسمت درباره این مرحله چهارم صحبت می کنیم.</p>
 
-<h2 id="بخش-پنجم-stemming">بخش پنجم: stemming</h2>
+<h2 id="بخش-پنجم-stemming"><strong>بخش پنجم: Stemming</strong></h2>
 
 <p>کاری که stemming انجام می ده اینه که میاد پسوند و پیشوند رو از کلمه حذف می کنه و هر چی باقی موند رو به عنوان خروجی میده، پس ممکنه خروجی حتی کلمه نباشه. خب پس چرا ازش استفاده می کنیم؟ بخاطر سادگی و سرعتی که داره.</p>
 
@@ -178,6 +180,8 @@ def stemming(tokenized_text):
 
 dataset['stemmed_text'] = dataset['tokenized_text'].apply(lambda x: stemming(x))
 </code></pre></div></div>
+
+<h2 id="بخش-ششم-lemmatization"><strong>بخش ششم: Lemmatization</strong></h2>
 
 
 
@@ -318,7 +322,7 @@ dataset['stemmed_text'] = dataset['tokenized_text'].apply(lambda x: stemming(x))
 
   </div>
 
-  <small id="build-time">Site generated on Wed, 14 Jul 2021 20:55:23 +0430</small>
+  <small id="build-time">Site generated on Wed, 14 Jul 2021 21:34:56 +0430</small>
 
 </footer>
 <script src="https://spacelover.ir/assets/js/main.js"></script>

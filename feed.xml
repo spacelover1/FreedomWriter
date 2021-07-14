@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2021-07-14T20:55:23Z</updated>
+<updated>2021-07-14T21:34:56Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -21,7 +21,7 @@
     <content type="html">
       <![CDATA[<div dir="rtl"><p>در قسمت قبل فایل متنی رو به دو روش آسان و دشوار خوندیم. و پاکسازی دیتا رو توسط سه متد پیش پردازش یاد گرفتیم: حذف علائم نگارشی، توکنایز کردن (جداسازی کلمات)، حذف کلمات بدون معنی. و گفتیم که یک مرحله چهارمی هم برای پاکسازی یا نرمالسازی داده متنی می شه استفاده کرد که شاید همیشه به اندازه مراحل قبل اهمیت نداشته باشه. در این قسمت درباره این مرحله چهارم صحبت می کنیم.</p>
 
-<h2 id="بخش-پنجم-stemming">بخش پنجم: stemming</h2>
+<h2 id="بخش-پنجم-stemming"><strong>بخش پنجم: Stemming</strong></h2>
 
 <p>کاری که stemming انجام می ده اینه که میاد پسوند و پیشوند رو از کلمه حذف می کنه و هر چی باقی موند رو به عنوان خروجی میده، پس ممکنه خروجی حتی کلمه نباشه. خب پس چرا ازش استفاده می کنیم؟ بخاطر سادگی و سرعتی که داره.</p>
 
@@ -79,6 +79,8 @@ def stemming(tokenized_text):
 
 dataset['stemmed_text'] = dataset['tokenized_text'].apply(lambda x: stemming(x))
 </code></pre></div></div>
+
+<h2 id="بخش-ششم-lemmatization"><strong>بخش ششم: Lemmatization</strong></h2>
 
 </div>]]>
     </content>
