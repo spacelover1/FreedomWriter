@@ -66,10 +66,32 @@ tags:    nlp اموزش
 ## **بخش ششم: Lemmatization**
 
 
+همونطور که دیدیم خروجی `stemming` لزوما کلمه نیست و ممکنه یک چیز بی معنی باشه یا حتی اشتباه. یک متد دیگه `Lemmatization` نام داره که خروجی این روش حتما کلمه ای در دیکشنریه. یعنی معمولا کلمات رو می بره به ریشه شون.
+
+به مثال های زیر توجه کنید. 
 
 
+    print(ps.stem('meaning')) ==> mean
+    print(ps.stem('meanness')) ==> mean
+
+    print(wn.lemmatize('meaning')) ==> meaning
+    print(wn.lemmatize('meanness')) ==> meanness
 
 
+    print(ps.stem('goose')) ==> goos
+    print(ps.stem('geese')) ==> gees
+
+    print(wn.lemmatize('goose')) ==> goose
+    print(wn.lemmatize('geese')) ==> goose
+
+
+در واقع stemming رویکرد الگوریتمی داره و فقط با رشته ای که بهش می دیم کار می کنه و فقط پسوند رو حذف می کنه.<br/>
+اما lemmatization پیچیده تره و کلمه ای که بهش داده می شه رو در لیست لغات بررسی می کنه و پرداش می کنه و بعد ریشه کلمه رو بر می گردونه مشکلش اینه که اگر کلمه ای که بهش داده شده در لیست لغات نباشه همونو برمی گردونه.
+
+همین اتفاقی که در این مثال ها افتاده، که همونطور که می بینیم خلاصه نکردن بهتر از رشته کلمه اشتباه برگردوندنه.
+
+حالا می خوایم تکنیک lemmatization رو روی دیتاست پیام ها پیاده کنیم. مثل قبل، ابتدا دیتا رو می خونیم و پاکسازی های اولیه رو انجام می دیم و بعد از lemmatizer استفاده می کنیم. <br/>
+در اینجا من فقط تابع lemmatizer رو نوشتم. کد کامل رو [اینجا](https://github.com/spacelover1/NLP-with-Python/blob/main/2-SupplementalDataCleaning/UsingaLemmatizer.ipynb) می تونید مشاهده کنید.
 
 
 
