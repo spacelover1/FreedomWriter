@@ -116,6 +116,32 @@ dataset['stemmed_text'] = dataset['tokenized_text'].apply(lambda x: stemming(x))
 
 <h۲ id="بخش-ششم-lemmatization"><strong>بخش ششم: Lemmatization</strong></h۲>
 
+<p>همونطور که دیدیم خروجی <code class="language-plaintext highlighter-rouge">stemming</code> لزوما کلمه نیست و ممکنه یک چیز بی معنی باشه یا حتی اشتباه. یک متد دیگه <code class="language-plaintext highlighter-rouge">Lemmatization</code> نام داره که خروجی این روش حتما کلمه ای در دیکشنریه. یعنی معمولا کلمات رو می بره به ریشه شون.</p>
+
+<p>به مثال های زیر توجه کنید.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(ps.stem('meaning')) ==&gt; mean
+print(ps.stem('meanness')) ==&gt; mean
+
+print(wn.lemmatize('meaning')) ==&gt; meaning
+print(wn.lemmatize('meanness')) ==&gt; meanness
+
+
+print(ps.stem('goose')) ==&gt; goos
+print(ps.stem('geese')) ==&gt; gees
+
+print(wn.lemmatize('goose')) ==&gt; goose
+print(wn.lemmatize('geese')) ==&gt; goose
+</code></pre></div></div>
+
+<p>در واقع stemming رویکرد الگوریتمی داره و فقط با رشته ای که بهش می دیم کار می کنه و فقط پسوند رو حذف می کنه.<br />
+اما lemmatization پیچیده تره و کلمه ای که بهش داده می شه رو در لیست لغات بررسی می کنه و پرداش می کنه و بعد ریشه کلمه رو بر می گردونه مشکلش اینه که اگر کلمه ای که بهش داده شده در لیست لغات نباشه همونو برمی گردونه.</p>
+
+<p>همین اتفاقی که در این مثال ها افتاده، که همونطور که می بینیم خلاصه نکردن بهتر از رشته کلمه اشتباه برگردوندنه.</p>
+
+<p>حالا می خوایم تکنیک lemmatization رو روی دیتاست پیام ها پیاده کنیم. مثل قبل، ابتدا دیتا رو می خونیم و پاکسازی های اولیه رو انجام می دیم و بعد از lemmatizer استفاده می کنیم. <br />
+در اینجا من فقط تابع lemmatizer رو نوشتم. کد کامل رو <a href="https://github.com/spacelover۱/NLP-with-Python/blob/main/۲-SupplementalDataCleaning/UsingaLemmatizer.ipynb">اینجا</a> می تونید مشاهده کنید.</p>
+
  دقیقه مطالعه -->
     </p>
   </div>
@@ -182,6 +208,32 @@ dataset['stemmed_text'] = dataset['tokenized_text'].apply(lambda x: stemming(x))
 </code></pre></div></div>
 
 <h2 id="بخش-ششم-lemmatization"><strong>بخش ششم: Lemmatization</strong></h2>
+
+<p>همونطور که دیدیم خروجی <code class="language-plaintext highlighter-rouge">stemming</code> لزوما کلمه نیست و ممکنه یک چیز بی معنی باشه یا حتی اشتباه. یک متد دیگه <code class="language-plaintext highlighter-rouge">Lemmatization</code> نام داره که خروجی این روش حتما کلمه ای در دیکشنریه. یعنی معمولا کلمات رو می بره به ریشه شون.</p>
+
+<p>به مثال های زیر توجه کنید.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(ps.stem('meaning')) ==&gt; mean
+print(ps.stem('meanness')) ==&gt; mean
+
+print(wn.lemmatize('meaning')) ==&gt; meaning
+print(wn.lemmatize('meanness')) ==&gt; meanness
+
+
+print(ps.stem('goose')) ==&gt; goos
+print(ps.stem('geese')) ==&gt; gees
+
+print(wn.lemmatize('goose')) ==&gt; goose
+print(wn.lemmatize('geese')) ==&gt; goose
+</code></pre></div></div>
+
+<p>در واقع stemming رویکرد الگوریتمی داره و فقط با رشته ای که بهش می دیم کار می کنه و فقط پسوند رو حذف می کنه.<br />
+اما lemmatization پیچیده تره و کلمه ای که بهش داده می شه رو در لیست لغات بررسی می کنه و پرداش می کنه و بعد ریشه کلمه رو بر می گردونه مشکلش اینه که اگر کلمه ای که بهش داده شده در لیست لغات نباشه همونو برمی گردونه.</p>
+
+<p>همین اتفاقی که در این مثال ها افتاده، که همونطور که می بینیم خلاصه نکردن بهتر از رشته کلمه اشتباه برگردوندنه.</p>
+
+<p>حالا می خوایم تکنیک lemmatization رو روی دیتاست پیام ها پیاده کنیم. مثل قبل، ابتدا دیتا رو می خونیم و پاکسازی های اولیه رو انجام می دیم و بعد از lemmatizer استفاده می کنیم. <br />
+در اینجا من فقط تابع lemmatizer رو نوشتم. کد کامل رو <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/2-SupplementalDataCleaning/UsingaLemmatizer.ipynb">اینجا</a> می تونید مشاهده کنید.</p>
 
 
 
@@ -322,7 +374,7 @@ dataset['stemmed_text'] = dataset['tokenized_text'].apply(lambda x: stemming(x))
 
   </div>
 
-  <small id="build-time">Site generated on Wed, 14 Jul 2021 21:34:56 +0430</small>
+  <small id="build-time">Site generated on Wed, 14 Jul 2021 21:36:49 +0430</small>
 
 </footer>
 <script src="https://spacelover.ir/assets/js/main.js"></script>
