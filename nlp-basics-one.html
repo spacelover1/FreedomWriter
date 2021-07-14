@@ -198,11 +198,15 @@ messy_text۱ = "This-is-a''''made-up/string-+to*****test-۲ &gt;&gt;&gt;&gt;&gt;
 </code></pre></div></div>
 
 <p>برای اینکه بتونیم از این عبارات با قاعده در پایتون استفاده کنیم باید کتابخونه ش رو ایمپورت کنیم. <br />
-کلمات جمله اول با فاصله از هم جدا شدند پس یه الگو به دست اومد، می تونیم هر جا کاراکتر فاصله بود تشخیص بدیم و کلمات رو از هم جدا کنیم. با استفاده از تابع <code class="language-plaintext highlighter-rouge">split()</code> و ‘\s’ به کوچک و بزرگ بودن حروف دقت کنید، چون هر کدوم معنی خاصی دارند. در اینجا حرف کوچک s یعنی از نقاطی که کاراکتر فاصله وجود داره کلمات رو جدا کن.
-    re.split(‘\s’, ‘text’)</p>
+کلمات جمله اول با فاصله از هم جدا شدند پس یه الگو به دست اومد، می تونیم هر جا کاراکتر فاصله بود تشخیص بدیم و کلمات رو از هم جدا کنیم. با استفاده از تابع <code class="language-plaintext highlighter-rouge">split()</code> و ‘\s’ به کوچک و بزرگ بودن حروف دقت کنید، چون هر کدوم معنی خاصی دارند. در اینجا حرف کوچک s یعنی از نقاطی که کاراکتر فاصله وجود داره کلمات رو جدا کن.</p>
 
-<p>اگر همین کد رو روی متن دوم اجرا کنیم جوابی که می خوایم رو نمی گیریم، چون بیشتر از یک کاراکتر فاصله بین بعضی کلمات وجود داره. پس از ‘\s+’ استفاده می کنیم. این یعنی یک فاصله یا بیشتر اگر بین کلمات بود حذف کن.
-    re.split(‘\s+’, ‘messy_text’)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>re.split('\s', 'text')
+</code></pre></div></div>
+
+<p>اگر همین کد رو روی متن دوم اجرا کنیم جوابی که می خوایم رو نمی گیریم، چون بیشتر از یک کاراکتر فاصله بین بعضی کلمات وجود داره. پس از ‘\s+’ استفاده می کنیم. این یعنی یک فاصله یا بیشتر اگر بین کلمات بود حذف کن.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>re.split('\s+', 'messy_text')
+</code></pre></div></div>
 
 <p>برای متن سوم هیچ کدوم از راه حلای بالا جواب نمی ده. و باید از راه دیگه ای بریم. اینجا به غیر از کاراکتر فاصله، کاراکترهای دیگه ای هم وجود داره. پس می تونیم بیاییم بگیم هر کاراکتر غیر کلمه ای رو حذف کن. و علامت + رو هم می ذاریم چون کاراکترهای غیرکلمه بیشتر از یکبار تکرار شدن بین هر کلمه.</p>
 
@@ -224,7 +228,7 @@ messy_text۱ = "This-is-a''''made-up/string-+to*****test-۲ &gt;&gt;&gt;&gt;&gt;
 <p>کدهای بخش سوم <a href="https://github.com/spacelover۱/NLP-with-Python/blob/main/۱-Basics/۰۳-RegEx.ipynb"><u>اینجا</u></a> قرار دارند.<br />
 یک کار دیگه ای که می شه با این عبارات با قاعده انجام داد اینه که کلماتی که املاشون اشتباه نوشته شده در یک متن رو پیدا کرد و با مقدار درستش جایگزین کرد. مثال این مورد رو می تونید در <a href="https://github.com/spacelover۱/NLP-with-Python/blob/main/۱-Basics/۰۴-RegEx۱.ipynb">اینجا</a> مشاهده کنید.</p>
 
-<h۲ id="بخش-چهارم-پیش-پردازش-پاکسازی-داده">بخش چهارم: پیش پردازش (پاکسازی) داده</h۲>
+<h۲ id="بخش-چهارم-پیش-پردازش-پاکسازی-داده"><strong>بخش چهارم: پیش پردازش (پاکسازی) داده</strong></h۲>
 
 <p>برای اینکه داده آماده بررسی و تحلیل بشه باید یکسری مراحل به عنوان پیش پردازش روش انجام بشه تا مواردی که اضافه است حذف بشه. این مراحل شامل حذف علائم نگارشی، تقسیم جمله به کلمه ها متشکل، حذف کلماتی که معنی خاصی ندارندو حذف مشتقات کلمات می شود.</p>
 
@@ -442,11 +446,15 @@ messy_text1 = "This-is-a''''made-up/string-+to*****test-2 &gt;&gt;&gt;&gt;&gt;&g
 </code></pre></div></div>
 
 <p>برای اینکه بتونیم از این عبارات با قاعده در پایتون استفاده کنیم باید کتابخونه ش رو ایمپورت کنیم. <br />
-کلمات جمله اول با فاصله از هم جدا شدند پس یه الگو به دست اومد، می تونیم هر جا کاراکتر فاصله بود تشخیص بدیم و کلمات رو از هم جدا کنیم. با استفاده از تابع <code class="language-plaintext highlighter-rouge">split()</code> و ‘\s’ به کوچک و بزرگ بودن حروف دقت کنید، چون هر کدوم معنی خاصی دارند. در اینجا حرف کوچک s یعنی از نقاطی که کاراکتر فاصله وجود داره کلمات رو جدا کن.
-    re.split(‘\s’, ‘text’)</p>
+کلمات جمله اول با فاصله از هم جدا شدند پس یه الگو به دست اومد، می تونیم هر جا کاراکتر فاصله بود تشخیص بدیم و کلمات رو از هم جدا کنیم. با استفاده از تابع <code class="language-plaintext highlighter-rouge">split()</code> و ‘\s’ به کوچک و بزرگ بودن حروف دقت کنید، چون هر کدوم معنی خاصی دارند. در اینجا حرف کوچک s یعنی از نقاطی که کاراکتر فاصله وجود داره کلمات رو جدا کن.</p>
 
-<p>اگر همین کد رو روی متن دوم اجرا کنیم جوابی که می خوایم رو نمی گیریم، چون بیشتر از یک کاراکتر فاصله بین بعضی کلمات وجود داره. پس از ‘\s+’ استفاده می کنیم. این یعنی یک فاصله یا بیشتر اگر بین کلمات بود حذف کن.
-    re.split(‘\s+’, ‘messy_text’)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>re.split('\s', 'text')
+</code></pre></div></div>
+
+<p>اگر همین کد رو روی متن دوم اجرا کنیم جوابی که می خوایم رو نمی گیریم، چون بیشتر از یک کاراکتر فاصله بین بعضی کلمات وجود داره. پس از ‘\s+’ استفاده می کنیم. این یعنی یک فاصله یا بیشتر اگر بین کلمات بود حذف کن.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>re.split('\s+', 'messy_text')
+</code></pre></div></div>
 
 <p>برای متن سوم هیچ کدوم از راه حلای بالا جواب نمی ده. و باید از راه دیگه ای بریم. اینجا به غیر از کاراکتر فاصله، کاراکترهای دیگه ای هم وجود داره. پس می تونیم بیاییم بگیم هر کاراکتر غیر کلمه ای رو حذف کن. و علامت + رو هم می ذاریم چون کاراکترهای غیرکلمه بیشتر از یکبار تکرار شدن بین هر کلمه.</p>
 
@@ -468,7 +476,7 @@ messy_text1 = "This-is-a''''made-up/string-+to*****test-2 &gt;&gt;&gt;&gt;&gt;&g
 <p>کدهای بخش سوم <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/03-RegEx.ipynb"><u>اینجا</u></a> قرار دارند.<br />
 یک کار دیگه ای که می شه با این عبارات با قاعده انجام داد اینه که کلماتی که املاشون اشتباه نوشته شده در یک متن رو پیدا کرد و با مقدار درستش جایگزین کرد. مثال این مورد رو می تونید در <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/1-Basics/04-RegEx1.ipynb">اینجا</a> مشاهده کنید.</p>
 
-<h2 id="بخش-چهارم-پیش-پردازش-پاکسازی-داده">بخش چهارم: پیش پردازش (پاکسازی) داده</h2>
+<h2 id="بخش-چهارم-پیش-پردازش-پاکسازی-داده"><strong>بخش چهارم: پیش پردازش (پاکسازی) داده</strong></h2>
 
 <p>برای اینکه داده آماده بررسی و تحلیل بشه باید یکسری مراحل به عنوان پیش پردازش روش انجام بشه تا مواردی که اضافه است حذف بشه. این مراحل شامل حذف علائم نگارشی، تقسیم جمله به کلمه ها متشکل، حذف کلماتی که معنی خاصی ندارندو حذف مشتقات کلمات می شود.</p>
 
@@ -544,6 +552,8 @@ dataset['body_nostop'] = dataset['body_tokenized'].apply(lambda x: remove_stopwo
       <h3>مطالب مرتبط</h3>
       <ul>
         
+          <li><a href="/nlp-basics-two.html">مبانی پردازش زبان طبیعی(NLP)- دو</a></li>
+        
           <li><a href="/why-are-we-here.html">چرا اینجا هستیم؟</a></li>
         
           <li><a href="/are-you-living-or-just-breathing.html">داری زندگی می‌کنی یا فقط نفس می‌کشی؟</a></li>
@@ -551,8 +561,6 @@ dataset['body_nostop'] = dataset['body_tokenized'].apply(lambda x: remove_stopwo
           <li><a href="/always-exercise.html">ورزش برای لاغر شدن نیست</a></li>
         
           <li><a href="/walks-the-earth.html">زنانی که با پای پیاده زمین را می پیمایند</a></li>
-        
-          <li><a href="/write-every-week.html">هر هفته، یک پست</a></li>
         
         </ul>
     </div>
@@ -576,7 +584,7 @@ dataset['body_nostop'] = dataset['body_tokenized'].apply(lambda x: remove_stopwo
 
   <nav class="pagination">
     
-      <a href="#" class="pagination--pager disabled">قبلی</a>
+      <a href="/nlp-basics-two.html" class="pagination--pager" title="مبانی پردازش زبان طبیعی(NLP)- دو">قبلی</a>
     
 
     
@@ -676,7 +684,7 @@ dataset['body_nostop'] = dataset['body_tokenized'].apply(lambda x: remove_stopwo
 
   </div>
 
-  <small id="build-time">Site generated on Wed, 14 Jul 2021 18:41:26 +0430</small>
+  <small id="build-time">Site generated on Wed, 14 Jul 2021 20:55:23 +0430</small>
 
 </footer>
 <script src="https://spacelover.ir/assets/js/main.js"></script>
