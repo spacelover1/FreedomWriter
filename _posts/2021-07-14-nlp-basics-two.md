@@ -93,6 +93,8 @@ tags:    nlp اموزش
 حالا می خوایم تکنیک lemmatization رو روی دیتاست پیام ها پیاده کنیم. مثل قبل، ابتدا دیتا رو می خونیم و پاکسازی های اولیه رو انجام می دیم و بعد از lemmatizer استفاده می کنیم. <br/>
 در اینجا من فقط تابع lemmatizer رو نوشتم. کد کامل رو [اینجا](https://github.com/spacelover1/NLP-with-Python/blob/main/2-SupplementalDataCleaning/UsingaLemmatizer.ipynb) می تونید مشاهده کنید.
 
+برای درک بهتر این دو روش می تونید [این توضیح انگلیسی](https://www.datacamp.com/community/tutorials/stemming-lemmatization-python) رو مطالعه کنید.
+
 
 
 
