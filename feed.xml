@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2021-07-14T21:36:49Z</updated>
+<updated>2021-07-15T16:11:04Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -11,6 +11,79 @@
   <email>spacelover1@gmail.com</email>
 </author>
 <rights>Commons Attribution 4.0 International</rights>
+
+  <entry>
+    <title>مبانی پردازش زبان طبیعی(NLP)- سه</title>
+    <link rel="alternate" type="text/html" href="https://spacelover.ir/nlp-basics-three.html"/>
+    <id>urn:uuid:</id>
+    <updated>2021-07-15T00:00:00Z</updated>
+    <category term="nlp"/><category term="اموزش"/>
+    <content type="html">
+      <![CDATA[<div dir="rtl"><p>در این قسمت در مورد برداری کردن دیتا صحبت می کنیم. <br />
+تا اینجا دیتا رو خوندیم و تا حدودی نرمالیزه کردیم. الان پایتون دیتا رو فقط یک سری رشته کاراکتر می بینه. حالا برای اینکه مدل ماشین لرنینگ و پایتون این دیتا رو درک کنه باید دیتا برداری بشه. برداری کردن یعنی چی؟ یعنی متن به عددصحیح تبدیل شه و یک بردار ویژگی ساخته شه.<br />
+حالا بردار ویژگی در اینجا یعنی متن هر پیام رو بگیریم و به یک بردارعددی تبدیل کنیم که نمایش دهنده متن اون پیام باشه. <br />
+چطوری این کار رو انجام می دیم؟ در ادامه درباره این مورد صحبت می کنیم.<br />
+چندین روش برای برداری کردن ویژگی ها وجود داره که در ادامه سه روش رایج رو بررسی می کنیم.</p>
+
+<h2 id="روش-اول-بردار-تعداد-count-vectorization">روش اول: بردار تعداد (Count Vectorization)</h2>
+
+<p>در این روش هر پیام گرفته می شه و هر کلمه به عنوان یک ویژگی در نظر گرفته می شه و بعد تعداد تکرار هر کلمه در اون پیام ثبت می شه. در نهایت یک ماتریسی داریم که هر سطر مربوط به یک پیام و هر ستون نمایش دهنده یک کلمه است. و در نهایت پایتون با بررسی این ماتریس یک ارتباطی بین کلمات موجود در پیام و لیبل اون پیام پیدا می کنه تا در آینده که بهش پیام های بدون لیبل بدیم بتونه به درسی برچسب گذاری کنه.</p>
+
+<p>برای درک بهتر این فرایند به عکس زیر دقت کنید:</p>
+
+<p><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/3-VectorizingRawData/vectorization_example.PNG" alt="vectorization_example" /></p>
+
+<p>دراین تصویر فقط دو رشته offer و lol از لیست کلمات پیام ها انتخاب شده و تعداد تکرارشون محاسبه شده. همونطور که در جدول سمت چپ و راست می بینید پیام هایی که برچسب غیر اسپم دارند در آن ها رشته lol وجود داشته و تکرار شده ولی شامل رشته offer نیستند و برعکس پیام های اسپم اکثرا رشته offer رو شامل می شن. <br />
+این یک مثال بسیار ساده برای درک فرایند و مفهوم بردار تعداد است.</p>
+
+<p>حالا در عمل این روش رو پیاده می کنیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import pandas as pd
+import re
+import string
+import nltk
+
+pd.set_option('display.max_colwidth', 100)
+dataset = pd.read_csv('SMSSpamCollection.tsv', sep='\t')
+dataset.columns = ['label', 'body']
+
+nltk.download('stopwords')
+stopwords = nltk.corpus.stopwords.words('english')
+ps = nltk.PorterStemmer()
+
+
+def clean_text(text):
+  text = "".join([word.lower() for word in text if word not in string.punctuation])
+  tokens = re.split('\W+', text)
+  text = [ps.stem(word) for word in tokens if word not in stopwords]
+  return text
+</code></pre></div></div>
+
+<p>بعد از خوندن و پاکسازی دیتا، سراغ برداری کردن می ریم.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from sklearn.feature_extraction import CountVectorizer
+
+count_vect = CountVectorizer(analyzer=func_name)
+X_counts = count_vect.fit_transform(dataset['body'])
+</code></pre></div></div>
+
+<p>حالا می تونیم با استفاده از <code class="language-plaintext highlighter-rouge">X_counts.shape</code> تعداد پیام ها و تعداد رشته های منحصر بفرد در این پیام ها رو ببینیم. در این دیتاست 5567 پیام و 8104 رشته منحصر بفرد داریم که همون ویژگی های ما هستند. این اعداد تعداد سطرو و ستون های ماتریس رو نمایش می ده.<br />
+و <code class="language-plaintext highlighter-rouge">count_vect.get_feature_names()</code> رشته های منحصربفرد رو نمایش می ده.</p>
+
+<p>تابع هایپرپارامترهای دیگه ای هم داره که <a href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html">اینجا</a> می تونید دربارشون بخونید.</p>
+
+<p>حالا در اینجا برای یادگیری 20 پیام اول رو  برداری می کنیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sample = dataset[0:20]
+count_vect_sample = CountVectorizer(analyzer=clean_text)
+X_counts_sample = count_vect_sample.fit_transform(dataset['body'])
+</code></pre></div></div>
+
+<p>و الان وقتی سایز دیتای نمونه رو ببینیم 192 رشته منحصربفرد داریم. خروجی و کد کامل این بخش رو <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/3-VectorizingRawData/CountVectorization.ipynb">اینجا</a> می تونید ببینید.</p>
+
+</div>]]>
+    </content>
+  </entry>
 
   <entry>
     <title>مبانی پردازش زبان طبیعی(NLP)- دو</title>
@@ -107,6 +180,8 @@ print(wn.lemmatize('geese')) ==&gt; goose
 
 <p>حالا می خوایم تکنیک lemmatization رو روی دیتاست پیام ها پیاده کنیم. مثل قبل، ابتدا دیتا رو می خونیم و پاکسازی های اولیه رو انجام می دیم و بعد از lemmatizer استفاده می کنیم. <br />
 در اینجا من فقط تابع lemmatizer رو نوشتم. کد کامل رو <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/2-SupplementalDataCleaning/UsingaLemmatizer.ipynb">اینجا</a> می تونید مشاهده کنید.</p>
+
+<p>برای درک بهتر این دو روش می تونید <a href="https://www.datacamp.com/community/tutorials/stemming-lemmatization-python">این توضیح انگلیسی</a> رو مطالعه کنید.</p>
 
 </div>]]>
     </content>
@@ -831,92 +906,6 @@ like being alive in the first place."
 <p>چند وقتی است که ناراحتم و می خواهم در این حال بمانم، چون می دانم اگر بخواهم اوضاع را تغییر دهم و تظاهر به خوب بودن کنم نه تنها کمکی نمی کند بلکه حالم بدتر می شود. به یاد صحنه ای از انیمیشن Inside out افتادم که یکی از موجودات تخیلی دخترک ناراحت می شود و “خوشحالی” (Joy) می آید تا او را شاد کند ولی تاثیری ندارد، بعد “غم” (Sadness) میا آید و با او صحبت می کند درباره چیزهایی که او را ناراحت کرده و باعث می شود که او کمی گریه کند و همین حالش را خوب می کند.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>There is no greater sorrow than to recall happiness in times of misery.
-</code></pre></div></div>
-
-</div>]]>
-    </content>
-  </entry>
-
-  <entry>
-    <title>کتاب Spy پائولو کوئلیو</title>
-    <link rel="alternate" type="text/html" href="https://spacelover.ir/spy.html"/>
-    <id>urn:uuid:</id>
-    <updated>2020-06-23T00:00:00Z</updated>
-    <category term="کتاب"/>
-    <content type="html">
-      <![CDATA[<div dir="rtl"><p>سوم تیر ماهه و گردنم هنوز درد میکنه.</p>
-
-<p>خیلی سخت و دردناکه وقتی یه اتفاق باعث بشه چیزی از دست بدی، چیزی که دیگه برنمی گرده.</p>
-
-<p>این کتاب رو تقریبا دو بار خوندمش. الان میخوام جملاتی که دوست داشتم رو بنویسم.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Memory is a river, one that always runs backward. 
-Memories are full of caprice, where images of things we've experienced
-are still capable of suffocating us 
-through one small detail or insignificant sound.
-</code></pre></div></div>
-
-<hr />
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I'm a woman who was born at the wrong time and nothing can be done to fix this.
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Remember this when you feel joy, pain, or sadness: 
-Everything passes, grows old, dies, and is reborn.
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Change" and "change for better" are two different things.
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Know what you want and try to go beyond your own expectations. 
-Improve your dancing, practice a lot, and set a very high goal, 
-one that will be difficult to achieve. Because that is an artist's mission:
-to go beyond one's limits. An artist who desires very little and
-achieves it has failed in life.
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You are born, go to school, and attend university in search of a husband. 
-You get married-- even if he is the worst man in the world-- 
-just so that others cant say no one wants you. You have children, 
-grow old, and spend the end of your days watching passersby 
-from a chair on the sidewalk, pretending to know everything about life 
-yet unable to silence the voice in your heart that says: 
-"You could try something else."
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sin was not created by God; it was created by us 
-when we tried to transform what was inevitable into something subjective. 
-We ceased to see the whole and came to see just one part; 
-and that part is loaded with guilt, rules, good versus evil, 
-and each side thinking it's right.
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Love doesn't obey anyone and will betray those who try to decipher its mystery.
-</code></pre></div></div>
-
-<hr />
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I thought that speaking about my wounds with only make them more real. 
-And yet the exact opposite was taking place: My tears were healing me.
-At times I punched my fists into the gravel beach and my hands bleed, 
-but I didn't even feel the pain. I was being healed. 
-I understood why Catholics confess even though they must know priests 
-share the same sins of worst. It did not matter who was listening 
-what mattered was leaving the wound open for the sun to purify 
-and the rainwater to wash. 
-That is what I was doing now in front of a man with whom 
-I had no intimacy that was the real reason i was able to speak so freely.
 </code></pre></div></div>
 
 </div>]]>
