@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="مبانی پردازش زبان طبیعی(NLP)- سه" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"نویسنده"},"url":"https://spacelover.ir/nlp-basics-three.html","@type":"BlogPosting","description":"در این قسمت در مورد برداری کردن دیتا صحبت می کنیم. تا اینجا دیتا رو خوندیم و تا حدودی نرمالیزه کردیم. الان پایتون دیتا رو فقط یک سری رشته کاراکتر می بینه. حالا برای اینکه مدل ماشین لرنینگ و پایتون این دیتا رو درک کنه باید دیتا برداری بشه. برداری کردن یعنی چی؟ یعنی متن به عددصحیح تبدیل شه و یک بردار ویژگی ساخته شه. حالا بردار ویژگی در اینجا یعنی متن هر پیام رو بگیریم و به یک بردارعددی تبدیل کنیم که نمایش دهنده متن اون پیام باشه. چطوری این کار رو انجام می دیم؟ در ادامه درباره این مورد صحبت می کنیم. چندین روش برای برداری کردن ویژگی ها وجود داره که در ادامه سه روش رایج رو بررسی می کنیم.","headline":"مبانی پردازش زبان طبیعی(NLP)- سه","dateModified":"2021-07-15T00:00:00+04:30","datePublished":"2021-07-15T00:00:00+04:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://spacelover.ir/nlp-basics-three.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"نویسنده"},"datePublished":"2021-07-15T00:00:00+04:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://spacelover.ir/nlp-basics-three.html"},"@type":"BlogPosting","description":"در این قسمت در مورد برداری کردن دیتا صحبت می کنیم. تا اینجا دیتا رو خوندیم و تا حدودی نرمالیزه کردیم. الان پایتون دیتا رو فقط یک سری رشته کاراکتر می بینه. حالا برای اینکه مدل ماشین لرنینگ و پایتون این دیتا رو درک کنه باید دیتا برداری بشه. برداری کردن یعنی چی؟ یعنی متن به عددصحیح تبدیل شه و یک بردار ویژگی ساخته شه. حالا بردار ویژگی در اینجا یعنی متن هر پیام رو بگیریم و به یک بردارعددی تبدیل کنیم که نمایش دهنده متن اون پیام باشه. چطوری این کار رو انجام می دیم؟ در ادامه درباره این مورد صحبت می کنیم. چندین روش برای برداری کردن ویژگی ها وجود داره که در ادامه سه روش رایج رو بررسی می کنیم.","url":"https://spacelover.ir/nlp-basics-three.html","headline":"مبانی پردازش زبان طبیعی(NLP)- سه","dateModified":"2021-07-15T00:00:00+04:30","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -59,7 +59,7 @@
 چطوری این کار رو انجام می دیم؟ در ادامه درباره این مورد صحبت می کنیم.<br />
 چندین روش برای برداری کردن ویژگی ها وجود داره که در ادامه سه روش رایج رو بررسی می کنیم.</p>
 
-<h۲ id="روش-اول-بردار-تعداد-count-vectorization">روش اول: بردار تعداد (Count Vectorization)</h۲>
+<h۲ id="روش-اول-بردار-تعداد-count-vectorization"><strong>روش اول: بردار تعداد (Count Vectorization)</strong></h۲>
 
 <p>در این روش هر پیام گرفته می شه و هر کلمه به عنوان یک ویژگی در نظر گرفته می شه و بعد تعداد تکرار هر کلمه در اون پیام ثبت می شه. در نهایت یک ماتریسی داریم که هر سطر مربوط به یک پیام و هر ستون نمایش دهنده یک کلمه است. و در نهایت پایتون با بررسی این ماتریس یک ارتباطی بین کلمات موجود در پیام و لیبل اون پیام پیدا می کنه تا در آینده که بهش پیام های بدون لیبل بدیم بتونه به درسی برچسب گذاری کنه.</p>
 
@@ -115,6 +115,34 @@ X_counts_sample = count_vect_sample.fit_transform(dataset['body'])
 
 <p>و الان وقتی سایز دیتای نمونه رو ببینیم ۱۹۲ رشته منحصربفرد داریم. خروجی و کد کامل این بخش رو <a href="https://github.com/spacelover۱/NLP-with-Python/blob/main/۳-VectorizingRawData/CountVectorization.ipynb">اینجا</a> می تونید ببینید.</p>
 
+<h۲ id="روش-دوم-بردار-n-grams-n-gram-vectorizing"><strong>روش دوم: بردار N-Grams (N-gram vectorizing)</strong></h۲>
+
+<p>این روش هم تا حدود زیادی مشابه روش قبلیه و ساختار کدش مشابه اونه. در اینجا هم هر سطر پیام ها هستند ولی هر ستون به جای نمایش یک رشته، ترکیب nتایی از رشته هاست. برای درک بهتر تصویر زیر  رو ببینید:</p>
+
+<p><a href="https://raw.githubusercontent.com/spacelover۱/NLP-with-Python/main/۳-VectorizingRawData/ngrams.png?token=AEGZAVTZYIIT۲UNASADUQN۳A۶KJCE">ngrams</a></p>
+
+<p>مثل مرحله قبل دیتا رو می خونیم و بعد باید تابعی بنویسیم که مراحل پاکسازی رو انجام بده. بخش قبل یک لیستی از توکن رو می دادیم به vectorizer اما الان چون می خواد ترکیبی از کلمه ها رو بسازه باید ورودی بهش یک رشته بدیم. پس در آخر باید توکن ها رو مثل یک جمله کنار هم دیگه قرار بدیم و این کار رو با تابع <code class="language-plaintext highlighter-rouge">join()</code> انجام می دیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def clean_text(text):
+  text = "".join([word.lower() for word in text if word not in string.punctuation])
+  tokens = re.split('\W+', text)
+  text = " ".join([ps.stem(word) for word in tokens if word not in stopwords])
+  return text
+</code></pre></div></div>
+
+<p>اگر یادتون باشه خط اول کاراکترها رو یکی یکی بررسی می کرد برای پیدا کردن علائم نگارشی و در اخر با <code class="language-plaintext highlighter-rouge">join()</code> این کاراکترها رو بهم متصل کردیم. در <code class="language-plaintext highlighter-rouge">join()</code> دومی قرار کلمه ها کنار هم بیان تا جمله بسازن پس باید یک فاصله بین هر کلمه باشه.</p>
+
+<p>در اینجا هم از CountVectorizer استفاده می کنیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ngram_vect = CountVectorizer(ngram_range=(۲,۲))
+X_counts = ngram_vect.fit_transform(dataset['cleaned_text'])
+</code></pre></div></div>
+
+<p>در <code class="language-plaintext highlighter-rouge">ngram_range</code> مشخص می کنیم که ترکیب چندتایی از کلمه ها بسازه. مثلا (۱,۳) یعنی همه ترکیبهای یکی، دوتایی و سه تایی. <br />
+همونطور که مشاهده می کنید تعداد فیچرها اینجا خیلی زیاد می شه. نکته ای که باید توجه کنیم اینه که چه زمانی از هر کدوم از این روش ها استفاده کنیم. با توجه به مسئله ممکنه یکی از این روش ها نتیجه بهتری بده. لزوما نمی شه گفت یکی از این روش ها بهتر از دیگری است.</p>
+
+<p>کدهای این بخش در <a href="https://github.com/spacelover۱/NLP-with-Python/blob/main/۳-VectorizingRawData/NGrams.ipynb">اینجا</a> قابل مشاهده است.</p>
+
  دقیقه مطالعه -->
     </p>
   </div>
@@ -125,7 +153,7 @@ X_counts_sample = count_vect_sample.fit_transform(dataset['body'])
 چطوری این کار رو انجام می دیم؟ در ادامه درباره این مورد صحبت می کنیم.<br />
 چندین روش برای برداری کردن ویژگی ها وجود داره که در ادامه سه روش رایج رو بررسی می کنیم.</p>
 
-<h2 id="روش-اول-بردار-تعداد-count-vectorization">روش اول: بردار تعداد (Count Vectorization)</h2>
+<h2 id="روش-اول-بردار-تعداد-count-vectorization"><strong>روش اول: بردار تعداد (Count Vectorization)</strong></h2>
 
 <p>در این روش هر پیام گرفته می شه و هر کلمه به عنوان یک ویژگی در نظر گرفته می شه و بعد تعداد تکرار هر کلمه در اون پیام ثبت می شه. در نهایت یک ماتریسی داریم که هر سطر مربوط به یک پیام و هر ستون نمایش دهنده یک کلمه است. و در نهایت پایتون با بررسی این ماتریس یک ارتباطی بین کلمات موجود در پیام و لیبل اون پیام پیدا می کنه تا در آینده که بهش پیام های بدون لیبل بدیم بتونه به درسی برچسب گذاری کنه.</p>
 
@@ -180,6 +208,34 @@ X_counts_sample = count_vect_sample.fit_transform(dataset['body'])
 </code></pre></div></div>
 
 <p>و الان وقتی سایز دیتای نمونه رو ببینیم 192 رشته منحصربفرد داریم. خروجی و کد کامل این بخش رو <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/3-VectorizingRawData/CountVectorization.ipynb">اینجا</a> می تونید ببینید.</p>
+
+<h2 id="روش-دوم-بردار-n-grams-n-gram-vectorizing"><strong>روش دوم: بردار N-Grams (N-gram vectorizing)</strong></h2>
+
+<p>این روش هم تا حدود زیادی مشابه روش قبلیه و ساختار کدش مشابه اونه. در اینجا هم هر سطر پیام ها هستند ولی هر ستون به جای نمایش یک رشته، ترکیب nتایی از رشته هاست. برای درک بهتر تصویر زیر  رو ببینید:</p>
+
+<p><a href="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/3-VectorizingRawData/ngrams.png?token=AEGZAVTZYIIT2UNASADUQN3A6KJCE">ngrams</a></p>
+
+<p>مثل مرحله قبل دیتا رو می خونیم و بعد باید تابعی بنویسیم که مراحل پاکسازی رو انجام بده. بخش قبل یک لیستی از توکن رو می دادیم به vectorizer اما الان چون می خواد ترکیبی از کلمه ها رو بسازه باید ورودی بهش یک رشته بدیم. پس در آخر باید توکن ها رو مثل یک جمله کنار هم دیگه قرار بدیم و این کار رو با تابع <code class="language-plaintext highlighter-rouge">join()</code> انجام می دیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def clean_text(text):
+  text = "".join([word.lower() for word in text if word not in string.punctuation])
+  tokens = re.split('\W+', text)
+  text = " ".join([ps.stem(word) for word in tokens if word not in stopwords])
+  return text
+</code></pre></div></div>
+
+<p>اگر یادتون باشه خط اول کاراکترها رو یکی یکی بررسی می کرد برای پیدا کردن علائم نگارشی و در اخر با <code class="language-plaintext highlighter-rouge">join()</code> این کاراکترها رو بهم متصل کردیم. در <code class="language-plaintext highlighter-rouge">join()</code> دومی قرار کلمه ها کنار هم بیان تا جمله بسازن پس باید یک فاصله بین هر کلمه باشه.</p>
+
+<p>در اینجا هم از CountVectorizer استفاده می کنیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ngram_vect = CountVectorizer(ngram_range=(2,2))
+X_counts = ngram_vect.fit_transform(dataset['cleaned_text'])
+</code></pre></div></div>
+
+<p>در <code class="language-plaintext highlighter-rouge">ngram_range</code> مشخص می کنیم که ترکیب چندتایی از کلمه ها بسازه. مثلا (1,3) یعنی همه ترکیبهای یکی، دوتایی و سه تایی. <br />
+همونطور که مشاهده می کنید تعداد فیچرها اینجا خیلی زیاد می شه. نکته ای که باید توجه کنیم اینه که چه زمانی از هر کدوم از این روش ها استفاده کنیم. با توجه به مسئله ممکنه یکی از این روش ها نتیجه بهتری بده. لزوما نمی شه گفت یکی از این روش ها بهتر از دیگری است.</p>
+
+<p>کدهای این بخش در <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/3-VectorizingRawData/NGrams.ipynb">اینجا</a> قابل مشاهده است.</p>
 
 
 
@@ -320,7 +376,7 @@ X_counts_sample = count_vect_sample.fit_transform(dataset['body'])
 
   </div>
 
-  <small id="build-time">Site generated on Thu, 15 Jul 2021 16:11:04 +0430</small>
+  <small id="build-time">Site generated on Sat, 17 Jul 2021 14:14:22 +0430</small>
 
 </footer>
 <script src="https://spacelover.ir/assets/js/main.js"></script>
