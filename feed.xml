@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2021-07-17T14:14:22Z</updated>
+<updated>2021-07-18T19:49:46Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -108,6 +108,57 @@ X_counts = ngram_vect.fit_transform(dataset['cleaned_text'])
 همونطور که مشاهده می کنید تعداد فیچرها اینجا خیلی زیاد می شه. نکته ای که باید توجه کنیم اینه که چه زمانی از هر کدوم از این روش ها استفاده کنیم. با توجه به مسئله ممکنه یکی از این روش ها نتیجه بهتری بده. لزوما نمی شه گفت یکی از این روش ها بهتر از دیگری است.</p>
 
 <p>کدهای این بخش در <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/3-VectorizingRawData/NGrams.ipynb">اینجا</a> قابل مشاهده است.</p>
+
+<h2 id="روش-سوم-te-idf-term-frequency--inverse-document-frequenct"><strong>روش سوم: TE-IDF (Term Frequency- Inverse Document Frequenct)</strong></h2>
+
+<p>در این روش هم یک ماتریس ایجاد می شه که سطرها پیام ها هستند و هر ستون یک کلمه رو مشخص می کنه. اما سلول های این ماتریس دیگه تعداد تکرار کلمه رو نشون نمی ده بلکه وزن اون کلمه رو نشون می ده، تا اهمیت هر کلمه رو در اون پیام مشخص کنه. <br />
+فرمول زیر برای محاسبه این وزنه:</p>
+
+<p><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/3-VectorizingRawData/tf-idf.PNG?token=AEGZAVSASZLPTSDT75HLYL3A6PNMY" alt="tf-idf_formula" /></p>
+
+<p>بریم ببینیم هر کدوم از این عبارات در فرمول چیو مشخص می کنه و چطوری محاسبه می شه:</p>
+
+<p>عبارت tf تعداد تکرار یک کلمه در یک جمله تقسیم بر تعداد کل کلمات اون جمله. <br />
+مثلا در جمله “امروز هوا گرم است” اگر کلمه “گرم” رو در نظر بگیریم، مقدار tf می شه: 1/4 یا 0.25</p>
+
+<p>قسمت دوم این فرمول مشخص می کنه که هر کلمه چند بار تو کل جملات (پیام ها) تکرار شده.
+در همین مثال اگر متن ما شامل 20 جمله باشه و کلمه گرم فقط یک بار تکرار شده باشه، نتیجه می شه:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>N = 20, df = 1 &gt;&gt;&gt;&gt; log(N/df) = log(20/1) = 1.301
+</code></pre></div></div>
+
+<p>مبنای لگاریتم هم 10 است.</p>
+
+<p>و درنهایت:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0.25 * 1.301 = 0.325
+</code></pre></div></div>
+
+<p>هر چقدر مقدار داخل لگاریتم بزرگتر باشه، لگاریتم اون مقدارم بزرگتر می شه. مثلا فرض کنید تعداد کل جملات 40 باشه مقدار لگاریتم می شه 1.6 یعنی بیشتر از مقدار قبل. پس طبق این فرمول هر چقدر یک کلمه در متن کمتر تکرار شده باشه، عددی که تولید می شه بزرگتره. <br />
+و اگر یک کلمه در یک جمله خیلی تکرار شده باشه ولی در کل متن خیلی کم باشه، مقدار نهایی عدد بزرگی می شه.<br />
+به طور خلاصه این روش کمک می کنه کلمات مهم ولی نادر رو در متن پیدا کنید.</p>
+
+<p>مثل روش های قبل دیتا رو می خونیم و یک تابع برای پاکسازی دیتا می نویسیم. این تابع رو مثل روش اول می نویسیم: 
+    def clean_text(text):
+      text = ““.join([word.lower() for word in text if word not in string.punctuation])
+      tokens = re.split(‘\W+’, text)
+      text = [ps.stem(word) for word in tokens if word not in stopwords]
+      return text</p>
+
+<p>و سپس وکتورایز tf-idf رو می سازیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from sklearn.feature_extraction.text import TfidfVectorizer
+
+tfidf_vect = TfidfVectorizer(analyzer=clean_text)
+X_tfidf = tfidf_vect.fit_transform(dataset['body'])
+</code></pre></div></div>
+
+<p>برای اینکه یه دیدی بگیریم بهتره یه بخشش کوچکی از دیتا رو انتخاب کنیم و دیتافریم ماتریس رو بسازیم تا خروجی رو ببینیم. برای ایجاد ماتریس از تابع <code class="language-plaintext highlighter-rouge">toarray()</code> و دیتافریم پانداس استفاده می کنیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>X_tfidf_df = pd.DataFrame(X_tfidf_sample.toarray())
+</code></pre></div></div>
+
+<p>کد کامل <a href="Uhttps://github.com/spacelover1/NLP-with-Python/blob/main/3-VectorizingRawData/TF_IDF.ipynbRL">اینجا</a> قرار داره.</p>
 
 </div>]]>
     </content>
