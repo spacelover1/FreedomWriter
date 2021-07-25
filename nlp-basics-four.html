@@ -85,6 +85,8 @@
 
 <p>در حالت کلی برای ایجاد ویژگی باید مسئله رو به درستی درک کنیم و دید خوبی نسبت بهش پیدا کنیم، و همچنین باید خلاقیت داشته باشیم و تو ذهنمون تصور کنیم که از چی می خوایم به چی برسیم و برای رسیدن به اون هدف چه ویژگی هایی نیاز داریم. مثلا در تشخیص پیام اسپم و غیراسپم پیدا کردن تعداد حروف a در پیام ها ممکنه کمک چندانی به حل مسئله نکنه و ویژگی مناسبی برای این مسئله نباشه ولی مثلا تعداد علائم نگارشی استفاده شده یا طول پیام به نظر مفیدتر می آد.</p>
 
+<h۲ id="تولید-ویژگی">تولید ویژگی</h۲>
+
 <p>بریم سراغ کد: <br />
 اینجا می خوایم دو تا ویژگی طول پیام و درصد علائم نگارشی در پیام رو ایجاد کنیم.</p>
 
@@ -105,6 +107,30 @@
 <p>این تابع چیکار می کنه؟ اول از همه یکی یکی علائم نگارشی رو می شماره و در نهایت با تابع <code class="language-plaintext highlighter-rouge">sum()</code> این یک ها رو جمع می کنیم. قراره درصد علائم نگارشی استفاده شده در پیام رو برگردونه. مقدار <code class="language-plaintext highlighter-rouge">count</code> تعداد علائم نگارشی یک پیامه. برای محاسبه درصد باید بیاییم این مقدار رو تقسیم بر کل کاراکترهای غیرفاصله پیام کنیم. بعد چون یک مقدار اعشاری برمی گردونه برای اینکه عدد خیلی طولانی نباشه رند می کنیم عدد رو تا سه رقم اعشار نشون بده و در نهایت در ۱۰۰ ضرب می کنیم تا از حالت اعشار خارج شه.</p>
 
 <p>کد کامل رو <a href="https://github.com/spacelover۱/NLP-with-Python/blob/main/۴-FeatureEngineering/FeatureCreation.ipynb">اینجا</a> می تونید مشاهده کنید.</p>
+
+<h۲ id="ارزیابی-ویژگی">ارزیابی ویژگی</h۲>
+
+<p>حالا باید بررسی کنیم که این ویژگی ها برای این دیتاست مناسبن یا نه؟ که آیا می تونیم برای استخراج اطلاعات بهتر ازشون استفاده کنیم یا نه؟ از کتابخونه matplotlib برای رسم نمودار و هیستوگرام استفاده می کنیم. از تابع <code class="language-plaintext highlighter-rouge">hist()</code> در مجموعه توابع <code class="language-plaintext highlighter-rouge">pyplot</code> استفاده می کنیم:</p>
+
+<p>ویژگی اولی که ساختیم طول پیام بود. حدس زدیم که احتمالا پیام های اسپم طولانی ترند. بریم ببینیم این حدس درسته یا نه؟</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bins = np.linspace(۰, ۲۰۰, ۴۰)
+pyplot.hist(dataset[dataset['label'] == 'spam']['body_len'], bins, alpha=۰.۵, density=True, label='spam')
+</code></pre></div></div>
+
+<p>محدوده و تعداد استوانه ها رو با <code class="language-plaintext highlighter-rouge">bin</code> مشخص می کنیم و مقادیری که می بینید به این ترتیبه: <code class="language-plaintext highlighter-rouge">bins = np.linspace(min_boundary, max_boundary, n_bins)</code>.<br />
+همین خط کد رو باید یرای پیام های غیراسپم هم بنویسیم تا بتونیم مقایسه کنیم.<br />
+بعد از گرفتن خروجی می بینیم که پیش بینی مون درست بوده و پیام های اسپم بسیار طولانی تر از پیام های غیراسپمن. پس این ویژگی که ایجاد کردیم مناسب و مفیده.</p>
+
+<p>برای تست ویژگی بعدی همین خط کد رو داریم فقط به جای <code class="language-plaintext highlighter-rouge">[body_len]</code> باید <code class="language-plaintext highlighter-rouge">[punct%]</code> رو بذاریم تا ببینیم طبق حدسمون پیام های اسپم بیشتر از غیراسپما علائم نگارشی دارند؟</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bins = np.linspace(۰, ۵۰, ۴۰)
+pyplot.hist(dataset[dataset['label'] == 'spam']['punct%'], bins, alpha=۰.۵, density=True, label='spam')
+</code></pre></div></div>
+
+<p>و بعد از اجرای کد می بینیم که خیلی این ویژگی مناسب و کارامد نبوده.</p>
+
+<p><a href="https://github.com/spacelover۱/NLP-with-Python/blob/main/۴-FeatureEngineering/FeatureCreation%۲۶Evaluation.ipynb">کد کامل این بخش</a>.</p>
 
  دقیقه مطالعه -->
     </p>
@@ -142,6 +168,8 @@
 
 <p>در حالت کلی برای ایجاد ویژگی باید مسئله رو به درستی درک کنیم و دید خوبی نسبت بهش پیدا کنیم، و همچنین باید خلاقیت داشته باشیم و تو ذهنمون تصور کنیم که از چی می خوایم به چی برسیم و برای رسیدن به اون هدف چه ویژگی هایی نیاز داریم. مثلا در تشخیص پیام اسپم و غیراسپم پیدا کردن تعداد حروف a در پیام ها ممکنه کمک چندانی به حل مسئله نکنه و ویژگی مناسبی برای این مسئله نباشه ولی مثلا تعداد علائم نگارشی استفاده شده یا طول پیام به نظر مفیدتر می آد.</p>
 
+<h2 id="تولید-ویژگی">تولید ویژگی</h2>
+
 <p>بریم سراغ کد: <br />
 اینجا می خوایم دو تا ویژگی طول پیام و درصد علائم نگارشی در پیام رو ایجاد کنیم.</p>
 
@@ -162,6 +190,30 @@
 <p>این تابع چیکار می کنه؟ اول از همه یکی یکی علائم نگارشی رو می شماره و در نهایت با تابع <code class="language-plaintext highlighter-rouge">sum()</code> این یک ها رو جمع می کنیم. قراره درصد علائم نگارشی استفاده شده در پیام رو برگردونه. مقدار <code class="language-plaintext highlighter-rouge">count</code> تعداد علائم نگارشی یک پیامه. برای محاسبه درصد باید بیاییم این مقدار رو تقسیم بر کل کاراکترهای غیرفاصله پیام کنیم. بعد چون یک مقدار اعشاری برمی گردونه برای اینکه عدد خیلی طولانی نباشه رند می کنیم عدد رو تا سه رقم اعشار نشون بده و در نهایت در 100 ضرب می کنیم تا از حالت اعشار خارج شه.</p>
 
 <p>کد کامل رو <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/4-FeatureEngineering/FeatureCreation.ipynb">اینجا</a> می تونید مشاهده کنید.</p>
+
+<h2 id="ارزیابی-ویژگی">ارزیابی ویژگی</h2>
+
+<p>حالا باید بررسی کنیم که این ویژگی ها برای این دیتاست مناسبن یا نه؟ که آیا می تونیم برای استخراج اطلاعات بهتر ازشون استفاده کنیم یا نه؟ از کتابخونه matplotlib برای رسم نمودار و هیستوگرام استفاده می کنیم. از تابع <code class="language-plaintext highlighter-rouge">hist()</code> در مجموعه توابع <code class="language-plaintext highlighter-rouge">pyplot</code> استفاده می کنیم:</p>
+
+<p>ویژگی اولی که ساختیم طول پیام بود. حدس زدیم که احتمالا پیام های اسپم طولانی ترند. بریم ببینیم این حدس درسته یا نه؟</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bins = np.linspace(0, 200, 40)
+pyplot.hist(dataset[dataset['label'] == 'spam']['body_len'], bins, alpha=0.5, density=True, label='spam')
+</code></pre></div></div>
+
+<p>محدوده و تعداد استوانه ها رو با <code class="language-plaintext highlighter-rouge">bin</code> مشخص می کنیم و مقادیری که می بینید به این ترتیبه: <code class="language-plaintext highlighter-rouge">bins = np.linspace(min_boundary, max_boundary, n_bins)</code>.<br />
+همین خط کد رو باید یرای پیام های غیراسپم هم بنویسیم تا بتونیم مقایسه کنیم.<br />
+بعد از گرفتن خروجی می بینیم که پیش بینی مون درست بوده و پیام های اسپم بسیار طولانی تر از پیام های غیراسپمن. پس این ویژگی که ایجاد کردیم مناسب و مفیده.</p>
+
+<p>برای تست ویژگی بعدی همین خط کد رو داریم فقط به جای <code class="language-plaintext highlighter-rouge">[body_len]</code> باید <code class="language-plaintext highlighter-rouge">[punct%]</code> رو بذاریم تا ببینیم طبق حدسمون پیام های اسپم بیشتر از غیراسپما علائم نگارشی دارند؟</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bins = np.linspace(0, 50, 40)
+pyplot.hist(dataset[dataset['label'] == 'spam']['punct%'], bins, alpha=0.5, density=True, label='spam')
+</code></pre></div></div>
+
+<p>و بعد از اجرای کد می بینیم که خیلی این ویژگی مناسب و کارامد نبوده.</p>
+
+<p><a href="https://github.com/spacelover1/NLP-with-Python/blob/main/4-FeatureEngineering/FeatureCreation%26Evaluation.ipynb">کد کامل این بخش</a>.</p>
 
 
 
@@ -302,7 +354,7 @@
 
   </div>
 
-  <small id="build-time">Site generated on Fri, 23 Jul 2021 13:41:05 +0430</small>
+  <small id="build-time">Site generated on Mon, 26 Jul 2021 00:12:58 +0430</small>
 
 </footer>
 <script src="https://spacelover.ir/assets/js/main.js"></script>
