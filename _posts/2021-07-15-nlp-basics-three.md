@@ -129,6 +129,7 @@ tags:    nlp اموزش
 
 
 مثل روش های قبل دیتا رو می خونیم و یک تابع برای پاکسازی دیتا می نویسیم. این تابع رو مثل روش اول می نویسیم: 
+
     def clean_text(text):
       text = "".join([word.lower() for word in text if word not in string.punctuation])
       tokens = re.split('\W+', text)
