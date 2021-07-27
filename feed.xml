@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2021-07-26T00:12:58Z</updated>
+<updated>2021-07-27T18:43:33Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -228,12 +228,14 @@ X_counts = ngram_vect.fit_transform(dataset['cleaned_text'])
 و اگر یک کلمه در یک جمله خیلی تکرار شده باشه ولی در کل متن خیلی کم باشه، مقدار نهایی عدد بزرگی می شه.<br />
 به طور خلاصه این روش کمک می کنه کلمات مهم ولی نادر رو در متن پیدا کنید.</p>
 
-<p>مثل روش های قبل دیتا رو می خونیم و یک تابع برای پاکسازی دیتا می نویسیم. این تابع رو مثل روش اول می نویسیم: 
-    def clean_text(text):
-      text = ““.join([word.lower() for word in text if word not in string.punctuation])
-      tokens = re.split(‘\W+’, text)
-      text = [ps.stem(word) for word in tokens if word not in stopwords]
-      return text</p>
+<p>مثل روش های قبل دیتا رو می خونیم و یک تابع برای پاکسازی دیتا می نویسیم. این تابع رو مثل روش اول می نویسیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def clean_text(text):
+  text = "".join([word.lower() for word in text if word not in string.punctuation])
+  tokens = re.split('\W+', text)
+  text = [ps.stem(word) for word in tokens if word not in stopwords]
+  return text
+</code></pre></div></div>
 
 <p>و سپس وکتورایز tf-idf رو می سازیم:</p>
 

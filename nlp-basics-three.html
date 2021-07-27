@@ -172,12 +172,14 @@ X_counts = ngram_vect.fit_transform(dataset['cleaned_text'])
 و اگر یک کلمه در یک جمله خیلی تکرار شده باشه ولی در کل متن خیلی کم باشه، مقدار نهایی عدد بزرگی می شه.<br />
 به طور خلاصه این روش کمک می کنه کلمات مهم ولی نادر رو در متن پیدا کنید.</p>
 
-<p>مثل روش های قبل دیتا رو می خونیم و یک تابع برای پاکسازی دیتا می نویسیم. این تابع رو مثل روش اول می نویسیم: 
-    def clean_text(text):
-      text = ““.join([word.lower() for word in text if word not in string.punctuation])
-      tokens = re.split(‘\W+’, text)
-      text = [ps.stem(word) for word in tokens if word not in stopwords]
-      return text</p>
+<p>مثل روش های قبل دیتا رو می خونیم و یک تابع برای پاکسازی دیتا می نویسیم. این تابع رو مثل روش اول می نویسیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def clean_text(text):
+  text = "".join([word.lower() for word in text if word not in string.punctuation])
+  tokens = re.split('\W+', text)
+  text = [ps.stem(word) for word in tokens if word not in stopwords]
+  return text
+</code></pre></div></div>
 
 <p>و سپس وکتورایز tf-idf رو می سازیم:</p>
 
@@ -317,12 +319,14 @@ X_counts = ngram_vect.fit_transform(dataset['cleaned_text'])
 و اگر یک کلمه در یک جمله خیلی تکرار شده باشه ولی در کل متن خیلی کم باشه، مقدار نهایی عدد بزرگی می شه.<br />
 به طور خلاصه این روش کمک می کنه کلمات مهم ولی نادر رو در متن پیدا کنید.</p>
 
-<p>مثل روش های قبل دیتا رو می خونیم و یک تابع برای پاکسازی دیتا می نویسیم. این تابع رو مثل روش اول می نویسیم: 
-    def clean_text(text):
-      text = ““.join([word.lower() for word in text if word not in string.punctuation])
-      tokens = re.split(‘\W+’, text)
-      text = [ps.stem(word) for word in tokens if word not in stopwords]
-      return text</p>
+<p>مثل روش های قبل دیتا رو می خونیم و یک تابع برای پاکسازی دیتا می نویسیم. این تابع رو مثل روش اول می نویسیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def clean_text(text):
+  text = "".join([word.lower() for word in text if word not in string.punctuation])
+  tokens = re.split('\W+', text)
+  text = [ps.stem(word) for word in tokens if word not in stopwords]
+  return text
+</code></pre></div></div>
 
 <p>و سپس وکتورایز tf-idf رو می سازیم:</p>
 
@@ -478,7 +482,7 @@ X_tfidf = tfidf_vect.fit_transform(dataset['body'])
 
   </div>
 
-  <small id="build-time">Site generated on Mon, 26 Jul 2021 00:12:58 +0430</small>
+  <small id="build-time">Site generated on Tue, 27 Jul 2021 18:43:33 +0430</small>
 
 </footer>
 <script src="https://spacelover.ir/assets/js/main.js"></script>
