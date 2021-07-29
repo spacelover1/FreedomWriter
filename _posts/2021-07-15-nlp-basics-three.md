@@ -17,7 +17,8 @@ tags:    nlp اموزش
 
 برای درک بهتر این فرایند به عکس زیر دقت کنید: 
 
-![vectorization_example](https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/3-VectorizingRawData/vectorization_example.PNG)
+<div style="text-align:center"><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/3-VectorizingRawData/vectorization_example.PNG" alt="vectorization_example" /></div>
+
 
 دراین تصویر فقط دو رشته offer و lol از لیست کلمات پیام ها انتخاب شده و تعداد تکرارشون محاسبه شده. همونطور که در جدول سمت چپ و راست می بینید پیام هایی که برچسب غیر اسپم دارند در آن ها رشته lol وجود داشته و تکرار شده ولی شامل رشته offer نیستند و برعکس پیام های اسپم اکثرا رشته offer رو شامل می شن. <br/>
 این یک مثال بسیار ساده برای درک فرایند و مفهوم بردار تعداد است.
@@ -74,8 +75,8 @@ tags:    nlp اموزش
 
 این روش هم تا حدود زیادی مشابه روش قبلیه و ساختار کدش مشابه اونه. در اینجا هم هر سطر پیام ها هستند ولی هر ستون به جای نمایش یک رشته، ترکیب nتایی از رشته هاست. برای درک بهتر تصویر زیر  رو ببینید: 
 
-[ngrams](https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/3-VectorizingRawData/ngrams.png?token=AEGZAVTZYIIT2UNASADUQN3A6KJCE)
 
+<div style="text-align:center"><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/3-VectorizingRawData/ngrams.png?token=AEGZAVTZYIIT2UNASADUQN3A6KJCE" alt="ngrams" /></div>
 
 مثل مرحله قبل دیتا رو می خونیم و بعد باید تابعی بنویسیم که مراحل پاکسازی رو انجام بده. بخش قبل یک لیستی از توکن رو می دادیم به vectorizer اما الان چون می خواد ترکیبی از کلمه ها رو بسازه باید ورودی بهش یک رشته بدیم. پس در آخر باید توکن ها رو مثل یک جمله کنار هم دیگه قرار بدیم و این کار رو با تابع `join()` انجام می دیم:
 
@@ -105,7 +106,8 @@ tags:    nlp اموزش
 در این روش هم یک ماتریس ایجاد می شه که سطرها پیام ها هستند و هر ستون یک کلمه رو مشخص می کنه. اما سلول های این ماتریس دیگه تعداد تکرار کلمه رو نشون نمی ده بلکه وزن اون کلمه رو نشون می ده، تا اهمیت هر کلمه رو در اون پیام مشخص کنه. <br/>
 فرمول زیر برای محاسبه این وزنه:
 
-![tf-idf_formula](https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/3-VectorizingRawData/tf-idf.PNG?token=AEGZAVSASZLPTSDT75HLYL3A6PNMY)
+<div style="text-align:center"><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/3-VectorizingRawData/tf-idf.PNG?token=AEGZAVSASZLPTSDT75HLYL3A6PNMY" alt="tf-idf_formula" /></div>
+
 
 بریم ببینیم هر کدوم از این عبارات در فرمول چیو مشخص می کنه و چطوری محاسبه می شه:
 
