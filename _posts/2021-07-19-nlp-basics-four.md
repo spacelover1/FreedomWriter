@@ -29,6 +29,8 @@ tags:    nlp اموزش
 برای نمونه دیگری از تبدیل به مثال زیر دقت کنید:<br/>
 تصویر سمت چپ یک نمونه دیتاست رو نشون می ده که داده ها پراکنده هستند و نمی شه ارتباط درستی پیدا کرد. در همچین مواردی که یک دنباله طولانی داریم از لگاریتم استفاده می کنیم.
 
+<div style="text-align:center"><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/4-FeatureEngineering/FE_transformation.PNG?token=AEGZAVWA2CDPI5ZWFAG3HVTA6V6WA" /></div>
+
 ![transformation](https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/4-FeatureEngineering/FE_transformation.PNG?token=AEGZAVWA2CDPI5ZWFAG3HVTA6V6WA)
  
 در حالت کلی برای ایجاد ویژگی باید مسئله رو به درستی درک کنیم و دید خوبی نسبت بهش پیدا کنیم، و همچنین باید خلاقیت داشته باشیم و تو ذهنمون تصور کنیم که از چی می خوایم به چی برسیم و برای رسیدن به اون هدف چه ویژگی هایی نیاز داریم. مثلا در تشخیص پیام اسپم و غیراسپم پیدا کردن تعداد حروف a در پیام ها ممکنه کمک چندانی به حل مسئله نکنه و ویژگی مناسبی برای این مسئله نباشه ولی مثلا تعداد علائم نگارشی استفاده شده یا طول پیام به نظر مفیدتر می آد.
