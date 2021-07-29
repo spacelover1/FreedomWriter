@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2021-07-29T10:45:20Z</updated>
+<updated>2021-07-29T12:53:02Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -48,8 +48,6 @@
 تصویر سمت چپ یک نمونه دیتاست رو نشون می ده که داده ها پراکنده هستند و نمی شه ارتباط درستی پیدا کرد. در همچین مواردی که یک دنباله طولانی داریم از لگاریتم استفاده می کنیم.</p>
 
 <div style="text-align:center"><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/4-FeatureEngineering/FE_transformation.PNG?token=AEGZAVWA2CDPI5ZWFAG3HVTA6V6WA" /></div>
-
-<p><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/4-FeatureEngineering/FE_transformation.PNG?token=AEGZAVWA2CDPI5ZWFAG3HVTA6V6WA" alt="transformation" /></p>
 
 <p>در حالت کلی برای ایجاد ویژگی باید مسئله رو به درستی درک کنیم و دید خوبی نسبت بهش پیدا کنیم، و همچنین باید خلاقیت داشته باشیم و تو ذهنمون تصور کنیم که از چی می خوایم به چی برسیم و برای رسیدن به اون هدف چه ویژگی هایی نیاز داریم. مثلا در تشخیص پیام اسپم و غیراسپم پیدا کردن تعداد حروف a در پیام ها ممکنه کمک چندانی به حل مسئله نکنه و ویژگی مناسبی برای این مسئله نباشه ولی مثلا تعداد علائم نگارشی استفاده شده یا طول پیام به نظر مفیدتر می آد.</p>
 
@@ -123,7 +121,7 @@ pyplot.hist(dataset[dataset['label'] == 'spam']['punct%'], bins, alpha=0.5, dens
 
 <p>برای درک بهتر این فرایند به عکس زیر دقت کنید:</p>
 
-<p><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/3-VectorizingRawData/vectorization_example.PNG" alt="vectorization_example" /></p>
+<div style="text-align:center"><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/3-VectorizingRawData/vectorization_example.PNG" alt="vectorization_example" /></div>
 
 <p>دراین تصویر فقط دو رشته offer و lol از لیست کلمات پیام ها انتخاب شده و تعداد تکرارشون محاسبه شده. همونطور که در جدول سمت چپ و راست می بینید پیام هایی که برچسب غیر اسپم دارند در آن ها رشته lol وجود داشته و تکرار شده ولی شامل رشته offer نیستند و برعکس پیام های اسپم اکثرا رشته offer رو شامل می شن. <br />
 این یک مثال بسیار ساده برای درک فرایند و مفهوم بردار تعداد است.</p>
@@ -177,7 +175,7 @@ X_counts_sample = count_vect_sample.fit_transform(dataset['body'])
 
 <p>این روش هم تا حدود زیادی مشابه روش قبلیه و ساختار کدش مشابه اونه. در اینجا هم هر سطر پیام ها هستند ولی هر ستون به جای نمایش یک رشته، ترکیب nتایی از رشته هاست. برای درک بهتر تصویر زیر  رو ببینید:</p>
 
-<p><a href="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/3-VectorizingRawData/ngrams.png?token=AEGZAVTZYIIT2UNASADUQN3A6KJCE">ngrams</a></p>
+<div style="text-align:center"><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/3-VectorizingRawData/ngrams.png?token=AEGZAVTZYIIT2UNASADUQN3A6KJCE" alt="ngrams" /></div>
 
 <p>مثل مرحله قبل دیتا رو می خونیم و بعد باید تابعی بنویسیم که مراحل پاکسازی رو انجام بده. بخش قبل یک لیستی از توکن رو می دادیم به vectorizer اما الان چون می خواد ترکیبی از کلمه ها رو بسازه باید ورودی بهش یک رشته بدیم. پس در آخر باید توکن ها رو مثل یک جمله کنار هم دیگه قرار بدیم و این کار رو با تابع <code class="language-plaintext highlighter-rouge">join()</code> انجام می دیم:</p>
 
@@ -206,7 +204,7 @@ X_counts = ngram_vect.fit_transform(dataset['cleaned_text'])
 <p>در این روش هم یک ماتریس ایجاد می شه که سطرها پیام ها هستند و هر ستون یک کلمه رو مشخص می کنه. اما سلول های این ماتریس دیگه تعداد تکرار کلمه رو نشون نمی ده بلکه وزن اون کلمه رو نشون می ده، تا اهمیت هر کلمه رو در اون پیام مشخص کنه. <br />
 فرمول زیر برای محاسبه این وزنه:</p>
 
-<p><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/3-VectorizingRawData/tf-idf.PNG?token=AEGZAVSASZLPTSDT75HLYL3A6PNMY" alt="tf-idf_formula" /></p>
+<div style="text-align:center"><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/3-VectorizingRawData/tf-idf.PNG?token=AEGZAVSASZLPTSDT75HLYL3A6PNMY" alt="tf-idf_formula" /></div>
 
 <p>بریم ببینیم هر کدوم از این عبارات در فرمول چیو مشخص می کنه و چطوری محاسبه می شه:</p>
 
