@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2021-07-27T18:43:33Z</updated>
+<updated>2021-07-29T10:45:20Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -46,6 +46,8 @@
 
 <p>برای نمونه دیگری از تبدیل به مثال زیر دقت کنید:<br />
 تصویر سمت چپ یک نمونه دیتاست رو نشون می ده که داده ها پراکنده هستند و نمی شه ارتباط درستی پیدا کرد. در همچین مواردی که یک دنباله طولانی داریم از لگاریتم استفاده می کنیم.</p>
+
+<div style="text-align:center"><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/4-FeatureEngineering/FE_transformation.PNG?token=AEGZAVWA2CDPI5ZWFAG3HVTA6V6WA" /></div>
 
 <p><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/4-FeatureEngineering/FE_transformation.PNG?token=AEGZAVWA2CDPI5ZWFAG3HVTA6V6WA" alt="transformation" /></p>
 
