@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2021-07-29T12:53:02Z</updated>
+<updated>2021-07-31T11:19:58Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -85,7 +85,9 @@ pyplot.hist(dataset[dataset['label'] == 'spam']['body_len'], bins, alpha=0.5, de
 </code></pre></div></div>
 
 <p>محدوده و تعداد استوانه ها رو با <code class="language-plaintext highlighter-rouge">bin</code> مشخص می کنیم و مقادیری که می بینید به این ترتیبه: <code class="language-plaintext highlighter-rouge">bins = np.linspace(min_boundary, max_boundary, n_bins)</code>.<br />
-همین خط کد رو باید یرای پیام های غیراسپم هم بنویسیم تا بتونیم مقایسه کنیم.<br />
+ممکنه در کدهای قدیمی تر پارامتر <code class="language-plaintext highlighter-rouge">normed=True</code> رو ببینید که این معادل پارامتر <code class="language-plaintext highlighter-rouge">density</code> است که اینجا استفاده کردیم در نسخه های جدیدتر پایتون از این پارامتر استفاده می شه.</p>
+
+<p>همین خط کد رو باید یرای پیام های غیراسپم هم بنویسیم تا بتونیم مقایسه کنیم.<br />
 بعد از گرفتن خروجی می بینیم که پیش بینی مون درست بوده و پیام های اسپم بسیار طولانی تر از پیام های غیراسپمن. پس این ویژگی که ایجاد کردیم مناسب و مفیده.</p>
 
 <p>برای تست ویژگی بعدی همین خط کد رو داریم فقط به جای <code class="language-plaintext highlighter-rouge">[body_len]</code> باید <code class="language-plaintext highlighter-rouge">[punct%]</code> رو بذاریم تا ببینیم طبق حدسمون پیام های اسپم بیشتر از غیراسپما علائم نگارشی دارند؟</p>
@@ -94,9 +96,43 @@ pyplot.hist(dataset[dataset['label'] == 'spam']['body_len'], bins, alpha=0.5, de
 pyplot.hist(dataset[dataset['label'] == 'spam']['punct%'], bins, alpha=0.5, density=True, label='spam')
 </code></pre></div></div>
 
-<p>و بعد از اجرای کد می بینیم که خیلی این ویژگی مناسب و کارامد نبوده.</p>
+<p>و بعد از اجرای کد می بینیم که تفاوت چشمگیری در استفاده از علائم نگارشی بین پیام های اسپم و غیراسپم وجود نداره. و همونطور که در این توزیع دیده می شه یه دنباله ای در پیام های غیراسپم ایجاد شده که احتمالا باید از تبدیل (transformation) استفاده کنیم تا بهتر بتونیم تصمیم بگیریم.</p>
 
 <p><a href="https://github.com/spacelover1/NLP-with-Python/blob/main/4-FeatureEngineering/FeatureCreation%26Evaluation.ipynb">کد کامل این بخش</a>.</p>
+
+<h2 id="تبدیل-transformation">تبدیل (Transformation)</h2>
+
+<p>در این بخش می خوایم بررسی کنیم که دو تا ویژگی ای که ایجاد کردیم نیاز به تبدیل دارند یا نه.<br />
+اولین کاری که باید انجام بدیم اینه که توزیع کاملشون رو رسم کنیم و بعد طبق اون تصمیم بگیریم. مواردی که نشون می ده تبدیل نیازه یا نه، عدم تقارن شدید، دنباله طولانی و outlierها (یعنی اون نقاطی که خیلی از توزیع اصلی دورافتادن).</p>
+
+<h3 id="طول-پیام">طول پیام</h3>
+
+<p>برای شروع <code class="language-plaintext highlighter-rouge">bins</code> رو مثل قبل تعریف می کنیم، از صفر شروع شه تا 200 بره و 40 تا bin تولید شه:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bins = np.linspace(0, 200, 40)
+pyplot.hist(dataset['body_len'], bins)
+</code></pre></div></div>
+
+<p>نیازی به پارامترای دیگه نیست چون می خوایم توزیع کلی طول پیام ها رو ببینیم، بدون توجه به لیبلشون.</p>
+
+<div style="text-align:center"><img src="" alt="" /></div>
+
+<p>همونطور که قبلا دیدیم طول پیام های اسپم بیشتر از غیراسپم ها بود پس این توزیع درست و با معنیه. پس این ویژگی نیازی به تبدیل نداره.</p>
+
+<h3 id="درصد-پیام-های-نگارشی">درصد پیام های نگارشی</h3>
+
+<p>برای بررسی ویژگی بعد 200 رو به 50 تغییر می دیم یعنی متن های تا 50 تا علائم نگارشی رو بررسی کنه.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bins = np.linspace(0, 50, 40)
+pyplot.hist(dataset['punct%'], bins)
+</code></pre></div></div>
+
+<div style="text-align:center"><img src="" alt="" /></div>
+
+<p>این توزیع رو همونطور که می بینید تقارن نداره مقدار زیادی از دیتا نزدیک صفر جمع شده و همینطور یک دنباله طول و دراز هم تشکیل شده که نشون می ده نیاز به تبدیل داره.</p>
+
+<p>what’s tra
+a tranformation is a process that alters each data point in a certain column in a systematic way that makes it cleaner for a model use, for instance that can mean sqaring each value or maybe taking the square root of each value.</p>
 
 </div>]]>
     </content>
