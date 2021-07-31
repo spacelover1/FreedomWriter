@@ -70,6 +70,8 @@ tags:    nlp اموزش
     pyplot.hist(dataset[dataset['label'] == 'spam']['body_len'], bins, alpha=0.5, density=True, label='spam')
 
 محدوده و تعداد استوانه ها رو با `bin` مشخص می کنیم و مقادیری که می بینید به این ترتیبه: `bins = np.linspace(min_boundary, max_boundary, n_bins)`.<br/>
+ممکنه در کدهای قدیمی تر پارامتر `normed=True` رو ببینید که این معادل پارامتر `density` است که اینجا استفاده کردیم در نسخه های جدیدتر پایتون از این پارامتر استفاده می شه.
+
 همین خط کد رو باید یرای پیام های غیراسپم هم بنویسیم تا بتونیم مقایسه کنیم.<br/>
 بعد از گرفتن خروجی می بینیم که پیش بینی مون درست بوده و پیام های اسپم بسیار طولانی تر از پیام های غیراسپمن. پس این ویژگی که ایجاد کردیم مناسب و مفیده.
 
@@ -78,11 +80,55 @@ tags:    nlp اموزش
     bins = np.linspace(0, 50, 40)
     pyplot.hist(dataset[dataset['label'] == 'spam']['punct%'], bins, alpha=0.5, density=True, label='spam')
     
-و بعد از اجرای کد می بینیم که خیلی این ویژگی مناسب و کارامد نبوده.
-
+و بعد از اجرای کد می بینیم که تفاوت چشمگیری در استفاده از علائم نگارشی بین پیام های اسپم و غیراسپم وجود نداره. و همونطور که در این توزیع دیده می شه یه دنباله ای در پیام های غیراسپم ایجاد شده که احتمالا باید از تبدیل (transformation) استفاده کنیم تا بهتر بتونیم تصمیم بگیریم.
 
 
 [کد کامل این بخش](https://github.com/spacelover1/NLP-with-Python/blob/main/4-FeatureEngineering/FeatureCreation%26Evaluation.ipynb).
+
+
+## تبدیل (Transformation)
+
+
+در این بخش می خوایم بررسی کنیم که دو تا ویژگی ای که ایجاد کردیم نیاز به تبدیل دارند یا نه.<br/>
+اولین کاری که باید انجام بدیم اینه که توزیع کاملشون رو رسم کنیم و بعد طبق اون تصمیم بگیریم. مواردی که نشون می ده تبدیل نیازه یا نه، عدم تقارن شدید، دنباله طولانی و outlierها (یعنی اون نقاطی که خیلی از توزیع اصلی دورافتادن).
+
+### طول پیام
+
+برای شروع `bins` رو مثل قبل تعریف می کنیم، از صفر شروع شه تا 200 بره و 40 تا bin تولید شه:
+
+    bins = np.linspace(0, 200, 40)
+    pyplot.hist(dataset['body_len'], bins)
+
+نیازی به پارامترای دیگه نیست چون می خوایم توزیع کلی طول پیام ها رو ببینیم، بدون توجه به لیبلشون.
+
+<div style="text-align:center"><img src="" alt="" /></div>
+
+همونطور که قبلا دیدیم طول پیام های اسپم بیشتر از غیراسپم ها بود پس این توزیع درست و با معنیه. پس این ویژگی نیازی به تبدیل نداره.
+
+### درصد پیام های نگارشی
+
+برای بررسی ویژگی بعد 200 رو به 50 تغییر می دیم یعنی متن های تا 50 تا علائم نگارشی رو بررسی کنه.
+
+    bins = np.linspace(0, 50, 40)
+    pyplot.hist(dataset['punct%'], bins)
+
+<div style="text-align:center"><img src="" alt="" /></div>
+
+این توزیع رو همونطور که می بینید تقارن نداره مقدار زیادی از دیتا نزدیک صفر جمع شده و همینطور یک دنباله طول و دراز هم تشکیل شده که نشون می ده نیاز به تبدیل داره.
+
+what's tra
+a tranformation is a process that alters each data point in a certain column in a systematic way that makes it cleaner for a model use, for instance that can mean sqaring each value or maybe taking the square root of each value.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
