@@ -101,7 +101,7 @@ tags:    nlp اموزش
 
 نیازی به پارامترای دیگه نیست چون می خوایم توزیع کلی طول پیام ها رو ببینیم، بدون توجه به لیبلشون.
 
-<div style="text-align:center"><img src="" alt="" /></div>
+<div style="text-align:center"><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/4-FeatureEngineering/length_distribution.PNG" alt="length distribution" /></div>
 
 همونطور که قبلا دیدیم طول پیام های اسپم بیشتر از غیراسپم ها بود پس این توزیع درست و با معنیه. پس این ویژگی نیازی به تبدیل نداره.
 
@@ -112,13 +112,9 @@ tags:    nlp اموزش
     bins = np.linspace(0, 50, 40)
     pyplot.hist(dataset['punct%'], bins)
 
-<div style="text-align:center"><img src="" alt="" /></div>
+<div style="text-align:center"><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/4-FeatureEngineering/punct_percentage.PNG" alt="punctuation percentage" /></div>
 
 این توزیع رو همونطور که می بینید تقارن نداره مقدار زیادی از دیتا نزدیک صفر جمع شده و همینطور یک دنباله طول و دراز هم تشکیل شده که نشون می ده نیاز به تبدیل داره.
-
-what's tra
-a tranformation is a process that alters each data point in a certain column in a systematic way that makes it cleaner for a model use, for instance that can mean sqaring each value or maybe taking the square root of each value.
-
 
 
 
