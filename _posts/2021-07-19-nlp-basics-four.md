@@ -117,21 +117,35 @@ tags:    nlp اموزش
 این توزیع رو همونطور که می بینید تقارن نداره مقدار زیادی از دیتا نزدیک صفر جمع شده و همینطور یک دنباله طول و دراز هم تشکیل شده که نشون می ده نیاز به تبدیل داره.
 
 
+حالا که ویژگی هایی که نیاز به تبدیل دارند رو مشخص کردیم، باید تبدیل رو شروع کنیم.
+
+تبدیل (Transformation) فرایندیه که هر داده رو در یک ستون مشخص به صورت سیستماتیک تغییر می ده (مثلا محاسبه جذر یا توان دوم هر داده) تا دیتا رو برای استفاده بهتر مدل از اون، پاکسازی کنه.
 
 
+مجموعه تبدیلی که اینجا استفاده می کنیم بسیار رایجه و Box-Cox Power Transformations نام داره. فرم پایه این تبدیلات y به توان x است. جدول زیر این تبدیل رو برای بازه `[-2,2]` نمایش می ده:
 
 
+<div style="text-align:center"><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/4-FeatureEngineering/cox-box-transformation.PNG" alt="cox-box transformation" /></div>
+
+حالا اگر فرض کنیم 50 درصد یک متن علائم نگارشیه، در جدول بالا `x = 50` می شه. 
+
+### فرایند تبدیل 
+
+1- مشخص کردن بازه توانی <br/>
+2- اعمال هر تبدیل را به هر مقدار ویژگی انتخاب شده<br/>
+3- استفاده از معیارهایی برای تشخیص تبدیلی که بهترین توزیع را تولید می کند 
+
+بعد از بررسی ویژگی هایی که ایجاد کردیم دیدیم که ویژگی علائم نگارشی نیاز به تبدیل داره. کد اعمال تبدیل رو به این صورت می نویسیم:
 
 
+    for i in range(1, 6):
+        pyplot.hist((dataset['punct%'])** (1/i), bins=40)
+        pyplot.title('transformation: 1/{}'.format(str(i)))
+
+[کد کامل این بخش](https://github.com/spacelover1/NLP-with-Python/blob/main/4-FeatureEngineering/featureEngineering_transformation.ipynb)
 
 
-
-
-
-
-
-
-
+برای مطالعه بیشتر درباره تبدیل و مهندسی ویژگی [این مقاله](https://towardsdatascience.com/data-transformation-and-feature-engineering-e3c7dfbb4899) رو می تونید مطالعه کنید.
 
 
 
