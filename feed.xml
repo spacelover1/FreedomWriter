@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2021-07-31T11:28:22Z</updated>
+<updated>2021-08-14T20:19:07Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -130,6 +130,33 @@ pyplot.hist(dataset['punct%'], bins)
 <div style="text-align:center"><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/4-FeatureEngineering/punct_percentage.PNG" alt="punctuation percentage" /></div>
 
 <p>این توزیع رو همونطور که می بینید تقارن نداره مقدار زیادی از دیتا نزدیک صفر جمع شده و همینطور یک دنباله طول و دراز هم تشکیل شده که نشون می ده نیاز به تبدیل داره.</p>
+
+<p>حالا که ویژگی هایی که نیاز به تبدیل دارند رو مشخص کردیم، باید تبدیل رو شروع کنیم.</p>
+
+<p>تبدیل (Transformation) فرایندیه که هر داده رو در یک ستون مشخص به صورت سیستماتیک تغییر می ده (مثلا محاسبه جذر یا توان دوم هر داده) تا دیتا رو برای استفاده بهتر مدل از اون، پاکسازی کنه.</p>
+
+<p>مجموعه تبدیلی که اینجا استفاده می کنیم بسیار رایجه و Box-Cox Power Transformations نام داره. فرم پایه این تبدیلات y به توان x است. جدول زیر این تبدیل رو برای بازه <code class="language-plaintext highlighter-rouge">[-2,2]</code> نمایش می ده:</p>
+
+<div style="text-align:center"><img src="https://raw.githubusercontent.com/spacelover1/NLP-with-Python/main/4-FeatureEngineering/cox-box-transformation.PNG" alt="cox-box transformation" /></div>
+
+<p>حالا اگر فرض کنیم 50 درصد یک متن علائم نگارشیه، در جدول بالا <code class="language-plaintext highlighter-rouge">x = 50</code> می شه.</p>
+
+<h3 id="فرایند-تبدیل">فرایند تبدیل</h3>
+
+<p>1- مشخص کردن بازه توانی <br />
+2- اعمال هر تبدیل را به هر مقدار ویژگی انتخاب شده<br />
+3- استفاده از معیارهایی برای تشخیص تبدیلی که بهترین توزیع را تولید می کند</p>
+
+<p>بعد از بررسی ویژگی هایی که ایجاد کردیم دیدیم که ویژگی علائم نگارشی نیاز به تبدیل داره. کد اعمال تبدیل رو به این صورت می نویسیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for i in range(1, 6):
+    pyplot.hist((dataset['punct%'])** (1/i), bins=40)
+    pyplot.title('transformation: 1/{}'.format(str(i)))
+</code></pre></div></div>
+
+<p><a href="https://github.com/spacelover1/NLP-with-Python/blob/main/4-FeatureEngineering/featureEngineering_transformation.ipynb">کد کامل این بخش</a></p>
+
+<p>برای مطالعه بیشتر درباره تبدیل و مهندسی ویژگی <a href="https://towardsdatascience.com/data-transformation-and-feature-engineering-e3c7dfbb4899">این مقاله</a> رو می تونید مطالعه کنید.</p>
 
 </div>]]>
     </content>
