@@ -149,7 +149,7 @@ tags:    nlp اموزش
 
 
 
-
+[فایل](https://github.com/spacelover1/personalBlog/blob/master/ZeinabSalimi-cv.pdf)
 
 
 
