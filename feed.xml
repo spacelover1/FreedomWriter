@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2022-05-08T00:59:43Z</updated>
+<updated>2022-05-08T01:03:32Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -11,6 +11,34 @@
   <email>spacelover1@gmail.com</email>
 </author>
 <rights>Commons Attribution 4.0 International</rights>
+
+  <entry>
+    <title>فیلم c'mon, c'mon</title>
+    <link rel="alternate" type="text/html" href="https://spacelover.ir/cmon-cmon.html"/>
+    <id>urn:uuid:</id>
+    <updated>2022-05-08T00:00:00Z</updated>
+    <category term="فیلم"/>
+    <content type="html">
+      <![CDATA[<div dir="rtl"><p>تو <a href="https://www.imdb.com/title/tt10986222/">این فیلم</a> شخصیت اصلی ینی Joaquin Phoenix با بچه ها درباره آینده و افکارشون مصاحبه می کنه. مثل همیشه چند تا از دیالوگ های فیلم رو میذارم. این دیالوگ ها اکثرا صحبت بجه های توی فیلمه.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>So my fear is loneliness, and people not understanding you even though they're there to understand you. It's just really scary  cause feels like you have no one.
+
+
+She says: Even though we love each other. She'll never know everything about me and I'll never know everything about her. It's just the way it is.
+
+"Have you ever thought about future?"
+"Oh, yeah. Whatever you plan on happening, never happens. Stuff you would never think of happens. So you just have to come on. Come on, come on, come on, come on..."
+
+'Kids tend to think freely. Adults when they think, they think in a tight space.' 
+
+"Motherhood is the place in our culture where we bury our conflicts and what it means to be fully human. Mothers are scapegoats for personal and political failings and for everything that is wrong in the world. In doing this, we blind ourselves to the world’s iniquities. What are we doing to our mothers and we expect them to carry the burden of everything that is hard as to contemplate about our society and ourselves. Mothers cannot help but be in touch with the most difficult aspects of any fully lived life. Why on earth should've fault them to paint things bright and innocent and safe?"
+
+"Over the years, you will try to make sense of that happy, sad, full, empty, always shifting life you're in. And when the time comes to return to your star, it may be hard to say goodbye to that strangely beautiful world." 
+</code></pre></div></div>
+
+</div>]]>
+    </content>
+  </entry>
 
   <entry>
     <title>یه چیزی بگو، هر چی!</title>
@@ -1096,20 +1124,6 @@ I feel like I exist for love
 
 <p>و ۱۵۰۰ کیلومتر دور شدم. بدون برنامه از تهران رفتم به سوزا شهری در  قشم. 
 اوایل سفر اصلا خوب نبود و به دلیل بی‌تجربگی با آدمای نامناسبی برخورد داشتم. ولی بعدش روی خوش سفر رو تجربه کردم. تو اون دو هفته‌ای که اونجا بودم حال خوبی داشتم. رها از همه چی و همه کس.</p>
-</div>]]>
-    </content>
-  </entry>
-
-  <entry>
-    <title>توجه! نام دامنه تغییر می‌کند</title>
-    <link rel="alternate" type="text/html" href="https://spacelover.ir/changing-domain-name.html"/>
-    <id>urn:uuid:</id>
-    <updated>2020-10-19T00:00:00Z</updated>
-    <category term="بلاگ"/>
-    <content type="html">
-      <![CDATA[<div dir="rtl"><p>علی‌رغم میلم مجبورم اسم دومین رو تغییر بدم، تقریبا ده روز دیگه این دومین منقضی میشه و در حال حاضر نمی‌تونم هزینه پسوند نت رو پرداخت کنم.
-می‌تونم از دامنه‌ای که گیت‌هاب میده استفاده کنم و یا اینکه یه پسوند دیگه تهیه کنم. راه دوم رو انتخاب کردم فعلا و از تاریخ 9 آبان (30 اکتبر) آدرس این بلاگ به spacelover.ir تغییر می‌کنه، فقط پسوندش به ir تغییر می‌کنه.</p>
-
 </div>]]>
     </content>
   </entry>
