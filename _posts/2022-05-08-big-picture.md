@@ -1,5 +1,5 @@
 ---
-title: `Big Picture, Please!`
+title: Big Picture, Please!
 category: general
 tags:  
 ---
