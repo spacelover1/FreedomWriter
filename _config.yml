@@ -35,12 +35,12 @@ collections:
   projects:
     output: true
 
-comments:
-  enabled: false
-  type: static
-  static:
-    avatar:
-      visible: true
+# comments:
+#   enabled: false
+#   type: static
+#   static:
+#     avatar:
+#       visible: true
 
 defaults:
 - scope:
