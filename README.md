@@ -18,7 +18,7 @@ You can find my blog here and I should mention that it is written in Persian: ht
 Theme repo and installation guide can be found here: https://github.com/mehdisadeghi/jekyll-theme-mehdix-rtl
 
 ## Things I need to work on
-- [] Add page(as called in WordPress) on the header
-- [] Link to the original template in the footer
+- [ ] Add page(as called in WordPress) on the header
+- [ ] Link to the original template in the footer
 - [x] Solve problem with the comment section
-- [] Solve problem with Related posts, they're not shown correctly
+- [ ] Solve problem with Related posts, they're not shown correctly
