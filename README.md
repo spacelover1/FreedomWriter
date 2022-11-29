@@ -1,9 +1,12 @@
 # personalBlog
+
+
 My Persian personal blog: https://spacelover.ir/
 
 This repo is for my Persian Blog. 
 
-Theme repo: https://github.com/mehdisadeghi/jekyll-theme-mehdix-rtl
+Special thanks to Mehdi Sadeghi for building this beatiful RTL theme.<br/>
+Theme repo can be find here: https://github.com/mehdisadeghi/jekyll-theme-mehdix-rtl
 
 ## Things to add to the blog
 - Photo Gallery link on the header
