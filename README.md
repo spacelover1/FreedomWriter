@@ -1,9 +1,10 @@
 <div dir="rtl" lang="fa">
+
 # وبلاگ فارسی
 
 
 این ریپو برای وبلاگ فارسی من است.<br/>
-:pray: سپاس از [مهدی صادقی](https://mehdix.ir/) برای ساخت این تم راست‌چین زیبا.<br/>
+ سپاس از [مهدی صادقی](https://mehdix.ir/)  برای ساخت این تم راست‌چین زیبا. :pray: <br/>
 راهنمای نصب این تم رو در این لینک می‌تونید مشاهده کنید: https://github.com/mehdisadeghi/jekyll-theme-mehdix-rtl
 
 لینک وبلاگ من:‌ https://spacelover.ir/  
@@ -21,7 +22,7 @@ My goal is to write freely, without censoring what is believed as taboo and enco
 
 You can find my blog here: https://spacelover.ir/
 
-:pray: Special thanks to [Mehdi Sadeghi](https://github.com/mehdisadeghi) for building this beautiful RTL theme.<br/>
+Special thanks to [Mehdi Sadeghi](https://github.com/mehdisadeghi) for building this beautiful RTL theme. :pray: <br/>
 Theme repo and installation guide can be found here: https://github.com/mehdisadeghi/jekyll-theme-mehdix-rtl
 
 ## Things I need to work on
