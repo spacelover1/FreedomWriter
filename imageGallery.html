@@ -1,0 +1,24 @@
+---
+layout: default
+permalink: /imagegallery/
+title: تصاویر
+sitemap: false
+---
+<div class="card">
+  {% for category in site.categories %}
+  {% capture category_name %}{{ category | first }}{% endcapture %}
+  <h1>❖ &nbsp; {{ category_name }}</h1>
+  <ul class="list-meta">
+    {% for post in site.categories[category_name] %}
+      <li>
+        <span class="list-meta-col">
+          {{ post.date | jdate: "%d %b %Y" | habify }}
+        </span>
+        <span>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</div>
