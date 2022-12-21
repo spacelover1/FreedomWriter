@@ -9,14 +9,30 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 
-gem "jekyll", ">= 3.8.4"
-gem "ffi", ">= 1.9.24"
-gem "jekyll-jalali"
-gem "jekyll-sitemap"
-gem "jekyll-paginate"
-gem "jekyll-hinduarabic"
-gem "jekyll-seo-tag"
-gem "jekyll-include-cache"
+gem "jekyll", "~> 4.2"
+
+group :jekyll_plugins do
+  gem "jekyll-paginate"
+  gem "jekyll-sitemap"
+  gem "jekyll-jalali"
+  gem "jekyll-hinduarabic"
+  gem "jekyll-tagging-lite"
+  gem "jekyll-tagging-related_posts", :git => "https://github.com/mehdisadeghi/jekyll-tagging-related_posts", :ref => "a58844c"
+  gem "liquid_reading_time"
+  gem "jekyll-seo-tag"
+  gem "jekyll-include-cache"
+  gem "webrick"
+  gem "jekyll-toc"
+end
+
+# gem "jekyll", ">= 3.8.4"
+# gem "ffi", ">= 1.9.24"
+# gem "jekyll-jalali"
+# gem "jekyll-sitemap"
+# gem "jekyll-paginate"
+# gem "jekyll-hinduarabic"
+# gem "jekyll-seo-tag"
+# gem "jekyll-include-cache"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "jekyll-theme-mehdix-rtl", "~> 2.0"#, :path => '../jekyll-theme-mehdix-rtl'
@@ -26,11 +42,11 @@ gem "jekyll-include-cache"
 # gem "github-pages", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
+# group :jekyll_plugins do
+  # gem "jekyll-feed", "~> 0.6"
   #gem "jekyll-tagging", :require => 'jekyll/tagging', :path => "../forks/jekyll-tagging"
   #gem "jekyll-tagging-lite", :path => "../forks/jekyll-tagging-lite"
-end
+# end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
