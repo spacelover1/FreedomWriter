@@ -25,14 +25,14 @@ group :jekyll_plugins do
   gem "jekyll-toc"
 end
 
-# gem "jekyll", ">= 3.8.4"
-# gem "ffi", ">= 1.9.24"
-# gem "jekyll-jalali"
-# gem "jekyll-sitemap"
-# gem "jekyll-paginate"
-# gem "jekyll-hinduarabic"
-# gem "jekyll-seo-tag"
-# gem "jekyll-include-cache"
+gem "jekyll", ">= 3.8.4"
+gem "ffi", ">= 1.9.24"
+gem "jekyll-jalali"
+gem "jekyll-sitemap"
+gem "jekyll-paginate"
+gem "jekyll-hinduarabic"
+gem "jekyll-seo-tag"
+gem "jekyll-include-cache"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "jekyll-theme-mehdix-rtl", "~> 2.0"#, :path => '../jekyll-theme-mehdix-rtl'
