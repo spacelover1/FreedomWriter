@@ -18,7 +18,7 @@ gem "jekyll-hinduarabic"
 gem "jekyll-seo-tag"
 gem "jekyll-include-cache"
 gem 'sass-embedded', '~> 1.57', '>= 1.57.1'
-# gem 'jekyll-sass-converter', '~> 1.5', '>= 1.5.2'
+gem 'jekyll-sass-converter', '~> 1.5', '>= 1.5.2'
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "jekyll-theme-mehdix-rtl", "~> 2.0"#, :path => '../jekyll-theme-mehdix-rtl'
@@ -30,8 +30,8 @@ gem 'sass-embedded', '~> 1.57', '>= 1.57.1'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem 'jekyll-feed', '~> 0.15.1'
-  gem 'sass-embedded', '~> 1.57', '>= 1.57.1'
-  gem 'jekyll-sass-converter', '~> 1.5', '>= 1.5.2'
+  # gem 'sass-embedded', '~> 1.57', '>= 1.57.1'
+  # gem 'jekyll-sass-converter', '~> 1.5', '>= 1.5.2'
 
   #gem "jekyll-tagging", :require => 'jekyll/tagging', :path => "../forks/jekyll-tagging"
   #gem "jekyll-tagging-lite", :path => "../forks/jekyll-tagging-lite"
