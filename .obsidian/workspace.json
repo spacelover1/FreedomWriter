@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7fcb3ead9573cc24",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2022-12-12-traveling.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2022-11-30-the-intimate-universe-one.md",
+                "file": "_posts/2022-12-12-traveling.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2022-11-30-the-intimate-universe-one.md",
+                "file": "_posts/2022-12-12-traveling.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2022-11-30-the-intimate-universe-one.md"
+                "file": "_posts/2022-12-12-traveling.md"
               }
             }
           }
@@ -146,7 +159,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2f8d26f9cace07b5",
+  "active": "7fcb3ead9573cc24",
   "lastOpenFiles": [
     "_posts/2022-12-12-traveling.md",
     "_posts/2022-07-19-where-do-you-come-from.md",
