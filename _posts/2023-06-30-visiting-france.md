@@ -22,5 +22,20 @@ tags: سفر زندگی
 کشوری که بدلیل بی‌کفایتی مدیران و مسئولانش ارتباطش با دنیا قطع شد به این وضع نابه‌سامان دچار می‌شه. بی‌نظمی، عدم اداره درست منابع طبیعی و انسانی، دزدی و بسیاری از مشکلات دیگر دامن‌گیر این کشور می‌شه. 
 برای مطالعه کوتاه درباره [جنگ جهانی اول](https://www.history.com/topics/world-war-i/world-war-i-history) و [جنگ جهانی دوم](https://www.britannica.com/event/World-War-II/The-Baltic-states-and-the-Russo-Finnish-War-1939-40) لینک‌ها رو قرار دادم.
 
+در آخر هم دوست دارم [آهنگ زیبای Imagine رو از John Lennon ](https://www.youtube.com/watch?v=YkgkThdzX-8)در این پست به اشتراک بگذارم.
+
+
+
+    Imagine there's no countries
+    It isn't hard to do
+    Nothing to kill or die for
+    And no religion, too
+    Imagine all the people
+    Livin' life in peace
+    You may say I'm a dreamer
+    But I'm not the only one
+    I hope someday you'll join us
+    And the world will be as one
+
 
 
