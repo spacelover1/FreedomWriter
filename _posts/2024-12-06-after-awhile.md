@@ -9,10 +9,10 @@ tags:
 
 امروز یه جمله از خبرنامه جیمز کلیر خوندم که دوست داشتم:
 
-`
-The common narrative is that kids learn faster than adults, but if you watch any toddler they spend a large portion of the day attempting things that are on the edge of their ability.
+``The common narrative is that kids learn faster than adults, but if you watch any toddler they spend a large portion of the day attempting things that are on the edge of their ability.
 
-How much time have you spent on the edge of your ability today? `
+How much time have you spent on the edge of your ability today? ``
+
 
 آیا ما هم اندازه بچه‌ها روی یاد گرفتن یه مهارت جدید وقت می‌ذاریم؟
 
