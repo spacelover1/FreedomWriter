@@ -7,15 +7,17 @@ tags:
 
 چهارشنبه رفتم سفارت برای تمدید گذرنامه. چون بیشتر از ۶ ماه اعتبار داشت گفت نمیشه. ولی با این حال از تمام مدارکم کپی گرفت و یه فرم هم داد که اطلاعات ایرانی‌هایی که در این شهر هستند رو داشته باشند و خیلی پشیمونم که فرم رو پر کردم و اجازه دادم از مدارکم کپی بگیره. حس تجاوز بهم دست داد. با حس خوب رفتم. گفتم بعد از چند ماه چند تا ایرانی می‌بینم، ولی یادم رفته بود که حالم تو ایران چطوری بود. 
 
-امروز یه جمله از خبرنامه جیمز کلیر خوندم که دوست داشتم:
+امروز یه جمله از [خبرنامه جیمز کلیر](https://jamesclear.com/3-2-1)خوندم که دوست داشتم:
 
-``The common narrative is that kids learn faster than adults, but if you watch any toddler they spend a large portion of the day attempting things that are on the edge of their ability.
+    The common narrative is that kids learn faster than adults, 
+    but if you watch any toddler they spend a large portion of the day 
+    attempting things that are on the edge of their ability.
 
-How much time have you spent on the edge of your ability today? ``
+    How much time have you spent on the edge of your ability today? 
 
 
 آیا ما هم اندازه بچه‌ها روی یاد گرفتن یه مهارت جدید وقت می‌ذاریم؟
 
-تقریبا یکسال شده که پست نذاشتم اینجا. این مدت برای خودم می‌نوشتم. وقتی اینجا، در بلاگم پست می‌نویسم حس ارزشمند بودن بیشتری میده. حس اینکه یه حرکتی زدم. 
+تقریبا یکسال شده که پست نذاشتم اینجا. این مدت برای خودم می‌نوشتم. وقتی اینجا، در بلاگم پست می‌نویسم حس ارزشمند بودن بیشتری میده. حس اینکه یه حرکتی زدم.
 
 به امید آزادی هر چه زودتر
