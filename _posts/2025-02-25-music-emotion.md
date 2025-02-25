@@ -19,6 +19,8 @@ tags:
 
 لینک آهنگ هایی که نام بردم و بیشتر رو در ادامه می‌ذارم:
 
+<div dir="ltr">
+
 [Lonely is the Muse- Halsey](https://youtu.be/tqgqz2vPUS4?si=DsSTYc67kpolf0Sr)  
 
 [You're On Your Own, Kid- Taylor Swift](https://youtu.be/7Gbg6Z70J7E?si=Qn4dQzPOhUtMTuFx)  
@@ -34,3 +36,5 @@ tags:
 [The End Of The World- Skeeter Davis](https://youtu.be/DsY_kocbWaM?si=BgHCw0qgqUT2eEx3)  
 
 [One cup of happiness- Dean Martin](https://youtu.be/z-my2vYMOVQ?si=mq6i_mznoHQNwlg1)  
+
+</div>
