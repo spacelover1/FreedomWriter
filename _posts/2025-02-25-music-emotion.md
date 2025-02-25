@@ -19,7 +19,6 @@ tags:
 
 لینک آهنگ هایی که نام بردم و بیشتر رو در ادامه می‌ذارم:
 
-<div dir="ltr">
 
 [Lonely is the Muse- Halsey](https://youtu.be/tqgqz2vPUS4?si=DsSTYc67kpolf0Sr)  
 
@@ -37,4 +36,3 @@ tags:
 
 [One cup of happiness- Dean Martin](https://youtu.be/z-my2vYMOVQ?si=mq6i_mznoHQNwlg1)  
 
-</div>
