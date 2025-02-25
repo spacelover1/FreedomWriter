@@ -19,11 +19,18 @@ tags:
 
 لینک آهنگ هایی که نام بردم و بیشتر رو در ادامه می‌ذارم:
 
-[Lonely is the Muse- Halsey](https://youtu.be/tqgqz2vPUS4?si=DsSTYc67kpolf0Sr)
-[You're On Your Own, Kid- Taylor Swift](https://youtu.be/7Gbg6Z70J7E?si=Qn4dQzPOhUtMTuFx)
-[evermore- taylor swift](https://youtu.be/EXLgZZE072g?si=C33stTWwmUo8h4dz)
-[Taylor Swift - The Man](https://youtu.be/AqAJLh9wuZ0?si=szBt6t1PQvyX6P0M)
-[The Emptiness Machine- Linkin Park](https://youtu.be/SRXH9AbT280?si=-mbg5lsb6-ix1SvA)
-[Fear of the Water- SYML](https://youtu.be/-T4THwne8IE?si=-LiBVNATMh2KYsYd)
-[The End Of The World- Skeeter Davis](https://youtu.be/DsY_kocbWaM?si=BgHCw0qgqUT2eEx3)
-[One cup of happiness- Dean Martin](https://youtu.be/z-my2vYMOVQ?si=mq6i_mznoHQNwlg1)
+[Lonely is the Muse- Halsey](https://youtu.be/tqgqz2vPUS4?si=DsSTYc67kpolf0Sr)  
+
+[You're On Your Own, Kid- Taylor Swift](https://youtu.be/7Gbg6Z70J7E?si=Qn4dQzPOhUtMTuFx)  
+
+[evermore- taylor swift](https://youtu.be/EXLgZZE072g?si=C33stTWwmUo8h4dz)  
+
+[Taylor Swift - The Man](https://youtu.be/AqAJLh9wuZ0?si=szBt6t1PQvyX6P0M)  
+
+[The Emptiness Machine- Linkin Park](https://youtu.be/SRXH9AbT280?si=-mbg5lsb6-ix1SvA)  
+
+[Fear of the Water- SYML](https://youtu.be/-T4THwne8IE?si=-LiBVNATMh2KYsYd)  
+
+[The End Of The World- Skeeter Davis](https://youtu.be/DsY_kocbWaM?si=BgHCw0qgqUT2eEx3)  
+
+[One cup of happiness- Dean Martin](https://youtu.be/z-my2vYMOVQ?si=mq6i_mznoHQNwlg1)  
