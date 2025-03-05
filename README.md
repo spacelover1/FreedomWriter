@@ -19,7 +19,7 @@
 
 
 I used to keep a journal, writing my feelings and thought in it since I was 7 :girl:, I still do:) And those are only for me.<br/>
-I decided to share my interests:milky_way:, thoughts:sparkler:, adventures :tada: and other things with everyone, so I created this repo.<br/>
+I decided to share my interests :milky_way:, thoughts :sparkler:, adventures :tada: and other things with everyone, so I created this repo.<br/>
 My goal is to write freely, without censoring what is believed as taboo and encouraging people to do so.
 
 You can find my blog here: https://spacelover.ir/
