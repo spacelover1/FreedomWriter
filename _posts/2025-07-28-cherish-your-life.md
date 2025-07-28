@@ -15,7 +15,7 @@ tags:
 
 این دو تا آهنگ هم در این موضوع دوست دارم در انتهای این پست ذکر کنم:
 
-[Lucky- Aurora](https://youtu.be/AmTiqR2_VAw?si=9BXGHQjY2grNKIfM)<br>
-[The Lucky One- TS](https://youtu.be/4LtQxA_ooLk?si=FrflKxMhh2DpJd-r)
+[Lucky- Aurora](https://youtu.be/AmTiqR2_VAw?si=9BXGHQjY2grNKIfM){:target="_blank"}<br>
+[The Lucky One- TS](https://youtu.be/4LtQxA_ooLk?si=FrflKxMhh2DpJd-r){:target="_blank"}
 
 
