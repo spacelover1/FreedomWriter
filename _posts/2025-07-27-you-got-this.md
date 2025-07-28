@@ -12,6 +12,5 @@ tags:
 
 
 
-[این هم یه ویدیو خیلی جالب](https://www.instagram.com/reel/DKub82QIS7J/?igsh=MXdocDlxZWlrdWo2YQ==) در همین مورده که تو اینستاگرام دیدم.
 
 
