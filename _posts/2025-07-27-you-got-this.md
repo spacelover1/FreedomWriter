@@ -8,7 +8,9 @@ tags:
 
 
 
-    Whenever you feel You're stuck, you feel you cannot keep going anymore. Give yourself some time to grieve. If you feel sleeping all day do that. But never think less of yourself. 
+    Whenever you feel You're stuck, you feel you cannot keep going anymore. 
+    Give yourself some time to grieve. 
+    If you feel sleeping all day do that. But never think less of yourself. 
 
 
 
