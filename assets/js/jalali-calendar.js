@@ -1,16 +1,21 @@
 // jalali-calendar.js
-// یک تاریخ شمسی ساده برای نمایش
-function getPersianDate() {
-  var date = new Date();
-  var pDate = new Intl.DateTimeFormat('fa-IR', { 
-    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
+// تبدیل تاریخ ISO پست به شمسی و نمایش در span#jalali-date
+
+// تابع کمکی برای تبدیل میلادی به شمسی با Intl
+function toPersianDate(gregorian) {
+  const date = new Date(gregorian);
+  return new Intl.DateTimeFormat('fa-IR', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
   }).format(date);
-  return pDate;
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  var el = document.getElementById("jalali-date");
+  const el = document.getElementById("jalali-date");
   if(el) {
-    el.innerText = getPersianDate();
+    const gDate = el.getAttribute("data-gregorian");
+    el.innerText = toPersianDate(gDate);
   }
 });
