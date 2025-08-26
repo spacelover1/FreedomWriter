@@ -1,9 +1,9 @@
-name: github pages
+name: Build and Deploy Jekyll
 
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
   build-deploy:
@@ -20,15 +20,10 @@ jobs:
           ruby-version: '3.1'
 
       - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
+        run: bundle install --jobs 4 --retry 3
 
-      - name: Build Jekyll site
+      - name: Build site with plugins
         run: bundle exec jekyll build
-
-      - name: Check build output
-        run: ls -R ./_site
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
