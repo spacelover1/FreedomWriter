@@ -12,12 +12,12 @@ layout: default
       <i class="fas fa-calendar"></i>
       {{ page.date | jdate: "%A %d %b %Y" | habify}}<br>
       
-      <i class="fas fa-stopwatch"></i>
-      {{ time | habify }} دقیقه مطالعه
+<!--       <i class="fas fa-stopwatch"></i>
+      {{ time | habify }} دقیقه مطالعه -->
     </p>
   </div>
 
-  <!--{{ content }} -->
+  {{ content }}
 
   {% if site.related_posts.size >= 1 %}
     <div id="related-posts">
