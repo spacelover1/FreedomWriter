@@ -1,1 +1,1 @@
-Sitemap: https://spacelover1.github.io/FreedomWriter/sitemap.xml
+Sitemap: http://spacelover1.github.io/personalBlog/sitemap.xml
