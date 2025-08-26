@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+  
+  <head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="author" content="نویسنده" />
+<meta name="copyright" content="Commons Attribution 4.0 International" />
+<meta name="robot" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="" />
+
+<link rel="canonical" href="https://spacelover.ir/hello-world.html" />
+<link rel="icon" href="" />
+<link rel="stylesheet" href="https://spacelover.ir/assets/css/main.css" />
+<link rel="stylesheet" href="https://spacelover.ir/assets/fonts/fontawesomev5.0.2.css" />
+<meta name="keywords" content='nlp,اموزش' /><title>مبانی پردازش زبان طبیعی(NLP)- دو - نویسنده آزاد</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>مبانی پردازش زبان طبیعی(NLP)- دو | نویسنده آزاد</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="مبانی پردازش زبان طبیعی(NLP)- دو" />
+<meta name="author" content="نویسنده" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="در قسمت قبل فایل متنی رو به دو روش آسان و دشوار خوندیم. و پاکسازی دیتا رو توسط سه متد پیش پردازش یاد گرفتیم: حذف علائم نگارشی، توکنایز کردن (جداسازی کلمات)، حذف کلمات بدون معنی. و گفتیم که یک مرحله چهارمی هم برای پاکسازی یا نرمالسازی داده متنی می شه استفاده کرد که شاید همیشه به اندازه مراحل قبل اهمیت نداشته باشه. در این قسمت درباره این مرحله چهارم صحبت می کنیم." />
+<meta property="og:description" content="در قسمت قبل فایل متنی رو به دو روش آسان و دشوار خوندیم. و پاکسازی دیتا رو توسط سه متد پیش پردازش یاد گرفتیم: حذف علائم نگارشی، توکنایز کردن (جداسازی کلمات)، حذف کلمات بدون معنی. و گفتیم که یک مرحله چهارمی هم برای پاکسازی یا نرمالسازی داده متنی می شه استفاده کرد که شاید همیشه به اندازه مراحل قبل اهمیت نداشته باشه. در این قسمت درباره این مرحله چهارم صحبت می کنیم." />
+<link rel="canonical" href="https://spacelover.ir/nlp-basics-two.html" />
+<meta property="og:url" content="https://spacelover.ir/nlp-basics-two.html" />
+<meta property="og:site_name" content="نویسنده آزاد" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-14T00:00:00+04:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="مبانی پردازش زبان طبیعی(NLP)- دو" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"نویسنده"},"dateModified":"2021-07-14T00:00:00+04:30","datePublished":"2021-07-14T00:00:00+04:30","description":"در قسمت قبل فایل متنی رو به دو روش آسان و دشوار خوندیم. و پاکسازی دیتا رو توسط سه متد پیش پردازش یاد گرفتیم: حذف علائم نگارشی، توکنایز کردن (جداسازی کلمات)، حذف کلمات بدون معنی. و گفتیم که یک مرحله چهارمی هم برای پاکسازی یا نرمالسازی داده متنی می شه استفاده کرد که شاید همیشه به اندازه مراحل قبل اهمیت نداشته باشه. در این قسمت درباره این مرحله چهارم صحبت می کنیم.","headline":"مبانی پردازش زبان طبیعی(NLP)- دو","mainEntityOfPage":{"@type":"WebPage","@id":"https://spacelover.ir/nlp-basics-two.html"},"url":"https://spacelover.ir/nlp-basics-two.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  </head>
+
+  <body><header>
+  <div class="wrapper">
+    <a class="site-title" href="https://spacelover.ir/">نویسنده آزاد</a>
+    <small id="motto"> نوشته‌های یک دختر ایرانی </small>
+    <!-- <nav style="display: inline;">
+      <a style="color:white;" href="/test">تست برگه</a>
+    </nav> -->
+  </div>
+</header><main>
+      <div class="wrapper">
+
+<article class="post-content">
+  <div class="post-header">
+    <h1 class="post-title">مبانی پردازش زبان طبیعی(NLP)- دو</h1>
+    <p>
+      <i class="fas fa-calendar"></i>
+      چهارشنبه ۲۳ Tir ۱۴۰۰<br>
+
+      <i class="fas fa-stopwatch"></i>
+      <p>در قسمت قبل فایل متنی رو به دو روش آسان و دشوار خوندیم. و پاکسازی دیتا رو توسط سه متد پیش پردازش یاد گرفتیم: حذف علائم نگارشی، توکنایز کردن (جداسازی کلمات)، حذف کلمات بدون معنی. و گفتیم که یک مرحله چهارمی هم برای پاکسازی یا نرمالسازی داده متنی می شه استفاده کرد که شاید همیشه به اندازه مراحل قبل اهمیت نداشته باشه. در این قسمت درباره این مرحله چهارم صحبت می کنیم.</p>
+
+<h۲ id="بخش-پنجم-stemming"><strong>بخش پنجم: Stemming</strong></h۲>
+
+<p>کاری که stemming انجام می ده اینه که میاد پسوند و پیشوند رو از کلمه حذف می کنه و هر چی باقی موند رو به عنوان خروجی میده، پس ممکنه خروجی حتی کلمه نباشه. خب پس چرا ازش استفاده می کنیم؟ بخاطر سادگی و سرعتی که داره.</p>
+
+<p>اول از همه روی یک سری کلمات این روش رو اجرا می کنیم تا بیشتر باهاش آشنا شیم و بعد روی دیتاستی که در قسمت قبل بررسی کردیم. <br />
+باید اول کتابخونه <code class="language-plaintext highlighter-rouge">nltk</code> رو ایمپورت کنیم. سپس از  استمر <code class="language-plaintext highlighter-rouge">PorterStemmer()</code>  استفاده می کنیم. این استمرها برای هر زبانی متفاوته، برای زبان انگلیسی دو استمر <code class="language-plaintext highlighter-rouge">PorterStammer</code> و <code class="language-plaintext highlighter-rouge">LancasterStammer</code> وجود داره. اولی رایجتره و سریعتر.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import nltk
+ps = nltk.PorterStemmer()
+</code></pre></div></div>
+
+<p>با استفاده از <code class="language-plaintext highlighter-rouge">dir(ps)</code> توابعی که این استمر داره رو می تونیم مشاهده کنیم. تابع <code class="language-plaintext highlighter-rouge">stem</code> بیشتر استفاده می شه.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(ps.stem('grow'))
+print(ps.stem('growing'))
+print(ps.stem('grows'))
+</code></pre></div></div>
+
+<p>همه این کلمات رو خلاصه می کنه به grow. در مثال بعدی فرق فعل و فاعل رو می دونه.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(ps.stem('runs'))  
+print(ps.stem('running'))
+print(ps.stem('runner'))
+</code></pre></div></div>
+
+<p>حالا بریم سراغ دیتاست پیام های اسپم و غیر اسپم.<br />
+ابتدا دیتا رو می خونیم:
+    import pandas as pd
+    import re
+    import string</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nltk.download('stopwords')
+stopword = nltk.corpus.stopwords.words('english')
+pd.set_option('display.max_colwidth', ۱۰۰)
+
+dataset = pd.read_csv('SMSSpamCollection.tsv', sep='\t', header=None)
+dataset.columns = ('label', 'body')
+dataset.head()
+</code></pre></div></div>
+
+<p>کتابخونه های مورد نیاز رو هم من همین ابتدا ایمپورت کردم. سپس سه مرحله پاکسازی دیتا رو انجام  می دیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def clean_data(text):
+    text = [word for word in text if word not in string.punctuation]
+    tokens = re.split('\W+', text)
+    text = [word for word in tokens if word not in stopword]
+    return text
+
+dataset['tokenized_text'] = dataset['body'].apply(lambda x: clean_data(x))
+
+
+
+def stemming(tokenized_text):
+    text = [ps.stem(word) for word in tokenized_text]
+    return text
+
+dataset['stemmed_text'] = dataset['tokenized_text'].apply(lambda x: stemming(x))
+</code></pre></div></div>
+
+<h۲ id="بخش-ششم-lemmatization"><strong>بخش ششم: Lemmatization</strong></h۲>
+
+<p>همونطور که دیدیم خروجی <code class="language-plaintext highlighter-rouge">stemming</code> لزوما کلمه نیست و ممکنه یک چیز بی معنی باشه یا حتی اشتباه. یک متد دیگه <code class="language-plaintext highlighter-rouge">Lemmatization</code> نام داره که خروجی این روش حتما کلمه ای در دیکشنریه. یعنی معمولا کلمات رو می بره به ریشه شون.</p>
+
+<p>به مثال های زیر توجه کنید.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(ps.stem('meaning')) ==&gt; mean
+print(ps.stem('meanness')) ==&gt; mean
+
+print(wn.lemmatize('meaning')) ==&gt; meaning
+print(wn.lemmatize('meanness')) ==&gt; meanness
+
+
+print(ps.stem('goose')) ==&gt; goos
+print(ps.stem('geese')) ==&gt; gees
+
+print(wn.lemmatize('goose')) ==&gt; goose
+print(wn.lemmatize('geese')) ==&gt; goose
+</code></pre></div></div>
+
+<p>در واقع stemming رویکرد الگوریتمی داره و فقط با رشته ای که بهش می دیم کار می کنه و فقط پسوند رو حذف می کنه.<br />
+اما lemmatization پیچیده تره و کلمه ای که بهش داده می شه رو در لیست لغات بررسی می کنه و پرداش می کنه و بعد ریشه کلمه رو بر می گردونه مشکلش اینه که اگر کلمه ای که بهش داده شده در لیست لغات نباشه همونو برمی گردونه.</p>
+
+<p>همین اتفاقی که در این مثال ها افتاده، که همونطور که می بینیم خلاصه نکردن بهتر از رشته کلمه اشتباه برگردوندنه.</p>
+
+<p>حالا می خوایم تکنیک lemmatization رو روی دیتاست پیام ها پیاده کنیم. مثل قبل، ابتدا دیتا رو می خونیم و پاکسازی های اولیه رو انجام می دیم و بعد از lemmatizer استفاده می کنیم. <br />
+در اینجا من فقط تابع lemmatizer رو نوشتم. کد کامل رو <a href="https://github.com/spacelover۱/NLP-with-Python/blob/main/۲-SupplementalDataCleaning/UsingaLemmatizer.ipynb">اینجا</a> می تونید مشاهده کنید.</p>
+
+<p>برای درک بهتر این دو روش می تونید <a href="https://www.datacamp.com/community/tutorials/stemming-lemmatization-python">این توضیح انگلیسی</a> رو مطالعه کنید.</p>
+
+ دقیقه مطالعه
+    </p>
+  </div>
+
+  <p>در قسمت قبل فایل متنی رو به دو روش آسان و دشوار خوندیم. و پاکسازی دیتا رو توسط سه متد پیش پردازش یاد گرفتیم: حذف علائم نگارشی، توکنایز کردن (جداسازی کلمات)، حذف کلمات بدون معنی. و گفتیم که یک مرحله چهارمی هم برای پاکسازی یا نرمالسازی داده متنی می شه استفاده کرد که شاید همیشه به اندازه مراحل قبل اهمیت نداشته باشه. در این قسمت درباره این مرحله چهارم صحبت می کنیم.</p>
+
+<h2 id="بخش-پنجم-stemming"><strong>بخش پنجم: Stemming</strong></h2>
+
+<p>کاری که stemming انجام می ده اینه که میاد پسوند و پیشوند رو از کلمه حذف می کنه و هر چی باقی موند رو به عنوان خروجی میده، پس ممکنه خروجی حتی کلمه نباشه. خب پس چرا ازش استفاده می کنیم؟ بخاطر سادگی و سرعتی که داره.</p>
+
+<p>اول از همه روی یک سری کلمات این روش رو اجرا می کنیم تا بیشتر باهاش آشنا شیم و بعد روی دیتاستی که در قسمت قبل بررسی کردیم. <br />
+باید اول کتابخونه <code class="language-plaintext highlighter-rouge">nltk</code> رو ایمپورت کنیم. سپس از  استمر <code class="language-plaintext highlighter-rouge">PorterStemmer()</code>  استفاده می کنیم. این استمرها برای هر زبانی متفاوته، برای زبان انگلیسی دو استمر <code class="language-plaintext highlighter-rouge">PorterStammer</code> و <code class="language-plaintext highlighter-rouge">LancasterStammer</code> وجود داره. اولی رایجتره و سریعتر.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import nltk
+ps = nltk.PorterStemmer()
+</code></pre></div></div>
+
+<p>با استفاده از <code class="language-plaintext highlighter-rouge">dir(ps)</code> توابعی که این استمر داره رو می تونیم مشاهده کنیم. تابع <code class="language-plaintext highlighter-rouge">stem</code> بیشتر استفاده می شه.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(ps.stem('grow'))
+print(ps.stem('growing'))
+print(ps.stem('grows'))
+</code></pre></div></div>
+
+<p>همه این کلمات رو خلاصه می کنه به grow. در مثال بعدی فرق فعل و فاعل رو می دونه.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(ps.stem('runs'))  
+print(ps.stem('running'))
+print(ps.stem('runner'))
+</code></pre></div></div>
+
+<p>حالا بریم سراغ دیتاست پیام های اسپم و غیر اسپم.<br />
+ابتدا دیتا رو می خونیم:
+    import pandas as pd
+    import re
+    import string</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nltk.download('stopwords')
+stopword = nltk.corpus.stopwords.words('english')
+pd.set_option('display.max_colwidth', 100)
+
+dataset = pd.read_csv('SMSSpamCollection.tsv', sep='\t', header=None)
+dataset.columns = ('label', 'body')
+dataset.head()
+</code></pre></div></div>
+
+<p>کتابخونه های مورد نیاز رو هم من همین ابتدا ایمپورت کردم. سپس سه مرحله پاکسازی دیتا رو انجام  می دیم:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def clean_data(text):
+    text = [word for word in text if word not in string.punctuation]
+    tokens = re.split('\W+', text)
+    text = [word for word in tokens if word not in stopword]
+    return text
+
+dataset['tokenized_text'] = dataset['body'].apply(lambda x: clean_data(x))
+
+
+
+def stemming(tokenized_text):
+    text = [ps.stem(word) for word in tokenized_text]
+    return text
+
+dataset['stemmed_text'] = dataset['tokenized_text'].apply(lambda x: stemming(x))
+</code></pre></div></div>
+
+<h2 id="بخش-ششم-lemmatization"><strong>بخش ششم: Lemmatization</strong></h2>
+
+<p>همونطور که دیدیم خروجی <code class="language-plaintext highlighter-rouge">stemming</code> لزوما کلمه نیست و ممکنه یک چیز بی معنی باشه یا حتی اشتباه. یک متد دیگه <code class="language-plaintext highlighter-rouge">Lemmatization</code> نام داره که خروجی این روش حتما کلمه ای در دیکشنریه. یعنی معمولا کلمات رو می بره به ریشه شون.</p>
+
+<p>به مثال های زیر توجه کنید.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(ps.stem('meaning')) ==&gt; mean
+print(ps.stem('meanness')) ==&gt; mean
+
+print(wn.lemmatize('meaning')) ==&gt; meaning
+print(wn.lemmatize('meanness')) ==&gt; meanness
+
+
+print(ps.stem('goose')) ==&gt; goos
+print(ps.stem('geese')) ==&gt; gees
+
+print(wn.lemmatize('goose')) ==&gt; goose
+print(wn.lemmatize('geese')) ==&gt; goose
+</code></pre></div></div>
+
+<p>در واقع stemming رویکرد الگوریتمی داره و فقط با رشته ای که بهش می دیم کار می کنه و فقط پسوند رو حذف می کنه.<br />
+اما lemmatization پیچیده تره و کلمه ای که بهش داده می شه رو در لیست لغات بررسی می کنه و پرداش می کنه و بعد ریشه کلمه رو بر می گردونه مشکلش اینه که اگر کلمه ای که بهش داده شده در لیست لغات نباشه همونو برمی گردونه.</p>
+
+<p>همین اتفاقی که در این مثال ها افتاده، که همونطور که می بینیم خلاصه نکردن بهتر از رشته کلمه اشتباه برگردوندنه.</p>
+
+<p>حالا می خوایم تکنیک lemmatization رو روی دیتاست پیام ها پیاده کنیم. مثل قبل، ابتدا دیتا رو می خونیم و پاکسازی های اولیه رو انجام می دیم و بعد از lemmatizer استفاده می کنیم. <br />
+در اینجا من فقط تابع lemmatizer رو نوشتم. کد کامل رو <a href="https://github.com/spacelover1/NLP-with-Python/blob/main/2-SupplementalDataCleaning/UsingaLemmatizer.ipynb">اینجا</a> می تونید مشاهده کنید.</p>
+
+<p>برای درک بهتر این دو روش می تونید <a href="https://www.datacamp.com/community/tutorials/stemming-lemmatization-python">این توضیح انگلیسی</a> رو مطالعه کنید.</p>
+
+
+
+  
+    <div id="related-posts">
+      <h3>مطالب مرتبط</h3>
+      <ul>
+        
+          <li><a href="/unresolved.html">مسئله حل نشده</a></li>
+        
+          <li><a href="/physics.html">فیزیک</a></li>
+        
+          <li><a href="/history.html">بماند به یادگار</a></li>
+        
+          <li><a href="/red-flags-run.html">اگر اینا رو دیدی فرار کن</a></li>
+        
+          <li><a href="/cherish-your-life.html">It's a wonderful life</a></li>
+        
+    </ul>
+    </div>
+  
+</article>
+</div>
+    </main><footer>
+
+  <div class="wrapper">
+
+    
+
+    <p id="footer-description">هر چیزی به وقتش اتفاق میفته:)
+</p>
+
+    <ul class="social-media-list">
+      
+      <li>
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/spacelover1">
+          <span class="username social-media-text">Github</span>
+        </a>
+      </li>
+      
+      
+      
+      
+      <li>
+        <i class="fas fa-envelope-open"></i>
+        <a href="mailto:spacelover1@gmail.com">
+          <span class="username social-media-text">Email</span></a>
+      </li>
+      
+    </ul>
+
+    <div id="footer-extra">
+      <small id="license">
+  <i class="fab fa-creative-commons"></i>
+  مطالب این وبلاگ تحت مجوز
+  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.fa">
+    کریتیو کامنز اتریبیوشن ۴.۰ اینترنشنال
+  </a>قرار دارد.
+</small>
+      <a id="atom" href="https://validator.w3.org/feed/check.cgi?url=https://spacelover.ir/feed.xml"><img
+          src=https://spacelover.ir/assets/img/valid-atom.png alt="[Valid Atom 1.0]"
+          title="Validate my Atom 1.0 feed" /></a>
+    </div>
+
+  </div>
+
+  <small id="build-time">Site generated on Tue, 26 Aug 2025 13:24:33 +0330</small>
+
+</footer><script src="https://spacelover.ir/assets/js/main.js"></script>
+    
+    <script src="/assets/js/jalali-calendar.js"></script>
+
+  </body>
+</html>
