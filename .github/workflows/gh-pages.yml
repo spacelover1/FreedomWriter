@@ -11,10 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Patch Jekyll Config
-      run: |
-        echo "baseurl: /FreedomWriter" >> _config.yml
-        echo "url: http://$GITHUB_ACTOR.github.io" >> _config.yml
       env:
          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
 
