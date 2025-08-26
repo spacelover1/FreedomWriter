@@ -183,11 +183,11 @@ tags:    nlp اموزش
 خط دوم `set_option('display.max_colwidth', 100)` تعداد کاراکترهایی که نمایش داده می شه رو مشخص می کنه. <br/>
 الان دیتا به این صورته:
 
-![dataset_before_cleaning](https://raw.githubusercontent.com/spacelover1/personalBlog/master/image/dataset.PNG)
+![dataset_before_cleaning](https://raw.githubusercontent.com/spacelover1/FreedomWriter/refs/heads/master/image/dataset.PNG)
 
 فایل دیتاست بعد از پاکسازی هم در این فولدر وجود داره و قراره دیتا به این صورت دربیاد:
 
-![cleaned_dataset](https://raw.githubusercontent.com/spacelover1/personalBlog/master/image/cleaned_dataset.PNG)
+![cleaned_dataset](https://raw.githubusercontent.com/spacelover1/FreedomWriter/refs/heads/master/image/cleaned_dataset.PNG)
 
 ### **حذف علائم نگارشی**
 
