@@ -18,7 +18,7 @@ long_description: > # this means to ignore newlines until "baseurl:"
 
 github:
   username: spacelover1
-  repository: personalBlog
+  repository: FreedomWriter
 # favicon: assets/img/me.png
 # logo: assets/img/me.png
 
