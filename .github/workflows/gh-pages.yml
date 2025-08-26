@@ -8,30 +8,31 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      env:
-         GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
 
-    - name: Remove Gemfile.lock
-      run: rm -rf Gemfile.lock
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
 
-    # - name: Build
-    #   uses: agentd00nut/jekyll-build-optional-deploy-gh-pages@master
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #     GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
-    #     GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
-    #     DEPLOY_SITE: false
-    #     REMOVE_GEMLOCK: true
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
 
-    - name: Build
-      uses: jerryjvl/jekyll-build-action@v1
+      - name: Check build output
+        run: ls -R ./_site
 
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3.7.3
-      with:
-        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        #publish_branch: gh-pages
-        publish_dir: ./_site
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          force_orphan: true
