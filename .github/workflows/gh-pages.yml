@@ -7,31 +7,35 @@ on:
 
 jobs:
   build-deploy:
-    name: Deploy website
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout website code
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-    # Remove this step if you bring your own domain.
-    - name: Patch Jekyll config
+    - name: Patch Jekyll Config
       run: |
-        echo "baseurl: /$REPO_NAME" >> _config.yml
-        echo "url: https://$GITHUB_ACTOR.github.io" >> _config.yml
+        echo "baseurl: /personalBlog" >> _config.yml
+        echo "url: http://$GITHUB_ACTOR.github.io" >> _config.yml
       env:
          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
-         REPO_NAME: ${{ github.event.repository.name }}
 
-    # Why? In order to avoid bundler version mismatch (happend to me).
     - name: Remove Gemfile.lock
       run: rm -rf Gemfile.lock
 
-    - name: Build website
+    # - name: Build
+    #   uses: agentd00nut/jekyll-build-optional-deploy-gh-pages@master
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #     GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
+    #     GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+    #     DEPLOY_SITE: false
+    #     REMOVE_GEMLOCK: true
+
+    - name: Build
       uses: jerryjvl/jekyll-build-action@v1
 
-    - name: Deploy website
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3.7.3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        #publish_branch: gh-pages
         publish_dir: ./_site
