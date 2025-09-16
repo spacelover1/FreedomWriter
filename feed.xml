@@ -3,7 +3,7 @@
 <title type="text" xml:lang="fa">نویسنده آزاد</title>
 <link rel="alternate" type="text/html" href="https://spacelover.ir"/>
 <link rel="self" type="application/atom+xml" href="https://spacelover.ir/feed.xml"/>
-<updated>2025-09-10T14:19:19Z</updated>
+<updated>2025-09-16T08:50:47Z</updated>
 <id>urn:uuid:1e7d9dd8-29e4-475d-adc5-17494fb80445</id>
 <author>
   <name>نویسنده</name>
@@ -17,12 +17,18 @@
     <link rel="alternate" type="text/html" href="https://spacelover.ir/less-need-more-power.html"/>
     <id>urn:uuid:</id>
     <updated>2025-09-05T00:00:00Z</updated>
-    
+    <category term="نیاز"/><category term="زندگی"/><category term="قدرت"/>
     <content type="html">
       <![CDATA[<div dir="rtl"><p><img src="https://raw.githubusercontent.com/spacelover1/FreedomWriter/refs/heads/master/image/Sheldon.jpg" alt="Sheldon" /></p>
 
 <p>یه سکانسی از تئوری بیگ‌‌ بنگ شلدون به استوارت میگه نیاز شدید تو به دوستی ضعیفت می‌کنه. <br />
 میدونی چرا؟ چون این نیاز شدید فاصله کمی داره تا ناامیدی و برای همین حاضر به انجام هر کاری میشه تا اون چیزی که می‌خواد رو به دست بیاره.</p>
+
+<p>اما نیاز است که منجر به اختراع می‌شود. (Necessity is the mother of invention)</p>
+
+<p>انسان پر از خواسته و نیاز است و اینگونه شده که تا اینجا پیشرفت‌های بسیار داشته. همین ویدیوهای تکنولوجیا براساس نیاز انسانه که اومدن چیزای جدید ساختن که بعضیاش واقعا جالب و کاربردیه.</p>
+
+<p>در جای دیگری <a href="https://www.youtube.com/watch?v=5BvGwjin8PI">حمیرا میگه من از بی نیازی به ثروت رسیدم</a> این همون بحثیه که در <a href="https://spacelover.ir/liberation.html">این پست</a> دربارش صحبت کردم. یعنی حرص و طمع رسیدن به چیزی رو ندارن. اعتماد کامل دارن به خودشون که هر چی بخوان رو دارن و می‌تونن به دست بیارن.</p>
 
 </div>]]>
     </content>
