@@ -1,5 +1,5 @@
 ---
-title: آینده بشریت (۲)
+title: آینده بشریت (۲)- Collective Goodness
 category: general
 tags: feminism patriarchy نویسنده شورشگر مبلغ
 ---
