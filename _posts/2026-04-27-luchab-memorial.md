@@ -1,7 +1,7 @@
 ---
 title: آرامگاه لوچاب
 category: general
-tags: تاریخ زندگی
+tags:  زندگی
 ---
 
 
